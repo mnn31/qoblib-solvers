@@ -22,9 +22,11 @@ from ParaSCIP in 2014, so it is defended by the people who write the solvers.
 `network11` to `network23` are QOBLIB-specific truncations of the same demand
 matrix. They are not in MIPLIB and have nothing like that history.
 
-Status: 10 new best-known values on `network14` to `network23`, up to 5.6%.
-`network11` to `network13` matched their published values repeatedly without
-beating them. See `network/results/README.md`.
+Status: an early version claimed 10 to 11 new best-known values, but it seeded
+replicas from the published solutions, which is not allowed; it was withdrawn.
+From random starts the method improves `network13` to `network20` and reaches
+the proven optimum on `network05` to `network10`. An exclusive rerun at 1800 s is
+in progress. See `network/results/README.md`.
 
 ## Track C: open instances (done for problem 06)
 

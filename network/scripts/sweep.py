@@ -69,10 +69,16 @@ def main():
     ap.add_argument("--replicas", type=int, default=8)
     ap.add_argument("--workers", type=int, default=max(1, (os.cpu_count() or 2) - 1))
     ap.add_argument("--outdir", default="results/sweep")
+    ap.add_argument("--skip-existing", action="store_true",
+                    help="skip (instance, seed) pairs whose result file already "
+                         "exists, so an interrupted sweep can be resumed")
     a = ap.parse_args()
 
     jobs = [(n, s, a.seconds, a.replicas, a.outdir)
             for n in parse_range(a.instances) for s in range(a.seeds)]
+    if a.skip_existing:
+        jobs = [j for j in jobs
+                if not os.path.exists(f"{a.outdir}/network{j[0]:02d}_seed{j[1]}.json")]
     print(f"{len(jobs)} runs on {a.workers} workers, {a.seconds:.0f}s each "
           f"(~{len(jobs) * a.seconds / a.workers / 60:.0f} min wall clock)")
 

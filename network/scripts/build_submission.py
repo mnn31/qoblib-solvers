@@ -42,7 +42,7 @@ REFERENCE = os.environ.get(
     "https://github.com/mnn31/qoblib-solvers/tree/main/network")
 DATE = os.environ.get("QOBLIB_DATE", "2026-08-18")
 DATE_TAG = os.environ.get("QOBLIB_DATE_TAG", "20260818")
-HARDWARE = os.environ.get("QOBLIB_HARDWARE", "Apple M3 Pro (Mac15,6), 11 cores (5 performance + 6 efficiency), 18 GB unified memory, macOS 26.3, arm64; one core per run")
+HARDWARE = os.environ.get("QOBLIB_HARDWARE", "Apple M3 Pro (Mac15,6), 11 cores (5 performance + 6 efficiency), 18 GB unified memory, macOS 26.3, arm64. One run at a time with nothing else on the machine, so no run shared the CPU with another.")
 
 README = """# Parallel tempering over network topologies
 

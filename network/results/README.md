@@ -2,7 +2,7 @@
 
 ## New best-known values, problem 08 (Network Design)
 
-Eight instances improved over the values published in
+On the shared-CPU runs, eight instances improved over the values published in
 `08-network/solutions/0-info.txt`. Every solution is verified by the official
 Rust checker (`08-network/check`, exit code 0) and independently by
 `qoblib_net.solio.verify`.
@@ -65,8 +65,15 @@ and 3-exchanges as the move, replica exchange every 40 proposals. Every replica
 starts from an independently sampled random topology. A replica's energy is the
 exact min-congestion multicommodity flow LP for its topology.
 
-Five independent runs per instance, seeds 0 to 4, 40 minutes each, one core per
-run, on an Apple M3 Pro. The integral routing is recovered once at the end by
+Five independent runs per instance, seeds 0 to 4, 40 minutes each, on an Apple
+M3 Pro. These ran eight at a time, so each run shared the CPU with seven others.
+Measured on network17, that costs about a third of the throughput: 104 LP
+evaluations per second shared against 158 when running alone.
+
+These numbers are being replaced. At the maintainer's request the whole set,
+network05 to network24, is being rerun at 1800 s per run with strictly one run
+on the machine at a time, so that every runtime is comparable. This page will be
+updated when that finishes. The integral routing is recovered once at the end by
 re-solving the same model with integrality on the flow variables.
 
 The declared objective is recomputed from the flows rather than taken from the
