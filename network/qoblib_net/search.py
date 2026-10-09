@@ -96,6 +96,10 @@ def parallel_tempering(n, demand, seconds=600.0, replicas=8, seed=0, start=None,
 
     while time.time() - start_time < seconds:
         for r in range(replicas):
+            # check the budget per proposal, not per sweep, so a run cannot
+            # drift past its wall-clock budget inside the replica loop
+            if time.time() - start_time >= seconds:
+                break
             cand = topo.propose(chains[r], rng, p_triple)
             props += 1
             if cand is None or not topo.is_strongly_connected(n, cand):

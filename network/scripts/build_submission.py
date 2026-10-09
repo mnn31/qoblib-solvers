@@ -42,7 +42,7 @@ REFERENCE = os.environ.get(
     "https://github.com/mnn31/qoblib-solvers/tree/main/network")
 DATE = os.environ.get("QOBLIB_DATE", "2026-08-18")
 DATE_TAG = os.environ.get("QOBLIB_DATE_TAG", "20260818")
-HARDWARE = os.environ.get("QOBLIB_HARDWARE", "Apple M3 Pro (Mac15,6), 11 cores (5 performance + 6 efficiency), 18 GB unified memory, macOS 26.3, arm64. One run at a time with nothing else on the machine, so no run shared the CPU with another.")
+HARDWARE = os.environ.get("QOBLIB_HARDWARE", "Apple M3 Pro (Mac15,6), 11 cores (5 performance + 6 efficiency), 18 GB unified memory, macOS 26.3, arm64. Runs executed strictly one at a time on an otherwise idle machine; no run shared the CPU with another.")
 
 README = """# Parallel tempering over network topologies
 
@@ -116,7 +116,15 @@ def main():
         json.dump(st["trajectories"],
                   open(f"{d}/{inst}_objective_time_series.json", "w"))
 
-        improves = st.get("improves", True)
+        status = st.get("status", "improves" if st.get("improves", True) else "worse")
+        status_note = {
+            "improves": "",
+            "matches": "This run reaches the published value exactly without improving "
+                       "it; on network05 to network10 that value is the proven optimum. ",
+            "worse": "This run does not reach the published best-known value and is "
+                     "included so the method stays comparable over time rather than "
+                     "only appearing where it wins. ",
+        }[status]
         write_csv(f"{d}/{inst}_summary.csv", {
             "Problem": inst,
             "Submitter": SUBMITTER, "Affiliation": AFFILIATION,
@@ -158,10 +166,7 @@ def main():
                 "average over the independent runs, single core each, queueing "
                 "excluded. Time to solution is the average over runs of the moment "
                 "each run last improved its incumbent. "
-                + ("" if improves else
-                   "This run does not reach the published best-known value and is "
-                   "included so the method stays comparable over time rather than "
-                   "only appearing where it wins. ")
+                + status_note
                 + "Successful runs are those "
                 "reaching this method's own best value. The declared objective is "
                 "recomputed from the flows rather than taken from the solver's z "

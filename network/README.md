@@ -58,7 +58,7 @@ git clone --depth 1 https://github.com/ZIB-AOPT/QOBLIB.git
 export QOBLIB_ROOT=$PWD/QOBLIB
 
 PYTHONPATH=. python scripts/check_reference.py
-PYTHONPATH=. python scripts/sweep.py --instances 11-23 --seeds 5 --seconds 1200 --workers 8
+PYTHONPATH=. python scripts/sweep.py --instances 11-23 --seeds 5 --seconds 1800 --workers 1
 ```
 
 ## Verification

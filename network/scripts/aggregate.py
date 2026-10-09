@@ -82,9 +82,11 @@ def main():
         # time to solution: when each run last improved its incumbent
         tts = [r["trajectory"][-2]["Time"] if len(r["trajectory"]) > 1
                else r["trajectory"][-1]["Time"] for r in rs]
+        status = "improves" if obj < BKV[n] else ("matches" if obj == BKV[n] else "worse")
         stats[n] = {
             "objective": obj,
             "improves": bool(obj < BKV[n]),
+            "status": status,
             "published": BKV[n],
             "nruns": len(rs),
             "nsucc": sum(1 for v in vals if v <= best),
@@ -95,9 +97,10 @@ def main():
         }
 
     json.dump(stats, open(a.stats, "w"))
-    improved = sum(1 for v in stats.values() if v["improves"])
-    print(f"\n{len(stats)} instances emitted, {improved} of them improving; "
-          f"statistics written to {a.stats}")
+    from collections import Counter
+    c = Counter(v["status"] for v in stats.values())
+    print(f"\n{len(stats)} instances emitted: {c['improves']} improve, "
+          f"{c['matches']} match, {c['worse']} worse; statistics written to {a.stats}")
 
 
 if __name__ == "__main__":
