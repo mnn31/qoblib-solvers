@@ -42,11 +42,13 @@ def main():
         for seed in range(a.seeds):
             out = f"{tmp}/{inst}_seed{seed}.sol"
             t0 = time.perf_counter()
-            subprocess.run([sys.executable, os.path.join(HERE, "route.py"),
-                            f"{INST}/{inst}", out, "--seed", str(seed)],
-                           check=True, capture_output=True)
+            # a seed that fails to converge is recorded as an invalid run, not a
+            # reason to abandon the whole sweep
+            r = subprocess.run([sys.executable, os.path.join(HERE, "route.py"),
+                                f"{INST}/{inst}", out, "--seed", str(seed)],
+                               capture_output=True)
             dt = time.perf_counter() - t0
-            ok = valid(inst, out)
+            ok = r.returncode == 0 and os.path.exists(out) and valid(inst, out)
             c = cost_of(out) if ok else None
             runs.append({"seed": seed, "cost": c, "seconds": dt, "valid": ok})
             if ok and (best is None or c < best[0]):

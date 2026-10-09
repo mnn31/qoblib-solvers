@@ -138,6 +138,12 @@ def route(d, seed=0, max_iter=200, polish=3, log=print):
     trees = {}
     nodes_of = {}
     t0 = time.time()
+    # Some seeds stall with one or two nodes that two nets both insist on,
+    # while the pressure factor grows without bound. After a stall of this
+    # kind, one of the nets through a contested node is forced to detour
+    # around it, which breaks the tie the penalties cannot.
+    stall = 0
+    forced = defaultdict(set)
     for it in range(max_iter):
         # occupancy from current trees
         occ = defaultdict(int)
@@ -152,8 +158,12 @@ def route(d, seed=0, max_iter=200, polish=3, log=print):
             for u, c in occ.items():
                 if c > 0:
                     node_cost[u] = pres_fac * c + hist[u]
-            forbidden = all_terms - set(terms[k])
+            forbidden = (all_terms - set(terms[k])) | forced[k]
             e, nn = steiner_tree(adj, terms[k], node_cost, forbidden, rng)
+            if e is None and forced[k]:
+                forced[k].clear()
+                forbidden = all_terms - set(terms[k])
+                e, nn = steiner_tree(adj, terms[k], node_cost, forbidden, rng)
             if e is None:
                 raise RuntimeError(f"net {k} unroutable")
             e, nn = prune(e, terms[k])
@@ -168,7 +178,14 @@ def route(d, seed=0, max_iter=200, polish=3, log=print):
         log(f"iter {it:3d} overused {len(over):5d} cost {cost} pres {pres_fac:.2f} t={time.time()-t0:.1f}s")
         if not over:
             break
-        pres_fac *= 1.5
+        pres_fac = min(pres_fac * 1.5, 1e6)
+        stall = stall + 1 if len(over) <= 3 else 0
+        if stall >= 15:
+            u = rng.choice(over)
+            users = [k for k in nets if u in nodes_of.get(k, ())]
+            if users:
+                forced[rng.choice(users)].add(u)
+            stall = 0
     else:
         return None, None
 
