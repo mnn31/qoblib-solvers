@@ -4,7 +4,7 @@
 set -u
 W=/workspace; Q=$W/QOBLIB/07-independentset; CHK=$Q/check/target/release/check_stableset
 LOG=$W/mis_online.log
-while tmux has-session -t mis 2>/dev/null; do sleep 60; done
+while tmux has-session -t =mis 2>/dev/null; do sleep 60; done  # exact name, "misonline" is a prefix match
 for INST in frb100-40 frb59-26-2; do
   OUT=$W/mis_online/$INST; mkdir -p $OUT
   python3 $W/qoblib-solvers/explore/mis/dimacs2metis.py $Q/instances/$INST.gph $OUT/$INST.graph >> $LOG
