@@ -5,7 +5,8 @@ PathFinder style rip up and reroute method used in VLSI switchbox routing.
 
 **Result: 147 previously open instances now have a verified feasible solution
 on record, and one of the 14 best-known-only instances is improved.** See
-[`results/`](results).
+[`results/`](results). Submitted upstream as
+[ZIB-AOPT/QOBLIB#88](https://github.com/ZIB-AOPT/QOBLIB/pull/88).
 
 ## The idea
 

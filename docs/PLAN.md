@@ -39,16 +39,15 @@ optimal. See `portfolio/results/README.md`.
 
 Still open, ranked by effort:
 
-- **`06-portfolio`, `a200`/`a400` (16 bases times 8 lambda).** No model files
-  shipped, and 18,000 binaries at `a200_t15`. The chain structure still holds
-  but a period has far too many feasible portfolios to enumerate, so this needs
-  a heuristic over the same chain. This is where an annealing approach has room.
+- **`06-portfolio`, `a200`/`a400` (16 bases times 8 lambda)**: done. A restricted
+  state version of the chain DP puts all 128 on record; weak at the highest
+  lambda. See `portfolio/qoblib_portfolio/heuristic.py`.
 - **`05-sports` (102 open)**: read the warning first, those instances were
   selected because existing solvers could not find any feasible solution in
   reasonable time.
-- **`04-steiner` (147 open)**: the largest open surface, but instances run to
-  millions of variables. A sequential rip-up-and-reroute heuristic is the
-  standard attack.
+- **`04-steiner` (147 open)**: done. The millions of variables belong to the MIP
+  formulation, not the graphs; a rip-up-and-reroute router closes all 147 in
+  seconds each and improves one best-known value. See `steiner/`.
 
 Do not touch `02-labs` (records held by a decade of dedicated tabu search) or
 `10-topology` (Graph Golf, its own long-running competition, integer objective).

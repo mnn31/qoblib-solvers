@@ -1,14 +1,15 @@
 # qoblib-solvers
 
-Solvers and results for two problem classes of the
+Solvers and results for three problem classes of the
 [Quantum Optimization Benchmarking Library](https://zib-aopt.github.io/QOBLIB/).
 
-The two are independent. Each lives in its own directory with its own code,
+The three are independent. Each lives in its own directory with its own code,
 its own results and its own write-up.
 
 | directory | problem | result |
 | :--- | :--- | :--- |
 | [`network/`](network) | 08, Network Design | 11 new best-known values on `network13` to `network23`, up to 5.0% |
+| [`steiner/`](steiner) | 04, Steiner Tree Packing | 147 previously open instances routed and verified, one best-known value improved |
 | [`portfolio/`](portfolio) | 06, Portfolio Optimization | 160 instances solved to proven optimality, 96 of them previously open; a heuristic puts the 128 previously open a200 and a400 instances on record |
 
 Nothing here is reported before it has been checked with QOBLIB's own checkers.
