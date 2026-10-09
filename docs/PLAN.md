@@ -24,9 +24,9 @@ matrix. They are not in MIPLIB and have nothing like that history.
 
 Status: an early version claimed 10 to 11 new best-known values, but it seeded
 replicas from the published solutions, which is not allowed; it was withdrawn.
-From random starts the method improves `network13` to `network20` and reaches
-the proven optimum on `network05` to `network10`. An exclusive rerun at 1800 s is
-in progress. See `network/results/README.md`.
+From random starts, run one at a time at 1800 s, the method improves
+`network13` to `network23` and reaches the proven optimum on `network05` to
+`network10`. See `network/results/README.md`.
 
 ## Track C: open instances (done for problem 06)
 

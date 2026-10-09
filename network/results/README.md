@@ -2,25 +2,38 @@
 
 ## New best-known values, problem 08 (Network Design)
 
-On the shared-CPU runs, eight instances improved over the values published in
-`08-network/solutions/0-info.txt`. Every solution is verified by the official
-Rust checker (`08-network/check`, exit code 0) and independently by
-`qoblib_net.solio.verify`.
+Eleven of the fourteen instances that are not proven optimal improved over the
+values published in `08-network/solutions/0-info.txt`. Every solution is
+verified by the official Rust checker (`08-network/check`, exit code 0) and
+independently by `qoblib_net.solio.verify`.
+
+Protocol: five independent runs per instance, seeds 0 to 4, 1800 s each,
+random starts only, executed strictly one at a time on an otherwise idle Apple
+M3 Pro, budget enforced per proposal (longest run 1888 s).
 
 | instance | published best-known | this work | improvement | relative |
 | :--- | ---: | ---: | ---: | ---: |
 | network13 | 304,116 | **300,620** | 3,496 | 1.15% |
 | network14 | 350,173 | **343,091** | 7,082 | 2.02% |
 | network15 | 383,000 | **370,870** | 12,130 | 3.17% |
-| network16 | 409,067 | **400,072** | 8,995 | 2.20% |
+| network16 | 409,067 | **397,908** | 11,159 | 2.73% |
 | network17 | 460,182 | **437,000** | 23,182 | 5.04% |
-| network18 | 481,950 | **476,758** | 5,192 | 1.08% |
-| network19 | 514,625 | **497,473** | 17,152 | 3.33% |
+| network18 | 481,950 | **473,375** | 8,575 | 1.78% |
+| network19 | 514,625 | **492,924** | 21,701 | 4.22% |
 | network20 | 548,536 | **528,528** | 20,008 | 3.65% |
+| network21 | 593,000 | **569,273** | 23,727 | 4.00% |
+| network22 | 647,594 | **618,135** | 29,459 | 4.55% |
+| network23 | 686,453 | **659,369** | 27,084 | 3.95% |
 
-Solution files are in `results/best_random/`.
+The six proven optimal instances, network05 to network10, are reached in all
+five runs each; network11 is matched; network12 (+0.4%) and network24 (+5.8%)
+are worse and are included in the submission anyway.
+
+Solution files are in `results/best_excl/`. Submitted upstream as
+https://github.com/ZIB-AOPT/QOBLIB/pull/45.
 
 ## An earlier version of this was wrong
+
 
 The first run of this experiment seeded half the replicas from the published
 reference topology. That means every run started sitting on the incumbent record
@@ -56,31 +69,6 @@ a few tenths of a percent of the warm-started ones, sometimes better. From 21
 nodes up the search cannot get near the published values at all: warm-started
 they looked like 4% improvements, cold they are 5 to 6% worse. All of that
 apparent gain was the seed.
-
-## Method
-
-Parallel tempering over 2-in/2-out digraphs. Eight replicas on a geometric
-temperature ladder from 6% to 0.2% of the incumbent energy, degree-preserving 2-
-and 3-exchanges as the move, replica exchange every 40 proposals. Every replica
-starts from an independently sampled random topology. A replica's energy is the
-exact min-congestion multicommodity flow LP for its topology.
-
-Five independent runs per instance, seeds 0 to 4, 40 minutes each, on an Apple
-M3 Pro. These ran eight at a time, so each run shared the CPU with seven others.
-Measured on network17, that costs about a third of the throughput: 104 LP
-evaluations per second shared against 158 when running alone.
-
-These numbers are being replaced. At the maintainer's request the whole set,
-network05 to network24, is being rerun at 1800 s per run with strictly one run
-on the machine at a time, so that every runtime is comparable. This page will be
-updated when that finishes. The integral routing is recovered once at the end by
-re-solving the same model with integrality on the flow variables.
-
-The declared objective is recomputed from the flows rather than taken from the
-solver's `z`, which the model only bounds from below; an untight `z` otherwise
-disagrees with the checker's own recomputed maximum arc load.
-
-## Not improved
 
 `network11` matched its published value in all five runs without beating it.
 `network12`, `network21`, `network22` and `network23` came out worse than

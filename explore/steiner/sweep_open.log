@@ -1,0 +1,10 @@
+stp_s060_l2_t4_h0_rs24098: best 1008  valid 10/10  7.5s
+stp_s060_l2_t4_h1_rs123: best 1065  valid 10/10  9.3s
+Traceback (most recent call last):
+  File "/Users/manan/WORK/QOBLIB/qoblib-net/explore/steiner/sweep_steiner.py", line 66, in <module>
+    main()
+  File "/Users/manan/WORK/QOBLIB/qoblib-net/explore/steiner/sweep_steiner.py", line 45, in main
+    subprocess.run([sys.executable, os.path.join(HERE, "route.py"),
+  File "/opt/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/opt/anaconda3/bin/python3', '/Users/manan/WORK/QOBLIB/qoblib-net/explore/steiner/route.py', '/Users/manan/WORK/QOBLIB/repo/04-steiner/instances/stp_s060_l2_t4_h1_rs24098', 'results/open/tmp/stp_s060_l2_t4_h1_rs24098_seed8.sol', '--seed', '8']' returned non-zero exit status 1.

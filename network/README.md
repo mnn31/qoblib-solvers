@@ -9,7 +9,7 @@ load on any arc. Instances `network05` to `network24`. Six are solved to proven
 optimality; the other fourteen have stood as best-known upper bounds, and the
 24-node case has resisted proof of optimality since 1995.
 
-**Result: 8 new best-known values on `network13` to `network20`**, up to 5.0%.
+**Result: 11 new best-known values on `network13` to `network23`**, up to 5.0%.
 Submitted upstream as [ZIB-AOPT/QOBLIB#45](https://github.com/ZIB-AOPT/QOBLIB/pull/45).
 See [`results/`](results/README.md).
 
