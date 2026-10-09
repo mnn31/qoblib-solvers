@@ -1,0 +1,18 @@
+{
+ "instance": "stp_s040_l2_t3_h0_rs97531",
+ "best_cost": 548,
+ "runs": [
+  {
+   "seed": 0,
+   "cost": 548,
+   "seconds": 0.35726654197787866,
+   "valid": true
+  },
+  {
+   "seed": 1,
+   "cost": 552,
+   "seconds": 0.24274349998449907,
+   "valid": true
+  }
+ ]
+}

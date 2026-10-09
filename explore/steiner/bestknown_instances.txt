@@ -1,0 +1,14 @@
+stp_s060_l3_t4_h1_rs123
+stp_s070_l4_t6_h0_rs97531
+stp_s020_l2_t4_h0_rs24098
+stp_s020_l2_t3_h3_rs97531
+stp_s020_l4_t4_h0_rs24098
+stp_s020_l3_t4_h0_rs24098
+stp_s030_l3_t4_h0_rs24098
+stp_s020_l5_t3_h3_rs24098
+stp_s020_l4_t3_h3_rs37235
+stp_s020_l5_t4_h0_rs24098
+stp_s050_l2_t3_h1_rs97531
+stp_s050_l3_t6_h2_rs97531
+stp_s030_l4_t4_h0_rs97531
+stp_s050_l2_t4_h1_rs97531
