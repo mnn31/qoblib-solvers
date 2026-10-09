@@ -1,0 +1,66 @@
+{
+ "instance": "stp_s080_l3_t5_h0_rs24098",
+ "best_cost": 1657,
+ "runs": [
+  {
+   "seed": 0,
+   "cost": 1659,
+   "seconds": 5.101244624995161,
+   "valid": true
+  },
+  {
+   "seed": 1,
+   "cost": 1676,
+   "seconds": 6.563988625013735,
+   "valid": true
+  },
+  {
+   "seed": 2,
+   "cost": 1670,
+   "seconds": 4.7326807920471765,
+   "valid": true
+  },
+  {
+   "seed": 3,
+   "cost": 1660,
+   "seconds": 5.454706749995239,
+   "valid": true
+  },
+  {
+   "seed": 4,
+   "cost": 1672,
+   "seconds": 5.791639500006568,
+   "valid": true
+  },
+  {
+   "seed": 5,
+   "cost": 1682,
+   "seconds": 4.785722874978092,
+   "valid": true
+  },
+  {
+   "seed": 6,
+   "cost": 1664,
+   "seconds": 3.5755382089992054,
+   "valid": true
+  },
+  {
+   "seed": 7,
+   "cost": 1675,
+   "seconds": 5.875941708975006,
+   "valid": true
+  },
+  {
+   "seed": 8,
+   "cost": 1657,
+   "seconds": 3.718691292044241,
+   "valid": true
+  },
+  {
+   "seed": 9,
+   "cost": 1678,
+   "seconds": 5.2105441659805365,
+   "valid": true
+  }
+ ]
+}

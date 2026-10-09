@@ -1,0 +1,186 @@
+{
+ "instance": "stp_s020_l4_t3_h3_rs37235",
+ "best_cost": 393,
+ "runs": [
+  {
+   "seed": 0,
+   "cost": 400,
+   "seconds": 0.20578608399955556,
+   "valid": true
+  },
+  {
+   "seed": 1,
+   "cost": 402,
+   "seconds": 0.221927999984473,
+   "valid": true
+  },
+  {
+   "seed": 2,
+   "cost": 404,
+   "seconds": 0.263665167032741,
+   "valid": true
+  },
+  {
+   "seed": 3,
+   "cost": 404,
+   "seconds": 0.22034645802341402,
+   "valid": true
+  },
+  {
+   "seed": 4,
+   "cost": 402,
+   "seconds": 0.23173979204148054,
+   "valid": true
+  },
+  {
+   "seed": 5,
+   "cost": 396,
+   "seconds": 0.24928670900408179,
+   "valid": true
+  },
+  {
+   "seed": 6,
+   "cost": 396,
+   "seconds": 0.23167941602878273,
+   "valid": true
+  },
+  {
+   "seed": 7,
+   "cost": 398,
+   "seconds": 0.25517770799342543,
+   "valid": true
+  },
+  {
+   "seed": 8,
+   "cost": 401,
+   "seconds": 0.2155499589862302,
+   "valid": true
+  },
+  {
+   "seed": 9,
+   "cost": 403,
+   "seconds": 0.2040973330149427,
+   "valid": true
+  },
+  {
+   "seed": 10,
+   "cost": 397,
+   "seconds": 0.20574583299458027,
+   "valid": true
+  },
+  {
+   "seed": 11,
+   "cost": 404,
+   "seconds": 0.2590553339687176,
+   "valid": true
+  },
+  {
+   "seed": 12,
+   "cost": 403,
+   "seconds": 0.28135754202958196,
+   "valid": true
+  },
+  {
+   "seed": 13,
+   "cost": 404,
+   "seconds": 0.21642833400983363,
+   "valid": true
+  },
+  {
+   "seed": 14,
+   "cost": 393,
+   "seconds": 0.22685458295745775,
+   "valid": true
+  },
+  {
+   "seed": 15,
+   "cost": 401,
+   "seconds": 0.2541932089952752,
+   "valid": true
+  },
+  {
+   "seed": 16,
+   "cost": 400,
+   "seconds": 0.21103883301839232,
+   "valid": true
+  },
+  {
+   "seed": 17,
+   "cost": 406,
+   "seconds": 0.25132079096511006,
+   "valid": true
+  },
+  {
+   "seed": 18,
+   "cost": 404,
+   "seconds": 0.2071178340120241,
+   "valid": true
+  },
+  {
+   "seed": 19,
+   "cost": 408,
+   "seconds": 0.24178795894840732,
+   "valid": true
+  },
+  {
+   "seed": 20,
+   "cost": 405,
+   "seconds": 0.31368058401858434,
+   "valid": true
+  },
+  {
+   "seed": 21,
+   "cost": 399,
+   "seconds": 0.20391116698738188,
+   "valid": true
+  },
+  {
+   "seed": 22,
+   "cost": 401,
+   "seconds": 0.2102557079633698,
+   "valid": true
+  },
+  {
+   "seed": 23,
+   "cost": 399,
+   "seconds": 0.22539179195882753,
+   "valid": true
+  },
+  {
+   "seed": 24,
+   "cost": 398,
+   "seconds": 0.19652783399214968,
+   "valid": true
+  },
+  {
+   "seed": 25,
+   "cost": 396,
+   "seconds": 0.2116936250240542,
+   "valid": true
+  },
+  {
+   "seed": 26,
+   "cost": 400,
+   "seconds": 0.3339817500091158,
+   "valid": true
+  },
+  {
+   "seed": 27,
+   "cost": 402,
+   "seconds": 0.22769316600169986,
+   "valid": true
+  },
+  {
+   "seed": 28,
+   "cost": 404,
+   "seconds": 0.21191558399004862,
+   "valid": true
+  },
+  {
+   "seed": 29,
+   "cost": 401,
+   "seconds": 0.2693511670222506,
+   "valid": true
+  }
+ ]
+}
