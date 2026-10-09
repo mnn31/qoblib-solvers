@@ -8,6 +8,14 @@ open, with no feasible solution on record. See [`results/`](results/README.md).
 
 Submitted upstream as [ZIB-AOPT/QOBLIB#44](https://github.com/ZIB-AOPT/QOBLIB/pull/44).
 
+**Large families:** `qoblib_portfolio/heuristic.py` is a restricted state version
+of the same chain dynamic program for a050 and above, where the per period
+portfolios cannot be enumerated. It reproduces the proven optimum on all 160
+small instances, is within a few hundredths of a percent of the published a050
+values at low lambda and clearly worse at the highest lambda, and puts all 128
+previously open a200 and a400 instances on record. Submitted as
+[ZIB-AOPT/QOBLIB#87](https://github.com/ZIB-AOPT/QOBLIB/pull/87).
+
 ## The idea
 
 The reference model couples periods in exactly one place, the rebalancing term
