@@ -77,9 +77,9 @@ def main():
     ap.add_argument("--kicks", type=int, default=3)
     ap.add_argument("--chain-kicks", type=int, default=4)
     ap.add_argument("--loo", type=int, default=8)
-    ap.add_argument("--lns-iters", type=int, default=30)
-    ap.add_argument("--lns-k", type=int, default=7)
-    ap.add_argument("--cd-lns-iters", type=int, default=10)
+    ap.add_argument("--lns-iters", type=int, default=24)
+    ap.add_argument("--lns-k", type=int, default=6)
+    ap.add_argument("--cd-lns-iters", type=int, default=4)
     ap.add_argument("--seed-width", type=int, default=6)
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--time-limit", type=float, default=None,

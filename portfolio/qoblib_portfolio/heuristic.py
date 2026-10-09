@@ -8,27 +8,42 @@ pool of good candidate portfolios per period:
 
 1. Per-period local search.  Each period on its own is a small integer convex
    quadratic program (the risk matrix is a scaled covariance, so it is PSD).
-   We run a best-improvement local search with add, remove and swap moves,
-   evaluating every move exactly in integers from the incremental gradient
-   ``q = R u``.  Neighbouring periods enter as "anchors": the rebalancing cost
-   ``delta_t . |u - v|`` is separable, so its change under a unit move is a
-   sign times ``delta_t[g]`` and stays exact.
-2. Candidate pools.  For every period we collect the independent local
-   optimum, kicked restarts, and local optima pulled towards candidates of the
-   neighbouring periods (forward and backward sweeps), so that the chain DP has
+   A best-improvement local search with add, remove, swap, pair-add and
+   pair-remove moves evaluates every move exactly in integers from the
+   incremental gradient ``q = R u``.  Pair moves matter because a hedged
+   long/short pair can be profitable while each leg alone is not, and the net
+   position cap can force a long to come with a short.  Neighbouring periods
+   enter as "anchors": the rebalancing cost ``delta_t . |u - v|`` is separable,
+   so its change under a unit move is a sign times ``delta_t[g]``.
+2. Per-period multistart.  Starts from the empty portfolio, a return-only
+   greedy fill continued through scaled-down risk, kicked restarts,
+   leave-one-out restarts (drop and forbid one held group, giving the
+   second-best structures the chain needs when the best one is expensive to
+   rebalance into), and roundings of the Frank-Wolfe solution of the
+   continuous relaxation (the only way to find diversified long/short baskets
+   whose sub-baskets are all unprofitable at high lambda).
+3. Exact large-neighbourhood polishing.  Free k groups (a risk-coupling
+   cluster around a held group, held groups plus the best groups to add, or
+   random), enumerate all (ub+1)^k assignments and evaluate them exactly in one
+   vectorized shot.  This dissolves hedge clusters that unit moves cannot
+   leave (removing one leg looks worse, removing the whole hedge is better).
+4. Candidate pools.  Every local optimum met goes into the period's pool,
+   plus local optima pulled towards candidates of the neighbouring periods
+   (forward and backward sweeps, several anchor weights), so the chain DP has
    cheap rebalancing options available.
-3. Restricted chain DP.  The exact chain recursion of ``solve_exact`` is run
+5. Restricted chain DP.  The exact chain recursion of ``solve_exact`` is run
    over the pools (K states per period instead of all feasible states), using
    ``Coefficients.period_cost`` for the state costs and the same integer
    rebalancing cost, so every value is exact for the reference model.
-4. Coordinate descent.  The DP schedule is refined period by period with the
-   neighbours fixed; the refined states are added to the pools and steps 3 and
-   4 repeat for a few rounds, with random kicks for diversification.
+6. Coordinate descent.  The DP schedule is refined period by period with the
+   neighbours fixed; the refined states are added to the pools and steps 5 and
+   6 repeat for a few rounds, with random kicks of the incumbent schedule.
 
 Everything is integer arithmetic on the coefficients built by
 ``model.Coefficients``, so the value reported here is exactly what the official
-checker computes.  The final schedule is always re-evaluated with
-``solver.objective`` before it is returned.
+checker computes.  The relaxation is float but only seeds integer starts.  The
+final schedule is always re-evaluated with ``solver.objective`` before it is
+returned.  No optimality proof: this is a heuristic.
 """
 
 from __future__ import annotations
@@ -281,11 +296,14 @@ class PeriodModel:
     _grids: dict = {}
 
     @classmethod
-    def _grid(cls, k: int, ub: int) -> np.ndarray:
+    def _grid(cls, k: int, ub: int):
+        """All assignments in {0..ub}^k, their totals, and pairwise products
+        (so the quadratic term is one matmul), cached per (k, ub)."""
         key = (k, ub)
         if key not in cls._grids:
-            g = np.indices((ub + 1,) * k).reshape(k, -1).T
-            cls._grids[key] = np.ascontiguousarray(g, dtype=np.int64)
+            V = np.ascontiguousarray(np.indices((ub + 1,) * k).reshape(k, -1).T, dtype=np.int64)
+            pair = (V[:, :, None] * V[:, None, :]).reshape(len(V), k * k)
+            cls._grids[key] = (V, V.sum(axis=1), np.ascontiguousarray(pair))
         return cls._grids[key]
 
     def solve_subset(self, u: np.ndarray, idx: np.ndarray, anchors=()):
@@ -295,12 +313,12 @@ class PeriodModel:
         one vectorized exact integer computation, and returns (new_u, cost)."""
         idx = np.asarray(idx, dtype=np.int64)
         k = len(idx)
-        V = self._grid(k, self.ub)
+        V, Vsum, Vpair = self._grid(k, self.ub)
         uF = u.astype(np.int64).copy()
         uF[idx] = 0
         total_F = int(uF.sum())
         net_F = int(uF @ self.tau)
-        totals = total_F + V.sum(axis=1)
+        totals = total_F + Vsum
         slack = self.capital - (net_F + V @ self.tau[idx])
         ok = (totals <= self.B) & (totals >= self.lo_total) & (slack >= 0) & (slack <= self.smax)
         lin = self.lin[idx].copy()
@@ -308,7 +326,7 @@ class PeriodModel:
         if self.quad:
             RII = self.R[np.ix_(idx, idx)]
             lin = lin + 2 * (self.R[idx] @ uF)
-            cost += np.einsum("sa,ab,sb->s", V, RII, V)
+            cost += Vpair @ RII.ravel()
         cost += V @ lin
         for w, v in anchors:
             cost += np.abs(V - v[idx][None, :]) @ w[idx]
@@ -384,6 +402,88 @@ class PeriodModel:
                 u = self.local_search(u, anchors)
                 cur = self.cost(u, anchors)
         return u
+
+    # ------------------------------------------------------------------
+    # continuous relaxation (Frank-Wolfe), used only to seed integer starts
+    def _lmo(self, g: np.ndarray) -> np.ndarray:
+        """Exact minimizer of g . x over the relaxed feasible set
+        {0 <= x <= ub, lo_total <= sum x <= B, capital - smax <= tau . x <= capital}.
+        For a fixed number of long and short units the best choice is the
+        cheapest units, so a prefix-sum table over (n_long, n_short) is exact."""
+        ub, B = self.ub, self.B
+        lo, hi = self.capital - self.smax, self.capital
+        longs = np.flatnonzero(self.tau > 0)
+        shorts = np.flatnonzero(self.tau < 0)
+        ol = longs[np.argsort(g[longs], kind="stable")]
+        os_ = shorts[np.argsort(g[shorts], kind="stable")]
+        pl = np.concatenate([[0.0], np.cumsum(np.repeat(g[ol], ub))])[: B + 1]
+        ps = np.concatenate([[0.0], np.cumsum(np.repeat(g[os_], ub))])[: B + 1]
+        nl = np.arange(len(pl))[:, None]
+        ns = np.arange(len(ps))[None, :]
+        val = pl[:, None] + ps[None, :]
+        ok = (nl + ns <= B) & (nl + ns >= self.lo_total) & (nl - ns >= lo) & (nl - ns <= hi)
+        val = np.where(ok, val, np.inf)
+        i, j = np.unravel_index(int(val.argmin()), val.shape)
+        x = np.zeros(self.G)
+        for n, order in ((int(i), ol), (int(j), os_)):
+            full, part = divmod(n, ub)
+            x[order[:full]] = ub
+            if part:
+                x[order[full]] = part
+        return x
+
+    def relax(self, iters: int = 300) -> np.ndarray:
+        """Frank-Wolfe on the continuous relaxation of the period problem (the
+        cash term is treated as linear in the net position).  Returns x."""
+        if not hasattr(self, "_Rf"):
+            self._Rf = self.R.astype(float) if self.quad else None
+        Rf = self._Rf
+        slope = float(self.cashval[1] - self.cashval[0]) if self.smax >= 1 else 0.0
+        c = self.lin.astype(float) + slope * self.tau
+        x = self._lmo(c)
+        for _ in range(iters):
+            g = c if Rf is None else 2.0 * (Rf @ x) + c
+            d = self._lmo(g) - x
+            gd = float(g @ d)
+            if gd >= -1e-9:
+                break
+            if Rf is None:
+                x = x + d
+                break
+            dRd = float(d @ (Rf @ d))
+            gamma = 1.0 if dRd <= 0 else min(1.0, -gd / (2.0 * dRd))
+            x = x + gamma * d
+        return x
+
+    def relaxed_starts(self, x: np.ndarray) -> list[np.ndarray]:
+        """Feasible integer portfolios derived from a relaxed solution x: direct
+        threshold roundings, and rank-based roundings (one unit to the groups
+        with the largest weight) at several totals.  A diversified long/short
+        basket spread thinly over many groups is only recoverable this way."""
+        out = []
+        mass = float(x.sum())
+        if mass < 1e-9:
+            return out
+        for theta in (0.3, 0.5, 0.7):
+            u = np.clip(np.floor(x + theta), 0, self.ub).astype(np.int64)
+            out.append(self._trim(u, x))
+        order = np.argsort(-x, kind="stable")
+        for n in sorted({int(round(mass)), min(self.B, 2 * int(round(mass))), self.B}):
+            if n <= 0:
+                continue
+            u = np.zeros(self.G, dtype=np.int64)
+            u[order[:n]] = 1
+            u[x <= 1e-9] = 0
+            out.append(self._trim(u, x))
+        return out
+
+    def _trim(self, u: np.ndarray, x: np.ndarray) -> np.ndarray:
+        u = u.copy()
+        while int(u.sum()) > self.B:
+            cand = np.flatnonzero(u > 0)
+            g = cand[int(np.argmin(x[cand] - (u[cand] - 1)))]
+            u[g] -= 1
+        return self.repair(u)
 
     # ------------------------------------------------------------------
     def kick(self, u0: np.ndarray, k: int, rng: np.random.Generator) -> np.ndarray:
@@ -530,8 +630,8 @@ def coordinate_descent(coef: Coefficients, periods: list[PeriodModel], U: np.nda
 
 
 def period_multistart(pm: PeriodModel, pools: Pools, t: int, kicks: int, kick_size: int,
-                      rng: np.random.Generator, loo: int = 8, lns_iters: int = 30,
-                      lns_k: int = 7) -> np.ndarray:
+                      rng: np.random.Generator, loo: int = 8, lns_iters: int = 24,
+                      lns_k: int = 6) -> np.ndarray:
     """Independent optimum of one period: several starts, kicks, leave-one-out.
 
     Starts: the empty portfolio, and the return-only greedy fill (risk ignored),
@@ -581,6 +681,20 @@ def period_multistart(pm: PeriodModel, pools: Pools, t: int, kicks: int, kick_si
         c = int(pools.coef.period_cost(t, v[None, :])[0])
         if c < best_cost:
             best, best_cost = v, c
+    # relaxation-seeded starts: the only way to find diversified long/short
+    # baskets whose sub-baskets are all unprofitable (high lambda)
+    if pm.quad:
+        for u0 in pm.relaxed_starts(pm.relax()):
+            # the raw basket goes in too: it may lose a little in this period
+            # yet be the cheapest thing to hold between two profitable periods
+            pools.add(t, u0)
+            v = pm.local_search(u0)
+            if lns_iters > 0:
+                v = pm.lns(v, rng=rng, iters=lns_iters, k=lns_k)
+            pools.add(t, v)
+            c = int(pools.coef.period_cost(t, v[None, :])[0])
+            if c < best_cost:
+                best, best_cost = v, c
     if lns_iters > 0:
         v = pm.lns(best, rng=rng, iters=lns_iters, k=lns_k)
         pools.add(t, v)
@@ -592,7 +706,7 @@ def period_multistart(pm: PeriodModel, pools: Pools, t: int, kicks: int, kick_si
 
 def solve_heuristic(coef: Coefficients, rounds: int = 4, kicks: int = 3, kick_size: int | None = None,
                     loo: int = 8, seed_width: int = 6, chain_kicks: int = 4, anchor_weights=(1, 2),
-                    lns_iters: int = 30, lns_k: int = 7, cd_lns_iters: int = 10,
+                    lns_iters: int = 24, lns_k: int = 6, cd_lns_iters: int = 4,
                     seed: int = 0, time_limit: float | None = None, verbose: bool = False):
     """Restricted-state chain heuristic.  Returns (value, (T, G) schedule, info).
 
@@ -611,7 +725,7 @@ def solve_heuristic(coef: Coefficients, rounds: int = 4, kicks: int = 3, kick_si
     """
     t0 = time.time()
     rng = np.random.default_rng(seed)
-    T, t_end, G = coef.T, coef.t_end, coef.G
+    T, t_end = coef.T, coef.t_end
     periods = [PeriodModel(coef, t) for t in range(T)]
     pools = Pools(coef)
     if kick_size is None:
