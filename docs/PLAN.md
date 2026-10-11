@@ -42,9 +42,9 @@ Still open, ranked by effort:
 - **`06-portfolio`, `a200`/`a400` (16 bases times 8 lambda)**: done. A restricted
   state version of the chain DP puts all 128 on record; weak at the highest
   lambda. See `portfolio/qoblib_portfolio/heuristic.py`.
-- **`05-sports` (102 open)**: read the warning first, those instances were
-  selected because existing solvers could not find any feasible solution in
-  reasonable time.
+- **`05-sports` (102 open)**: in progress. The hard constraints go straight into
+  a CP-SAT model with no objective; every timetable is checked independently and
+  with the official RobinX validator. See `sports/`.
 - **`04-steiner` (147 open)**: done. The millions of variables belong to the MIP
   formulation, not the graphs; a rip-up-and-reroute router closes all 147 in
   seconds each and improves one best-known value. See `steiner/`.

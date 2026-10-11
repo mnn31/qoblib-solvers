@@ -24,10 +24,11 @@ COLUMNS = ["Problem","Submitter","Affiliation","Date","Reference","Best Objectiv
 
 SUBMITTER = "Manan Gupta"; AFFILIATION = "The Harker School"
 REFERENCE = "https://github.com/mnn31/qoblib-solvers/tree/main/sports"
-HARDWARE = ("RunPod cloud CPU pod: AMD EPYC 9655 (96 core host), container limited to 16 vCPUs "
-            "(8 physical cores with SMT), Ubuntu 24.04, x86_64, OR-Tools 9.15. One instance at a "
-            "time with 16 CP-SAT workers; nothing else ran in the container. The host is shared "
-            "with other tenants, so wall clock times carry some noise.")
+HARDWARE = ("RunPod cloud CPU pod on an AMD EPYC 9655 host (96 cores, 192 threads). The container is "
+            "pinned by cpuset to 16 hardware threads, which are the two SMT siblings of 8 physical cores, "
+            "with a 64 GB memory limit; Ubuntu 24.04, x86_64, Python 3.12, OR-Tools 9.15. One instance "
+            "at a time with 16 CP-SAT workers and nothing else running in the container. The host is "
+            "shared with other tenants, so wall clock times carry some noise.")
 WORKFLOW = ("Constraint programming. The hard constraints of the instance (round robin structure, "
             "phases, CA1 to CA4, GA1, BR1, BR2) are posted directly on binary game variables "
             "x[home,away,slot] plus home and break indicators, with no objective. OR-Tools CP-SAT "
