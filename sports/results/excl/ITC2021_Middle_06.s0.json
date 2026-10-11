@@ -1,0 +1,22 @@
+{
+ "status": "OPTIMAL",
+ "build_seconds": 0.09595537185668945,
+ "solve_seconds": 6.089369297027588,
+ "wall_seconds": 6.190608501434326,
+ "num_booleans": 10239,
+ "num_conflicts": 50399,
+ "num_branches": 1470566,
+ "instance": "ITC2021_Middle_06",
+ "teams": 18,
+ "slots": 34,
+ "phased": true,
+ "hard_constraints": 162,
+ "seconds_limit": 600.0,
+ "workers": 16,
+ "seed": 0,
+ "redundant": false,
+ "params": null,
+ "machine": "c073f2759a66",
+ "cpu": "x86_64",
+ "checked_feasible": true
+}

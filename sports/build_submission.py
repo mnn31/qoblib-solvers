@@ -37,23 +37,25 @@ WORKFLOW = ("Constraint programming. The hard constraints of the instance (round
             "timetable is verified by an independent checker before being reported.")
 README = """# CP-SAT feasibility runs for the sports timetabling instances
 
-The feasibility version of problem 05 asks for a timetable that satisfies all
-hard constraints. The hard constraints are posted directly as a constraint
-programming model on binary game variables x[home, away, slot], with home and
-break indicator variables, and OR-Tools CP-SAT searches for a feasible point
-with no objective.
+The benchmark version of problem 05 only asks for a timetable that satisfies
+every hard constraint. I post those constraints directly as a constraint
+programming model over binary game variables x[home, away, slot], with home
+and break indicator variables, and let OR-Tools CP-SAT look for a feasible
+point. There is no objective and soft constraints are ignored, as the
+benchmark description specifies.
 
-The variable counts in each summary describe this model: n(n-1)S game variables,
-nS home indicators and, when break constraints are present, 2n(S-1) break
-indicators, all binary. The model has no objective and no reference MIP is
-built, so the coefficient fields are N/A.
+The variable counts in each summary describe that model: n(n-1)S game
+variables, nS home indicators and, when the instance has break constraints,
+2n(S-1) break indicators, all binary. Since there is no objective and no
+reference MIP is built, the coefficient fields are N/A.
 
-Every timetable was verified by an independent checker that reproduces the hard
+Each timetable was verified twice. My own checker reproduces the hard
 constraint semantics of the ITC2021 problem description and accepts all 249
-reference solutions in 05-sports/solutions, and by the ITC2021 RobinX validator
-where noted. The solution files use the Gurobi style x#home#away#slot format that
-05-sports/misc/sol2itc.py converts to RobinX XML; a RobinX XML copy of each
-timetable is included alongside.
+reference solutions in 05-sports/solutions. The official RobinX validator from
+the ITC2021 organisers reports infeasibility 0 for every file. The .sol files
+use the Gurobi style x#home#away#slot lines that 05-sports/misc/sol2itc.py
+converts to RobinX XML, and a RobinX XML copy of each timetable is included
+next to it with the soft penalty the validator computed.
 
 Code: https://github.com/mnn31/qoblib-solvers/tree/main/sports
 """
@@ -93,8 +95,13 @@ def main():
         d = f"{root}/{inst}"; os.makedirs(d, exist_ok=True)
         write_solution_sol(f"{d}/{inst}_solution.sol", games, 0,
                            f"instance {inst}\nfeasible timetable, all hard constraints satisfied\nOR-Tools CP-SAT, seed {rec['seed']}, {rec['workers']} workers")
-        write_solution_xml(f"{d}/{inst}_robinx.xml", I, games, SUBMITTER, "CP-SAT",
-                           "Feasibility version: hard constraints only")
+        rx_path = sol[:-4] + ".robinx.json"
+        rx = json.load(open(rx_path)) if os.path.exists(rx_path) else {}
+        if rx.get("infeasibility") != 0:
+            print("REFUSING", inst, "no clean RobinX validation"); continue
+        y, mo, dd = (int(v) for v in a.date.split("-"))
+        write_solution_xml(f"{d}/{inst}_robinx.xml", I, games, SUBMITTER, date=(dd, mo, y),
+                           objective=rx["soft_objective"])
         t = round(rec["wall_seconds"], 2)
         row = {c: "N/A" for c in COLUMNS}
         row.update({"Problem": inst, "Submitter": SUBMITTER, "Affiliation": AFFILIATION,
@@ -103,16 +110,16 @@ def main():
             "Modeling Approach": "Constraint programming model of the hard constraints on binary game, home and break indicator variables; no objective.",
             "# Decision Variables": nvar, "# Binary Variables": nvar,
             "# Integer Variables": 0, "# Continuous Variables": 0,
-            "Workflow": WORKFLOW, "Algorithm Type": "Exact", "Paradigm": "Classical",
+            "Workflow": WORKFLOW, "Algorithm Type": "Deterministic", "Paradigm": "Classical",
             "# Runs": 1, "# Feasible Runs": 1, "# Successful Runs": 1,
             "Success Threshold": 0, "Hardware Specifications": HARDWARE,
             "Total Runtime": t, "Time to Solution": t, "CPU Runtime": t,
             "Remarks": (f"No feasible solution was on record for this instance before this submission. "
                         f"Pure feasibility problem: the objective is 0 for any timetable that satisfies all hard "
                         f"constraints, so 0 is also the bound. {n} teams, {S} slots, {'phased' if I.phased else 'not phased'}, "
-                        f"{len(I.hard())} hard constraints. Single run, CP-SAT seed {rec['seed']}, time limit "
+                        f"{len(I.hard())} hard constraints. Single run with fixed CP-SAT seed {rec['seed']}; the 16 worker portfolio search is not bitwise reproducible, so repeated runs can differ in time. Time limit "
                         f"{int(rec['seconds_limit'])} s; runtime is wall clock including model build. "
-                        f"Verified with an independent checker; a RobinX XML copy of the timetable is included.")})
+                        f"Verified with an independent checker and with the official RobinX validator (infeasibility 0, soft penalty {rx['soft_objective']}, not part of the benchmark objective); a RobinX XML copy is included.")})
         with open(f"{d}/{inst}_summary.csv", "w", newline="") as fh:
             w = csv.DictWriter(fh, fieldnames=COLUMNS); w.writeheader(); w.writerow(row)
         made += 1

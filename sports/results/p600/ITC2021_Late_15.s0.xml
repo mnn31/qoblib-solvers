@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Solution>
     <MetaData>
-        <SolutionName>ITC2021_Late_15</SolutionName>
         <InstanceName>ITC2021_Late_15.xml</InstanceName>
+        <SolutionName>ITC2021_Late_15_CPSAT.xml</SolutionName>
         <Contributor>Manan Gupta</Contributor>
-        <SolutionMethod>CP-SAT</SolutionMethod>
-        <ObjectiveValue infeasibility="0" objective="0"/>
-        <Remarks>NULL</Remarks>
+        <Date day="11" month="10" year="2026"/>
+        <ObjectiveValue infeasibility="0" objective="9335"/>
     </MetaData>
     <Games>
         <ScheduledMatch home="1" away="4" slot="0"/>

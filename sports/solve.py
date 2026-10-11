@@ -23,7 +23,7 @@ from robinx import read_instance, write_solution_sol, write_solution_xml  # noqa
 from check import check  # noqa: E402
 
 
-def build(inst):
+def build(inst, redundant=False):
     n, S = inst.n, inst.S
     m = cp_model.CpModel()
     x = {}
@@ -48,6 +48,19 @@ def build(inst):
         for h in range(n):
             for a in range(h + 1, n):
                 m.AddExactlyOne([x[h, a, s] for s in range(half)] + [x[a, h, s] for s in range(half)])
+    if redundant:
+        # implied by the structure, added for propagation
+        for s in range(S):
+            m.Add(sum(x[h, a, s] for h in range(n) for a in range(n) if h != a) == n // 2)
+            m.Add(sum(home[t][s] for t in range(n)) == n // 2)
+        for t in range(n):
+            m.Add(sum(home[t]) == n - 1)
+            if inst.phased:
+                for h0 in (0, S // 2):
+                    for a in range(n):
+                        if a != t:
+                            m.AddExactlyOne([x[t, a, s] for s in range(h0, h0 + S // 2)] +
+                                            [x[a, t, s] for s in range(h0, h0 + S // 2)])
     # breaks: bh[t][s] = home[s-1] and home[s]; ba[t][s] = away[s-1] and away[s]
     need_breaks = any(c.tag in ("BR1", "BR2") for c in inst.hard())
     bh = ba = None
@@ -177,15 +190,20 @@ def build(inst):
     return m, x
 
 
-def solve(inst, seconds, workers, seed, log=False):
+def solve(inst, seconds, workers, seed, log=False, redundant=False, params=None):
     t0 = time.time()
-    m, x = build(inst)
+    m, x = build(inst, redundant)
     build_s = time.time() - t0
     solver = cp_model.CpSolver()
     solver.parameters.max_time_in_seconds = seconds
     solver.parameters.num_workers = workers
     solver.parameters.random_seed = seed
     solver.parameters.log_search_progress = log
+    if params:
+        for kv in params.split():
+            k, v = kv.split(":")
+            cur = getattr(solver.parameters, k)
+            setattr(solver.parameters, k, type(cur)(v) if not isinstance(cur, bool) else v.lower() in ("1", "true"))
     t1 = time.time()
     status = solver.Solve(m)
     solve_s = time.time() - t1
@@ -208,14 +226,16 @@ def main():
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--out", default=None)
     ap.add_argument("--log", action="store_true")
+    ap.add_argument("--redundant", action="store_true")
+    ap.add_argument("--params", default=None, help="extra CP-SAT parameters in text proto form")
     a = ap.parse_args()
     inst = read_instance(a.instance)
     print(f"{inst.name}: {inst.n} teams, {inst.S} slots, phased={inst.phased}, "
           f"{len(inst.hard())} hard / {len(inst.constraints)} constraints", flush=True)
-    info, games = solve(inst, a.seconds, a.workers, a.seed, a.log)
+    info, games = solve(inst, a.seconds, a.workers, a.seed, a.log, a.redundant, a.params)
     info.update({"instance": inst.name, "teams": inst.n, "slots": inst.S, "phased": inst.phased,
                  "hard_constraints": len(inst.hard()), "seconds_limit": a.seconds,
-                 "workers": a.workers, "seed": a.seed, "machine": platform.node(),
+                 "workers": a.workers, "seed": a.seed, "redundant": a.redundant, "params": a.params, "machine": platform.node(),
                  "cpu": platform.processor() or platform.machine()})
     if games is not None:
         viol = check(inst, games)

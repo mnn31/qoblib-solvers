@@ -1,0 +1,10 @@
+{
+ "timetable": "ITC2021_Middle_15.s0.xml",
+ "returncode": 59,
+ "infeasibility": 0,
+ "soft_objective": 8251,
+ "exceptions": [
+  "[Exception 1] [source/validator/ClassInstance.cpp:752] Objective value of 8251.000000 does not correspond with value from XML file (0.000000)."
+ ],
+ "revalidated_clean": true
+}

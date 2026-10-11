@@ -1,0 +1,19 @@
+{
+ "status": "UNKNOWN",
+ "build_seconds": 0.03696632385253906,
+ "solve_seconds": 600.1049032211304,
+ "wall_seconds": 600.1419370174408,
+ "num_booleans": 3426,
+ "num_conflicts": 0,
+ "num_branches": 8052,
+ "instance": "Addition_047_Medium",
+ "teams": 12,
+ "slots": 22,
+ "phased": true,
+ "hard_constraints": 120,
+ "seconds_limit": 600.0,
+ "workers": 16,
+ "seed": 0,
+ "machine": "c073f2759a66",
+ "cpu": "x86_64"
+}
