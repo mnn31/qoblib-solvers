@@ -1,0 +1,21 @@
+{
+ "status": "UNKNOWN",
+ "build_seconds": 0.04449915885925293,
+ "solve_seconds": 600.0510618686676,
+ "wall_seconds": 600.0956437587738,
+ "num_booleans": 7771,
+ "num_conflicts": 40357,
+ "num_branches": 538415,
+ "instance": "ITC2021_Early_01",
+ "teams": 16,
+ "slots": 30,
+ "phased": true,
+ "hard_constraints": 83,
+ "seconds_limit": 600.0,
+ "workers": 8,
+ "seed": 0,
+ "redundant": false,
+ "params": null,
+ "machine": "c073f2759a66",
+ "cpu": "x86_64"
+}
