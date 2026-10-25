@@ -14,9 +14,11 @@ INTSCALE = 1000
 #: Reference best-known values published in 08-network/solutions/0-info.txt.
 #: network05..network10 are proven optimal; the rest are upper bounds only.
 BKV = {5: 65500, 6: 101000, 7: 142400, 8: 170231, 9: 196750, 10: 210800,
-       11: 238334, 12: 276474, 13: 304116, 14: 350173, 15: 383000,
-       16: 409067, 17: 460182, 18: 481950, 19: 514625, 20: 548536,
-       21: 593000, 22: 647594, 23: 686453, 24: 663688}
+       11: 238334, 12: 276474, 13: 300620, 14: 343091, 15: 370870,
+       16: 397908, 17: 437000, 18: 473375, 19: 492924, 20: 528528,
+       21: 569273, 22: 618135, 23: 659369, 24: 663688}
+# best known table of ZIB-AOPT/QOBLIB main as of 2026-10-25 (network11 to
+# network23 hold this method's own 2026-08-18 values)
 
 PROVEN_OPTIMAL = {5, 6, 7, 8, 9, 10}
 
