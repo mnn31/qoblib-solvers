@@ -236,13 +236,28 @@ class Packing:
                 pairs.append((a, b))
         return pairs
 
-    def lns(self, seconds, rng, log, group_sizes=(2, 3), noise_levels=(0.0, 0.3, 1.0)):
+    def snapshot(self):
+        return {k: set(e) for k, e in self.trees.items()}
+
+    def restore(self, snap):
+        for k, e in snap.items():
+            self.set_tree(k, e)
+
+    def lns(self, seconds, rng, log, group_sizes=(2, 2, 3, 3, 4), noise_levels=(0.0, 0.3, 1.0),
+            stale_limit=150):
+        """Large neighbourhood search with occasional kicks. When no group
+        move has paid off for `stale_limit` iterations the search accepts one
+        random noisy re-insertion even if it is worse, polishes from there and
+        keeps going. The best packing seen is restored at the end."""
         t0 = time.time()
         it = 0
         pairs = self.touching()
+        best_total, best_snap = self.total(), self.snapshot()
+        stale = 0
+        kicks = 0
         while time.time() - t0 < seconds:
             it += 1
-            size = rng.choice(group_sizes)
+            size = int(rng.choice(group_sizes))
             if pairs and rng.random() < 0.8:
                 a, b = pairs[rng.integers(len(pairs))]
                 group = {a, b}
@@ -253,11 +268,15 @@ class Packing:
                         break
                     group.add(cands[rng.integers(len(cands))])
             else:
-                group = set(rng.choice(self.nets, size=size, replace=False).tolist())
+                group = set(rng.choice(self.nets, size=min(size, len(self.nets)), replace=False).tolist())
             group = sorted(group)
             old = sum(self.cost[k] for k in group)
             best, best_trees = old, None
-            for order in itertools.permutations(group):
+            orders = list(itertools.permutations(group))
+            if len(orders) > 6:
+                rng.shuffle(orders)
+                orders = orders[:6]
+            for order in orders:
                 for noise in noise_levels:
                     tot, trees = self.reinsert(group, order, rng, noise)
                     if tot is not None and tot < best:
@@ -265,11 +284,34 @@ class Packing:
             if best_trees is not None:
                 for k, e in best_trees.items():
                     self.set_tree(k, e)
-                log(f"  lns it {it} group {group}: {old} -> {best}  total {self.total()}  t={time.time()-t0:.0f}s")
-                # a change can open room for the single-net polish again
                 while self.polish_pass(log):
                     pass
                 pairs = self.touching()
+                log(f"  lns it {it} group {group}: {old} -> {best}  total {self.total()}  t={time.time()-t0:.0f}s")
+            if self.total() < best_total:
+                best_total, best_snap = self.total(), self.snapshot()
+                stale = 0
+            else:
+                stale += 1
+            if stale >= stale_limit:
+                # kick: a noisy re-insertion of a random group, accepted blindly
+                size = int(rng.choice((2, 3)))
+                group = sorted(rng.choice(self.nets, size=min(size, len(self.nets)), replace=False).tolist())
+                order = list(group)
+                rng.shuffle(order)
+                tot, trees = self.reinsert(group, order, rng, noise=2.0)
+                if trees is not None:
+                    for k, e in trees.items():
+                        self.set_tree(k, e)
+                    while self.polish_pass(lambda *a: None):
+                        pass
+                    pairs = self.touching()
+                    kicks += 1
+                    log(f"  kick {kicks} at it {it}: total {self.total()} (best {best_total})")
+                stale = 0
+        if self.total() > best_total:
+            self.restore(best_snap)
+        log(f"  lns done: {it} iterations, {kicks} kicks, best {best_total}")
         return it
 
 

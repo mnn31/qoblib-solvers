@@ -27,14 +27,20 @@ def valid(inst, sol):
 
 
 def one(job):
-    inst, seed, lns_seconds, tmp = job
+    inst, seed, lns_seconds, tmp, init_dir = job
     import route, polish
     t0 = time.perf_counter()
     out = f"{tmp}/{inst}_seed{seed}.sol"
     log = open(f"{tmp}/{inst}_seed{seed}.log", "w")
     lg = lambda *a: print(*a, file=log, flush=True)
     try:
-        trees, adj = route.route(f"{INST}/{inst}", seed=seed, log=lg)
+        init = f"{init_dir}/{inst}.sol" if init_dir else None
+        if init and os.path.exists(init):
+            trees = polish.read_solution(init)
+            _, adj, _ = route.load_instance(f"{INST}/{inst}")
+            lg(f"start from {init}")
+        else:
+            trees, adj = route.route(f"{INST}/{inst}", seed=seed, log=lg)
         if trees is None:
             return {"instance": inst, "seed": seed, "cost": None, "seconds": time.perf_counter() - t0,
                     "valid": False, "route_cost": None}
@@ -61,6 +67,7 @@ def main():
     ap.add_argument("--outdir", default="results/polished")
     ap.add_argument("--targets", default=None, help="tsv with instance/ours/kaminski columns")
     ap.add_argument("--skip-existing", action="store_true")
+    ap.add_argument("--init-dir", default=None, help="start every seed from <init-dir>/<inst>.sol if present")
     a = ap.parse_args()
     os.makedirs(a.outdir, exist_ok=True)
     tmp = os.path.join(a.outdir, "tmp"); os.makedirs(tmp, exist_ok=True)
@@ -73,7 +80,7 @@ def main():
         insts = [i for i in insts if not os.path.exists(f"{a.outdir}/{i}.json")]
     # biggest instances first so the pool tail is short
     insts.sort(key=lambda i: -os.path.getsize(f"{INST}/{i}/arcs.dat"))
-    jobs = [(i, s, a.lns_seconds, tmp) for i in insts for s in range(a.seeds)]
+    jobs = [(i, s, a.lns_seconds, tmp, a.init_dir) for i in insts for s in range(a.seeds)]
     runs = {i: [] for i in insts}
     done = 0
     with Pool(a.workers) as pool:
