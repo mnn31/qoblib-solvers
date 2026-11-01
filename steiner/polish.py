@@ -170,6 +170,12 @@ class Packing:
         self.trees = {k: set(trees.get(k, ())) for k in self.nets}
         self.nodes = {k: tree_nodes(self.trees[k], terms[k]) for k in self.nets}
         self.cost = {k: sum(grid.adj[u][v] for (u, v) in self.trees[k]) for k in self.nets}
+        self.on_change = None
+
+    def note(self):
+        """Tell the caller the current total, for the incumbent time series."""
+        if self.on_change:
+            self.on_change(self.total())
 
     def total(self):
         return sum(self.cost.values())
@@ -198,6 +204,7 @@ class Packing:
             if c is not None and c < self.cost[k]:
                 log(f"  net {k}: {self.cost[k]} -> {c}")
                 self.set_tree(k, e)
+                self.note()
                 improved = True
         return improved
 
@@ -284,6 +291,7 @@ class Packing:
             if best_trees is not None:
                 for k, e in best_trees.items():
                     self.set_tree(k, e)
+                self.note()
                 while self.polish_pass(log):
                     pass
                 pairs = self.touching()
@@ -315,10 +323,12 @@ class Packing:
         return it
 
 
-def improve(inst_dir, trees, seconds, seed, log=print):
+def improve(inst_dir, trees, seconds, seed, log=print, on_change=None):
     n_nodes, adj, terms = load_instance(inst_dir)
     grid = Grid(adj)
     pk = Packing(grid, terms, trees)
+    pk.on_change = on_change
+    pk.note()
     rng = np.random.default_rng(seed)
     log(f"start {pk.total()}")
     while pk.polish_pass(log):

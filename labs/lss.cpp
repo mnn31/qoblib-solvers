@@ -16,6 +16,7 @@
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
+#include <ctime>
 #include <fstream>
 #include <vector>
 using namespace std;
@@ -136,7 +137,7 @@ int main(int argc, char **argv) {
                             best = pe;
                             ofstream o(argv[3]); o << "# Energy: " << best << "\n# self avoiding walk search near skew length " << M << ", seed " << seed << "\n";
                             for (int i = 0; i < N; i++) o << (res[i] > 0 ? 1 : 0) << "\n";
-                            printf("%.3f %d probes %lld\n", now(), best, probes); fflush(stdout);
+                            printf("%.3f %d probes %lld cpu %.3f\n", now(), best, probes, (double)clock() / CLOCKS_PER_SEC); fflush(stdout);
                             if (best <= target) goto done;
                         }
                     }
@@ -148,12 +149,12 @@ int main(int argc, char **argv) {
                 if (energy() != be) { fprintf(stderr, "energy mismatch\n"); return 3; }
                 ofstream o(argv[3]); o << "# Energy: " << best << "\n# self avoiding walk search, seed " << seed << "\n";
                 for (int i = 0; i < L; i++) o << (P[i] > 0 ? 1 : 0) << "\n";
-                printf("%.3f %d probes %lld\n", now(), best, probes); fflush(stdout);
+                printf("%.3f %d probes %lld cpu %.3f\n", now(), best, probes, (double)clock() / CLOCKS_PER_SEC); fflush(stdout);
                 if (best <= target) goto done;
             }
         }
     }
 done:
-    fprintf(stderr, "walks %lld probes %lld polished %lld best %d time %.1f\n", walks, probes, polished, best, now());
+    printf("END %.3f %d cpu %.3f walks %lld probes %lld\n", now(), best, (double)clock() / CLOCKS_PER_SEC, walks, probes);
     return 0;
 }
