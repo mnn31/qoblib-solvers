@@ -707,7 +707,8 @@ def period_multistart(pm: PeriodModel, pools: Pools, t: int, kicks: int, kick_si
 def solve_heuristic(coef: Coefficients, rounds: int = 4, kicks: int = 3, kick_size: int | None = None,
                     loo: int = 8, seed_width: int = 6, chain_kicks: int = 4, anchor_weights=(1, 2),
                     lns_iters: int = 24, lns_k: int = 6, cd_lns_iters: int = 4,
-                    seed: int = 0, time_limit: float | None = None, verbose: bool = False):
+                    seed: int = 0, time_limit: float | None = None, verbose: bool = False,
+                    on_change=None):
     """Restricted-state chain heuristic.  Returns (value, (T, G) schedule, info).
 
     rounds        : DP + coordinate descent + kick rounds (stops early when stuck)
@@ -722,6 +723,7 @@ def solve_heuristic(coef: Coefficients, rounds: int = 4, kicks: int = 3, kick_si
     lns_k         : groups freed per step ((ub+1)^k assignments enumerated)
     cd_lns_iters  : large-neighbourhood steps per period inside coordinate descent
     time_limit    : soft wall-clock limit in seconds for the search phase
+    on_change     : called with the incumbent value whenever it improves
     """
     t0 = time.time()
     rng = np.random.default_rng(seed)
@@ -756,6 +758,8 @@ def solve_heuristic(coef: Coefficients, rounds: int = 4, kicks: int = 3, kick_si
     # phase 3 and 4: DP over pools, coordinate descent, repeat with kicks
     best_value, best_U = restricted_dp(coef, pools)
     assert objective(coef, best_U) == best_value
+    if on_change:
+        on_change(best_value)
     history = [best_value]
     for r in range(rounds):
         if out_of_time():
@@ -764,6 +768,8 @@ def solve_heuristic(coef: Coefficients, rounds: int = 4, kicks: int = 3, kick_si
                                       lns_iters=cd_lns_iters, lns_k=lns_k)
         if value < best_value:
             best_value, best_U = value, U
+            if on_change:
+                on_change(best_value)
         for _ in range(chain_kicks):
             if out_of_time():
                 break
@@ -776,9 +782,13 @@ def solve_heuristic(coef: Coefficients, rounds: int = 4, kicks: int = 3, kick_si
                                           lns_iters=cd_lns_iters, lns_k=lns_k)
             if value < best_value:
                 best_value, best_U = value, U
+                if on_change:
+                    on_change(best_value)
         value, U = restricted_dp(coef, pools)
         if value < best_value:
             best_value, best_U = value, U
+            if on_change:
+                on_change(best_value)
         history.append(best_value)
         if verbose:
             print(f"    round {r + 1}: best {best_value}, {pools.size()} states  [{time.time() - t0:.1f}s]")
