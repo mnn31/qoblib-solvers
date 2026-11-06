@@ -1,0 +1,49 @@
+iter   0 overused    25 cost 487 pres 0.50 t=0.0s
+iter   1 overused     4 cost 481 pres 0.75 t=0.1s
+iter   2 overused     1 cost 485 pres 1.12 t=0.1s
+iter   3 overused     1 cost 481 pres 1.69 t=0.1s
+iter   4 overused     0 cost 490 pres 2.53 t=0.2s
+polish 0 cost 483
+polish 1 cost 482
+polish 2 cost 482
+start 482
+  net 2: 68 -> 67
+  net 3: 57 -> 55
+after exact polish 479
+  lns it 148 group [3, 5, 9]: 129 -> 128  total 478  t=28s
+  lns it 156 group [2, 5, 9]: 142 -> 141  total 477  t=30s
+  kick 1 at it 306: total 479 (best 477)
+  lns it 314 group [4, 10, 11]: 107 -> 105  total 477  t=62s
+  kick 2 at it 456: total 479 (best 477)
+  lns it 465 group [2, 7, 9]: 134 -> 132  total 477  t=91s
+  kick 3 at it 606: total 477 (best 477)
+  kick 4 at it 756: total 477 (best 477)
+  kick 5 at it 906: total 477 (best 477)
+  kick 6 at it 1056: total 481 (best 477)
+  lns it 1058 group [6, 7, 9]: 123 -> 121  total 479  t=203s
+  lns it 1059 group [2, 7, 8]: 134 -> 132  total 477  t=203s
+  lns it 1178 group [2, 3, 6, 7]: 207 -> 206  total 476  t=226s
+  kick 7 at it 1328: total 476 (best 476)
+  kick 8 at it 1478: total 476 (best 476)
+  kick 9 at it 1628: total 476 (best 476)
+  kick 10 at it 1778: total 476 (best 476)
+  kick 11 at it 1928: total 478 (best 476)
+  lns it 1930 group [5, 6, 11]: 125 -> 124  total 477  t=363s
+  lns it 1939 group [5, 7]: 72 -> 71  total 476  t=364s
+  kick 12 at it 2078: total 476 (best 476)
+  kick 13 at it 2228: total 476 (best 476)
+  kick 14 at it 2378: total 476 (best 476)
+  kick 15 at it 2528: total 479 (best 476)
+  lns it 2529 group [3, 5, 6]: 151 -> 149  total 477  t=479s
+  lns it 2545 group [1, 2, 3, 4]: 215 -> 214  total 476  t=483s
+  kick 16 at it 2678: total 480 (best 476)
+  lns it 2690 group [1, 3, 8, 9]: 182 -> 178  total 476  t=512s
+  kick 17 at it 2828: total 478 (best 476)
+  lns it 2829 group [2, 3, 7]: 152 -> 151  total 477  t=541s
+  lns it 2860 group [2, 11]: 94 -> 93  total 476  t=545s
+  kick 18 at it 2978: total 476 (best 476)
+  kick 19 at it 3128: total 480 (best 476)
+  lns it 3129 group [4, 8, 9]: 108 -> 106  total 478  t=596s
+  lns it 3138 group [1, 9]: 93 -> 91  total 476  t=597s
+  lns done: 3159 iterations, 19 kicks, best 476
+after lns (3159 iterations) 476

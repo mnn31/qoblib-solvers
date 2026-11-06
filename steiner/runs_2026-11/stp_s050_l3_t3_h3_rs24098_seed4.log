@@ -1,0 +1,46 @@
+iter   0 overused    21 cost 761 pres 0.50 t=0.1s
+iter   1 overused     7 cost 762 pres 0.75 t=0.1s
+iter   2 overused     2 cost 748 pres 1.12 t=0.2s
+iter   3 overused     3 cost 765 pres 1.69 t=0.3s
+iter   4 overused     1 cost 769 pres 2.53 t=0.4s
+iter   5 overused     1 cost 769 pres 3.80 t=0.4s
+iter   6 overused     1 cost 770 pres 5.70 t=0.5s
+iter   7 overused     0 cost 753 pres 8.54 t=0.6s
+polish 0 cost 752
+polish 1 cost 752
+start 752
+  net 7: 83 -> 82
+after exact polish 751
+  lns it 4 group [1, 4, 13]: 168 -> 165  total 748  t=1s
+  lns it 117 group [1, 2, 4, 12]: 287 -> 286  total 747  t=19s
+  kick 1 at it 267: total 747 (best 747)
+  lns it 309 group [3, 4, 9, 14]: 208 -> 207  total 746  t=53s
+  kick 2 at it 459: total 746 (best 746)
+  kick 3 at it 609: total 746 (best 746)
+  kick 4 at it 759: total 746 (best 746)
+  kick 5 at it 909: total 746 (best 746)
+  lns it 982 group [1, 4, 12, 14]: 261 -> 260  total 745  t=166s
+  kick 6 at it 1132: total 745 (best 745)
+  kick 7 at it 1282: total 747 (best 745)
+  lns it 1287 group [4, 8, 14]: 215 -> 213  total 745  t=216s
+  kick 8 at it 1432: total 745 (best 745)
+  kick 9 at it 1582: total 745 (best 745)
+  kick 10 at it 1732: total 745 (best 745)
+  kick 11 at it 1882: total 745 (best 745)
+  kick 12 at it 2032: total 745 (best 745)
+  kick 13 at it 2182: total 745 (best 745)
+  kick 14 at it 2332: total 745 (best 745)
+  kick 15 at it 2482: total 751 (best 745)
+  lns it 2487 group [2, 3, 7, 8]: 300 -> 296  total 747  t=422s
+  lns it 2582 group [4, 6, 7, 8]: 271 -> 270  total 746  t=438s
+  kick 16 at it 2632: total 746 (best 745)
+  lns it 2673 group [2, 4, 7, 8]: 320 -> 319  total 745  t=453s
+  kick 17 at it 2782: total 745 (best 745)
+  kick 18 at it 2932: total 745 (best 745)
+  kick 19 at it 3082: total 745 (best 745)
+  kick 20 at it 3232: total 745 (best 745)
+  kick 21 at it 3382: total 745 (best 745)
+  kick 22 at it 3532: total 747 (best 745)
+  lns it 3534 group [4, 5, 10, 13]: 191 -> 189  total 745  t=600s
+  lns done: 3534 iterations, 22 kicks, best 745
+after lns (3534 iterations) 745

@@ -1,0 +1,99 @@
+iter   0 overused    13 cost 533 pres 0.50 t=0.0s
+iter   1 overused     2 cost 553 pres 0.75 t=0.1s
+iter   2 overused     1 cost 555 pres 1.12 t=0.1s
+iter   3 overused     2 cost 555 pres 1.69 t=0.1s
+iter   4 overused     1 cost 543 pres 2.53 t=0.1s
+iter   5 overused     0 cost 556 pres 3.80 t=0.2s
+polish 0 cost 548
+polish 1 cost 548
+start 548
+  net 1: 62 -> 59
+  net 2: 73 -> 72
+after exact polish 544
+  lns it 5 group [2, 5, 12]: 166 -> 165  total 543  t=0s
+  kick 1 at it 155: total 543 (best 543)
+  kick 2 at it 305: total 543 (best 543)
+  kick 3 at it 455: total 543 (best 543)
+  kick 4 at it 605: total 543 (best 543)
+  kick 5 at it 755: total 543 (best 543)
+  kick 6 at it 905: total 543 (best 543)
+  kick 7 at it 1055: total 546 (best 543)
+  lns it 1056 group [1, 10, 11]: 140 -> 139  total 545  t=57s
+  lns it 1069 group [1, 7, 9]: 147 -> 145  total 543  t=58s
+  kick 8 at it 1205: total 543 (best 543)
+  kick 9 at it 1355: total 543 (best 543)
+  kick 10 at it 1505: total 543 (best 543)
+  kick 11 at it 1655: total 543 (best 543)
+  kick 12 at it 1805: total 543 (best 543)
+  kick 13 at it 1955: total 543 (best 543)
+  kick 14 at it 2105: total 543 (best 543)
+  kick 15 at it 2255: total 543 (best 543)
+  kick 16 at it 2405: total 553 (best 543)
+  lns it 2413 group [1, 6, 11]: 174 -> 166  total 545  t=134s
+  lns it 2429 group [2, 5, 11]: 177 -> 175  total 543  t=135s
+  kick 17 at it 2555: total 543 (best 543)
+  kick 18 at it 2705: total 543 (best 543)
+  kick 19 at it 2855: total 543 (best 543)
+  kick 20 at it 3005: total 543 (best 543)
+  kick 21 at it 3155: total 543 (best 543)
+  kick 22 at it 3455: total 543 (best 543)
+  kick 23 at it 3605: total 543 (best 543)
+  kick 24 at it 3755: total 549 (best 543)
+  lns it 3761 group [3, 7]: 102 -> 100  total 547  t=208s
+  lns it 3772 group [4, 6, 7, 10]: 111 -> 107  total 543  t=208s
+  kick 25 at it 3905: total 543 (best 543)
+  kick 26 at it 4055: total 543 (best 543)
+  kick 27 at it 4205: total 543 (best 543)
+  kick 28 at it 4355: total 543 (best 543)
+  kick 29 at it 4505: total 543 (best 543)
+  kick 30 at it 4655: total 549 (best 543)
+  lns it 4669 group [9, 10, 11]: 148 -> 142  total 543  t=258s
+  kick 31 at it 4805: total 543 (best 543)
+  kick 32 at it 4955: total 543 (best 543)
+  kick 33 at it 5105: total 543 (best 543)
+  kick 34 at it 5255: total 543 (best 543)
+  kick 35 at it 5405: total 543 (best 543)
+  kick 36 at it 5555: total 543 (best 543)
+  kick 37 at it 5705: total 543 (best 543)
+  kick 38 at it 5855: total 543 (best 543)
+  kick 39 at it 6005: total 543 (best 543)
+  kick 40 at it 6155: total 545 (best 543)
+  lns it 6156 group [1, 3, 5]: 186 -> 184  total 543  t=339s
+  kick 41 at it 6305: total 543 (best 543)
+  kick 42 at it 6455: total 546 (best 543)
+  lns it 6462 group [2, 9]: 138 -> 135  total 543  t=355s
+  kick 43 at it 6605: total 543 (best 543)
+  kick 44 at it 6755: total 543 (best 543)
+  kick 45 at it 6905: total 548 (best 543)
+  lns it 6908 group [1, 10]: 86 -> 84  total 546  t=381s
+  lns it 6917 group [2, 9]: 138 -> 137  total 545  t=381s
+  lns it 6919 group [1, 2]: 132 -> 130  total 543  t=381s
+  kick 46 at it 7055: total 543 (best 543)
+  kick 47 at it 7205: total 543 (best 543)
+  kick 48 at it 7355: total 543 (best 543)
+  kick 49 at it 7505: total 546 (best 543)
+  lns it 7506 group [1, 3, 6, 10]: 211 -> 210  total 545  t=412s
+  lns it 7510 group [2, 9]: 137 -> 136  total 544  t=412s
+  lns it 7578 group [2, 3, 9]: 213 -> 212  total 543  t=416s
+  kick 50 at it 7655: total 543 (best 543)
+  kick 51 at it 7805: total 543 (best 543)
+  kick 52 at it 7955: total 543 (best 543)
+  kick 53 at it 8255: total 543 (best 543)
+  kick 54 at it 8405: total 543 (best 543)
+  kick 55 at it 8555: total 543 (best 543)
+  kick 56 at it 8705: total 543 (best 543)
+  kick 57 at it 8855: total 543 (best 543)
+  kick 58 at it 9005: total 543 (best 543)
+  kick 59 at it 9155: total 543 (best 543)
+  kick 60 at it 9305: total 545 (best 543)
+  lns it 9307 group [3, 9, 12]: 186 -> 184  total 543  t=520s
+  kick 61 at it 9455: total 543 (best 543)
+  kick 62 at it 9605: total 543 (best 543)
+  kick 63 at it 9755: total 543 (best 543)
+  kick 64 at it 9905: total 543 (best 543)
+  kick 65 at it 10055: total 543 (best 543)
+  kick 66 at it 10205: total 543 (best 543)
+  kick 67 at it 10355: total 543 (best 543)
+  kick 68 at it 10505: total 543 (best 543)
+  lns done: 10618 iterations, 68 kicks, best 543
+after lns (10618 iterations) 543

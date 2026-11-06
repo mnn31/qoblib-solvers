@@ -1,0 +1,63 @@
+iter   0 overused    10 cost 227 pres 0.50 t=0.0s
+iter   1 overused     6 cost 231 pres 0.75 t=0.0s
+iter   2 overused     1 cost 238 pres 1.12 t=0.0s
+iter   3 overused     2 cost 233 pres 1.69 t=0.0s
+iter   4 overused     0 cost 238 pres 2.53 t=0.0s
+polish 0 cost 234
+polish 1 cost 234
+start 234
+  net 1: 36 -> 34
+after exact polish 232
+  lns it 5 group [2, 5]: 72 -> 71  total 231  t=0s
+  lns it 11 group [1, 4, 6, 8]: 148 -> 146  total 229  t=0s
+  kick 1 at it 161: total 233 (best 229)
+  lns it 165 group [3, 4, 8]: 90 -> 88  total 231  t=5s
+  lns it 172 group [3, 4, 6, 8]: 127 -> 125  total 229  t=5s
+  kick 2 at it 311: total 233 (best 229)
+  lns it 316 group [1, 4, 6]: 114 -> 111  total 230  t=10s
+  lns it 324 group [4, 6, 8]: 113 -> 112  total 229  t=10s
+  kick 3 at it 461: total 229 (best 229)
+  kick 4 at it 611: total 229 (best 229)
+  kick 5 at it 761: total 229 (best 229)
+  kick 6 at it 911: total 236 (best 229)
+  net 2: 40 -> 36
+  lns it 912 group [1, 5, 6]: 109 -> 107  total 230  t=25s
+  lns it 937 group [1, 2, 5, 6]: 143 -> 142  total 229  t=26s
+  kick 7 at it 1061: total 234 (best 229)
+  lns it 1062 group [2, 8]: 72 -> 71  total 233  t=29s
+  net 1: 33 -> 32
+  lns it 1069 group [1, 2, 4, 6]: 149 -> 146  total 229  t=29s
+  kick 8 at it 1211: total 229 (best 229)
+  lns it 1268 group [1, 4, 6, 8]: 144 -> 143  total 228  t=34s
+  kick 9 at it 1418: total 230 (best 228)
+  lns it 1420 group [1, 4, 5, 8]: 142 -> 140  total 228  t=38s
+  kick 10 at it 1568: total 228 (best 228)
+  kick 11 at it 1718: total 237 (best 228)
+  lns it 1721 group [5, 6, 8]: 118 -> 109  total 228  t=47s
+  kick 12 at it 1868: total 232 (best 228)
+  lns it 1877 group [4, 8]: 77 -> 73  total 228  t=51s
+  kick 13 at it 2018: total 232 (best 228)
+  net 5: 37 -> 36
+  lns it 2030 group [4, 5, 6]: 118 -> 115  total 228  t=56s
+  kick 14 at it 2168: total 228 (best 228)
+  kick 15 at it 2318: total 228 (best 228)
+  kick 16 at it 2468: total 228 (best 228)
+  kick 17 at it 2618: total 233 (best 228)
+  lns it 2620 group [1, 2, 4]: 108 -> 107  total 232  t=72s
+  net 2: 37 -> 35
+  lns it 2626 group [1, 4, 8]: 106 -> 104  total 228  t=72s
+  kick 18 at it 2768: total 228 (best 228)
+  kick 19 at it 2918: total 229 (best 228)
+  lns it 2922 group [1, 4, 5]: 107 -> 106  total 228  t=80s
+  kick 20 at it 3218: total 228 (best 228)
+  kick 21 at it 3368: total 228 (best 228)
+  kick 22 at it 3518: total 228 (best 228)
+  kick 23 at it 3668: total 228 (best 228)
+  kick 24 at it 3818: total 238 (best 228)
+  lns it 3820 group [3, 7, 8]: 56 -> 46  total 228  t=103s
+  kick 25 at it 4118: total 228 (best 228)
+  kick 26 at it 4268: total 229 (best 228)
+  lns it 4271 group [1, 6, 7, 8]: 106 -> 105  total 228  t=114s
+  kick 27 at it 4418: total 228 (best 228)
+  lns done: 4489 iterations, 27 kicks, best 228
+after lns (4489 iterations) 228

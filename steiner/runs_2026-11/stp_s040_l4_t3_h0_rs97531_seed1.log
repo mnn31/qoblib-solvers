@@ -1,0 +1,58 @@
+iter   0 overused    15 cost 565 pres 0.50 t=0.1s
+iter   1 overused     5 cost 585 pres 0.75 t=0.2s
+iter   2 overused     1 cost 581 pres 1.12 t=0.3s
+iter   3 overused     1 cost 581 pres 1.69 t=0.4s
+iter   4 overused     0 cost 584 pres 2.53 t=0.5s
+polish 0 cost 583
+polish 1 cost 577
+polish 2 cost 577
+start 577
+after exact polish 577
+  lns it 4 group [2, 4, 12]: 195 -> 194  total 576  t=1s
+  kick 1 at it 154: total 576 (best 576)
+  kick 2 at it 304: total 576 (best 576)
+  kick 3 at it 454: total 579 (best 576)
+  lns it 469 group [2, 4, 9]: 190 -> 187  total 576  t=62s
+  lns it 499 group [2, 3, 9, 12]: 238 -> 237  total 575  t=65s
+  kick 4 at it 649: total 578 (best 575)
+  lns it 650 group [7, 12]: 101 -> 99  total 576  t=86s
+  lns it 670 group [3, 7, 8, 12]: 231 -> 228  total 573  t=88s
+  kick 5 at it 820: total 573 (best 573)
+  kick 6 at it 970: total 573 (best 573)
+  kick 7 at it 1120: total 573 (best 573)
+  kick 8 at it 1270: total 573 (best 573)
+  kick 9 at it 1420: total 576 (best 573)
+  lns it 1426 group [3, 4, 9]: 195 -> 192  total 573  t=192s
+  kick 10 at it 1570: total 574 (best 573)
+  lns it 1575 group [2, 4, 9, 12]: 237 -> 236  total 573  t=212s
+  kick 11 at it 1720: total 573 (best 573)
+  kick 12 at it 1870: total 573 (best 573)
+  kick 13 at it 2020: total 573 (best 573)
+  kick 14 at it 2170: total 573 (best 573)
+  kick 15 at it 2320: total 574 (best 573)
+  lns it 2333 group [2, 4, 7, 12]: 247 -> 246  total 573  t=306s
+  kick 16 at it 2470: total 573 (best 573)
+  kick 17 at it 2620: total 573 (best 573)
+  kick 18 at it 2770: total 575 (best 573)
+  lns it 2796 group [8, 10]: 73 -> 71  total 573  t=368s
+  kick 19 at it 2920: total 575 (best 573)
+  net 2: 73 -> 72
+  lns it 2937 group [2, 3, 5, 9]: 221 -> 220  total 573  t=390s
+  kick 20 at it 3070: total 573 (best 573)
+  kick 21 at it 3220: total 573 (best 573)
+  kick 22 at it 3370: total 575 (best 573)
+  lns it 3376 group [3, 6, 7]: 154 -> 152  total 573  t=446s
+  kick 23 at it 3520: total 573 (best 573)
+  kick 24 at it 3670: total 573 (best 573)
+  kick 25 at it 3820: total 577 (best 573)
+  lns it 3851 group [1, 3, 11]: 162 -> 160  total 575  t=503s
+  lns it 3852 group [2, 6, 7, 10]: 168 -> 166  total 573  t=503s
+  kick 26 at it 3970: total 575 (best 573)
+  lns it 3983 group [3, 4, 7]: 204 -> 202  total 573  t=520s
+  kick 27 at it 4120: total 573 (best 573)
+  kick 28 at it 4270: total 573 (best 573)
+  kick 29 at it 4420: total 573 (best 573)
+  kick 30 at it 4570: total 575 (best 573)
+  lns it 4578 group [1, 4, 8]: 189 -> 187  total 573  t=598s
+  lns done: 4590 iterations, 30 kicks, best 573
+after lns (4590 iterations) 573

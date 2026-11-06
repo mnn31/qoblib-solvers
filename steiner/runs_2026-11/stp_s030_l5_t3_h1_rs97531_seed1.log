@@ -1,0 +1,47 @@
+iter   0 overused    12 cost 313 pres 0.50 t=0.0s
+iter   1 overused     4 cost 323 pres 0.75 t=0.1s
+iter   2 overused     2 cost 321 pres 1.12 t=0.1s
+iter   3 overused     2 cost 328 pres 1.69 t=0.1s
+iter   4 overused     0 cost 325 pres 2.53 t=0.2s
+polish 0 cost 325
+start 325
+after exact polish 325
+  lns it 2 group [3, 5, 7]: 94 -> 93  total 324  t=0s
+  lns it 11 group [1, 5, 6, 9]: 167 -> 166  total 323  t=1s
+  lns it 125 group [1, 4, 5, 10]: 142 -> 140  total 321  t=16s
+  kick 1 at it 275: total 321 (best 321)
+  lns it 361 group [2, 3, 6, 9]: 168 -> 167  total 320  t=45s
+  kick 2 at it 511: total 320 (best 320)
+  kick 3 at it 661: total 320 (best 320)
+  kick 4 at it 811: total 322 (best 320)
+  lns it 816 group [1, 5, 10]: 117 -> 115  total 320  t=105s
+  kick 5 at it 961: total 320 (best 320)
+  kick 6 at it 1111: total 320 (best 320)
+  kick 7 at it 1261: total 320 (best 320)
+  kick 8 at it 1411: total 320 (best 320)
+  kick 9 at it 1561: total 320 (best 320)
+  kick 10 at it 1711: total 322 (best 320)
+  lns it 1721 group [4, 5, 10]: 98 -> 96  total 320  t=218s
+  kick 11 at it 1861: total 320 (best 320)
+  kick 12 at it 2011: total 320 (best 320)
+  kick 13 at it 2161: total 320 (best 320)
+  kick 14 at it 2311: total 320 (best 320)
+  kick 15 at it 2461: total 320 (best 320)
+  kick 16 at it 2611: total 320 (best 320)
+  kick 17 at it 2761: total 322 (best 320)
+  lns it 2765 group [5, 6, 10]: 124 -> 122  total 320  t=353s
+  kick 18 at it 2911: total 320 (best 320)
+  kick 19 at it 3061: total 320 (best 320)
+  kick 20 at it 3211: total 320 (best 320)
+  kick 21 at it 3361: total 320 (best 320)
+  kick 22 at it 3511: total 320 (best 320)
+  kick 23 at it 3661: total 320 (best 320)
+  kick 24 at it 3811: total 320 (best 320)
+  kick 25 at it 3961: total 320 (best 320)
+  kick 26 at it 4111: total 320 (best 320)
+  kick 27 at it 4261: total 320 (best 320)
+  kick 28 at it 4411: total 323 (best 320)
+  lns it 4413 group [1, 3, 5, 9]: 157 -> 154  total 320  t=564s
+  kick 29 at it 4561: total 320 (best 320)
+  lns done: 4696 iterations, 29 kicks, best 320
+after lns (4696 iterations) 320

@@ -1,0 +1,79 @@
+iter   0 overused    14 cost 322 pres 0.50 t=0.0s
+iter   1 overused     6 cost 326 pres 0.75 t=0.0s
+iter   2 overused     5 cost 328 pres 1.12 t=0.1s
+iter   3 overused     4 cost 330 pres 1.69 t=0.1s
+iter   4 overused     1 cost 334 pres 2.53 t=0.1s
+iter   5 overused     1 cost 334 pres 3.80 t=0.1s
+iter   6 overused     0 cost 337 pres 5.70 t=0.1s
+polish 0 cost 336
+polish 1 cost 336
+start 336
+after exact polish 336
+  lns it 6 group [1, 3, 5, 6]: 181 -> 179  total 334  t=0s
+  net 2: 46 -> 45
+  lns it 7 group [3, 5, 7, 10]: 123 -> 121  total 331  t=1s
+  lns it 33 group [1, 2, 5, 6]: 180 -> 179  total 330  t=2s
+  lns it 54 group [2, 3, 6]: 140 -> 139  total 329  t=3s
+  lns it 64 group [1, 3, 4, 9]: 147 -> 145  total 327  t=4s
+  kick 1 at it 214: total 328 (best 327)
+  lns it 217 group [3, 6]: 93 -> 92  total 327  t=17s
+  kick 2 at it 514: total 327 (best 327)
+  kick 3 at it 664: total 331 (best 327)
+  lns it 670 group [7, 8, 10]: 54 -> 50  total 327  t=52s
+  kick 4 at it 814: total 327 (best 327)
+  kick 5 at it 964: total 327 (best 327)
+  kick 6 at it 1114: total 327 (best 327)
+  kick 7 at it 1264: total 333 (best 327)
+  lns it 1266 group [1, 5, 7]: 96 -> 94  total 331  t=98s
+  lns it 1277 group [2, 3, 10]: 120 -> 118  total 329  t=99s
+  lns it 1314 group [2, 7, 10]: 85 -> 83  total 327  t=101s
+  kick 8 at it 1414: total 327 (best 327)
+  kick 9 at it 1564: total 329 (best 327)
+  lns it 1583 group [2, 3, 6]: 141 -> 139  total 327  t=124s
+  kick 10 at it 1714: total 327 (best 327)
+  kick 11 at it 1864: total 327 (best 327)
+  kick 12 at it 2014: total 327 (best 327)
+  kick 13 at it 2164: total 327 (best 327)
+  kick 14 at it 2314: total 327 (best 327)
+  kick 15 at it 2464: total 328 (best 327)
+  lns it 2468 group [2, 3, 6, 10]: 169 -> 168  total 327  t=192s
+  kick 16 at it 2614: total 327 (best 327)
+  kick 17 at it 2764: total 327 (best 327)
+  kick 18 at it 2914: total 331 (best 327)
+  lns it 2918 group [1, 3, 8, 10]: 133 -> 129  total 327  t=229s
+  kick 19 at it 3064: total 327 (best 327)
+  kick 20 at it 3214: total 327 (best 327)
+  kick 21 at it 3364: total 327 (best 327)
+  kick 22 at it 3514: total 327 (best 327)
+  kick 23 at it 3664: total 327 (best 327)
+  kick 24 at it 3814: total 327 (best 327)
+  kick 25 at it 3964: total 327 (best 327)
+  kick 26 at it 4114: total 327 (best 327)
+  kick 27 at it 4264: total 329 (best 327)
+  lns it 4268 group [2, 3, 5, 9]: 160 -> 158  total 327  t=339s
+  kick 28 at it 4414: total 327 (best 327)
+  kick 29 at it 4564: total 327 (best 327)
+  kick 30 at it 4714: total 327 (best 327)
+  kick 31 at it 4864: total 327 (best 327)
+  kick 32 at it 5014: total 327 (best 327)
+  kick 33 at it 5164: total 327 (best 327)
+  kick 34 at it 5314: total 327 (best 327)
+  kick 35 at it 5464: total 327 (best 327)
+  kick 36 at it 5614: total 327 (best 327)
+  kick 37 at it 5764: total 327 (best 327)
+  kick 38 at it 5914: total 329 (best 327)
+  lns it 5915 group [1, 7, 9, 10]: 116 -> 114  total 327  t=456s
+  kick 39 at it 6064: total 327 (best 327)
+  kick 40 at it 6214: total 327 (best 327)
+  kick 41 at it 6364: total 327 (best 327)
+  kick 42 at it 6514: total 327 (best 327)
+  kick 43 at it 6664: total 327 (best 327)
+  kick 44 at it 6814: total 327 (best 327)
+  kick 45 at it 6964: total 328 (best 327)
+  lns it 6966 group [1, 3, 6]: 139 -> 138  total 327  t=539s
+  kick 46 at it 7114: total 327 (best 327)
+  kick 47 at it 7264: total 327 (best 327)
+  kick 48 at it 7414: total 327 (best 327)
+  kick 49 at it 7564: total 327 (best 327)
+  lns done: 7713 iterations, 49 kicks, best 327
+after lns (7713 iterations) 327

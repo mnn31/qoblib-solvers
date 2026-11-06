@@ -1,0 +1,44 @@
+iter   0 overused    21 cost 1228 pres 0.50 t=0.1s
+iter   1 overused     6 cost 1270 pres 0.75 t=0.3s
+iter   2 overused     2 cost 1247 pres 1.12 t=0.4s
+iter   3 overused     2 cost 1248 pres 1.69 t=0.5s
+iter   4 overused     0 cost 1247 pres 2.53 t=0.6s
+polish 0 cost 1246
+polish 1 cost 1243
+polish 2 cost 1243
+start 1243
+  net 6: 132 -> 128
+after exact polish 1239
+  lns it 11 group [1, 5, 10]: 325 -> 324  total 1238  t=2s
+  lns it 19 group [5, 7, 8, 9]: 427 -> 425  total 1236  t=5s
+  lns it 29 group [2, 4, 8]: 396 -> 393  total 1233  t=7s
+  lns it 37 group [2, 3, 7, 10]: 454 -> 452  total 1231  t=10s
+  lns it 137 group [3, 5, 6, 9]: 460 -> 459  total 1230  t=35s
+  kick 1 at it 287: total 1230 (best 1230)
+  kick 2 at it 437: total 1230 (best 1230)
+  kick 3 at it 587: total 1230 (best 1230)
+  kick 4 at it 737: total 1234 (best 1230)
+  lns it 746 group [3, 7, 8]: 362 -> 358  total 1230  t=182s
+  kick 5 at it 887: total 1232 (best 1230)
+  lns it 889 group [5, 6, 10]: 335 -> 333  total 1230  t=216s
+  kick 6 at it 1037: total 1230 (best 1230)
+  kick 7 at it 1187: total 1232 (best 1230)
+  lns it 1190 group [7, 9, 11]: 260 -> 258  total 1230  t=287s
+  kick 8 at it 1337: total 1230 (best 1230)
+  kick 9 at it 1487: total 1230 (best 1230)
+  kick 10 at it 1637: total 1230 (best 1230)
+  kick 11 at it 1787: total 1230 (best 1230)
+  kick 12 at it 1937: total 1232 (best 1230)
+  lns it 1964 group [5, 6, 9, 11]: 402 -> 400  total 1230  t=465s
+  kick 13 at it 2087: total 1232 (best 1230)
+  lns it 2119 group [1, 4, 5]: 366 -> 364  total 1230  t=502s
+  kick 14 at it 2237: total 1233 (best 1230)
+  lns it 2270 group [3, 4, 6, 8]: 524 -> 521  total 1230  t=535s
+  kick 15 at it 2387: total 1236 (best 1230)
+  net 2: 131 -> 129
+  net 4: 135 -> 134
+  lns it 2394 group [1, 4, 6, 11]: 456 -> 455  total 1232  t=563s
+  lns it 2405 group [5, 11]: 188 -> 186  total 1230  t=565s
+  kick 16 at it 2537: total 1230 (best 1230)
+  lns done: 2543 iterations, 16 kicks, best 1230
+after lns (2543 iterations) 1230

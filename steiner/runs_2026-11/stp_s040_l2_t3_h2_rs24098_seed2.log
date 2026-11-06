@@ -1,0 +1,86 @@
+iter   0 overused    18 cost 561 pres 0.50 t=0.0s
+iter   1 overused     3 cost 577 pres 0.75 t=0.1s
+iter   2 overused     0 cost 577 pres 1.12 t=0.1s
+polish 0 cost 574
+polish 1 cost 574
+start 574
+after exact polish 574
+  lns it 1 group [2, 5, 6, 11]: 249 -> 247  total 572  t=0s
+  kick 1 at it 151: total 572 (best 572)
+  kick 2 at it 301: total 572 (best 572)
+  kick 3 at it 451: total 572 (best 572)
+  kick 4 at it 601: total 572 (best 572)
+  kick 5 at it 751: total 576 (best 572)
+  net 7: 44 -> 42
+  lns it 756 group [2, 3, 4, 10]: 192 -> 190  total 572  t=57s
+  kick 6 at it 901: total 572 (best 572)
+  lns it 1027 group [2, 4, 8, 9]: 240 -> 239  total 571  t=77s
+  kick 7 at it 1177: total 571 (best 571)
+  kick 8 at it 1327: total 571 (best 571)
+  kick 9 at it 1477: total 571 (best 571)
+  kick 10 at it 1627: total 571 (best 571)
+  kick 11 at it 1777: total 571 (best 571)
+  kick 12 at it 1927: total 571 (best 571)
+  kick 13 at it 2077: total 571 (best 571)
+  kick 14 at it 2227: total 571 (best 571)
+  kick 15 at it 2377: total 571 (best 571)
+  kick 16 at it 2527: total 575 (best 571)
+  lns it 2545 group [1, 4, 5, 8]: 233 -> 229  total 571  t=189s
+  kick 17 at it 2677: total 572 (best 571)
+  lns it 2689 group [2, 4, 5, 11]: 233 -> 232  total 571  t=199s
+  kick 18 at it 2827: total 571 (best 571)
+  kick 19 at it 2977: total 571 (best 571)
+  kick 20 at it 3127: total 571 (best 571)
+  kick 21 at it 3277: total 592 (best 571)
+  net 4: 75 -> 60
+  net 8: 55 -> 51
+  lns it 3278 group [2, 8]: 131 -> 129  total 571  t=243s
+  kick 22 at it 3427: total 573 (best 571)
+  lns it 3472 group [4, 5, 8]: 181 -> 179  total 571  t=259s
+  kick 23 at it 3577: total 571 (best 571)
+  kick 24 at it 3727: total 571 (best 571)
+  kick 25 at it 3877: total 571 (best 571)
+  kick 26 at it 4027: total 579 (best 571)
+  net 7: 46 -> 44
+  lns it 4033 group [1, 6, 8]: 178 -> 174  total 573  t=302s
+  lns it 4089 group [1, 6, 7, 8]: 218 -> 216  total 571  t=305s
+  kick 27 at it 4177: total 571 (best 571)
+  kick 28 at it 4327: total 579 (best 571)
+  lns it 4328 group [2, 4, 5]: 204 -> 203  total 578  t=324s
+  net 7: 46 -> 42
+  net 9: 56 -> 54
+  lns it 4334 group [4, 5, 9]: 185 -> 184  total 571  t=325s
+  kick 29 at it 4477: total 575 (best 571)
+  lns it 4490 group [2, 4, 5, 6]: 279 -> 275  total 571  t=336s
+  kick 30 at it 4627: total 571 (best 571)
+  kick 31 at it 4777: total 571 (best 571)
+  kick 32 at it 4927: total 581 (best 571)
+  lns it 4929 group [1, 4, 8]: 171 -> 170  total 580  t=370s
+  lns it 4932 group [3, 4]: 117 -> 108  total 571  t=370s
+  kick 33 at it 5077: total 571 (best 571)
+  kick 34 at it 5227: total 571 (best 571)
+  kick 35 at it 5377: total 571 (best 571)
+  kick 36 at it 5527: total 571 (best 571)
+  kick 37 at it 5677: total 571 (best 571)
+  kick 38 at it 5827: total 591 (best 571)
+  lns it 5828 group [3, 4, 7]: 164 -> 153  total 580  t=436s
+  net 4: 63 -> 61
+  lns it 5829 group [1, 2, 6, 8]: 254 -> 252  total 576  t=436s
+  lns it 5836 group [1, 3, 8]: 151 -> 149  total 574  t=437s
+  lns it 5847 group [1, 2, 6]: 199 -> 197  total 572  t=437s
+  lns it 5860 group [4, 8]: 112 -> 111  total 571  t=438s
+  kick 39 at it 5977: total 571 (best 571)
+  kick 40 at it 6127: total 571 (best 571)
+  kick 41 at it 6427: total 573 (best 571)
+  lns it 6429 group [2, 3, 6]: 197 -> 195  total 571  t=480s
+  kick 42 at it 6577: total 571 (best 571)
+  kick 43 at it 6727: total 571 (best 571)
+  kick 44 at it 6877: total 571 (best 571)
+  kick 45 at it 7027: total 571 (best 571)
+  kick 46 at it 7177: total 571 (best 571)
+  kick 47 at it 7477: total 571 (best 571)
+  kick 48 at it 7627: total 571 (best 571)
+  kick 49 at it 7777: total 571 (best 571)
+  kick 50 at it 7927: total 571 (best 571)
+  lns done: 8051 iterations, 50 kicks, best 571
+after lns (8051 iterations) 571

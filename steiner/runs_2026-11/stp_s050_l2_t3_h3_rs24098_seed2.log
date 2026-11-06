@@ -1,0 +1,50 @@
+iter   0 overused    11 cost 509 pres 0.50 t=0.0s
+iter   1 overused     8 cost 511 pres 0.75 t=0.1s
+iter   2 overused     2 cost 518 pres 1.12 t=0.1s
+iter   3 overused     0 cost 515 pres 1.69 t=0.2s
+polish 0 cost 514
+polish 1 cost 514
+start 514
+  net 2: 89 -> 85
+after exact polish 510
+  lns it 3 group [1, 2, 3, 8]: 289 -> 287  total 508  t=1s
+  net 1: 86 -> 84
+  lns it 10 group [2, 5]: 156 -> 151  total 501  t=2s
+  lns it 38 group [2, 3, 5, 10]: 217 -> 216  total 500  t=6s
+  lns it 39 group [2, 3, 5]: 205 -> 204  total 499  t=6s
+  kick 1 at it 189: total 499 (best 499)
+  kick 2 at it 339: total 499 (best 499)
+  kick 3 at it 489: total 499 (best 499)
+  kick 4 at it 639: total 499 (best 499)
+  kick 5 at it 789: total 501 (best 499)
+  lns it 794 group [2, 6, 8]: 166 -> 164  total 499  t=118s
+  kick 6 at it 939: total 500 (best 499)
+  lns it 945 group [2, 5]: 150 -> 149  total 499  t=138s
+  kick 7 at it 1089: total 499 (best 499)
+  kick 8 at it 1239: total 499 (best 499)
+  kick 9 at it 1389: total 499 (best 499)
+  kick 10 at it 1539: total 499 (best 499)
+  kick 11 at it 1689: total 499 (best 499)
+  kick 12 at it 1839: total 499 (best 499)
+  kick 13 at it 1989: total 500 (best 499)
+  lns it 1997 group [4, 8]: 132 -> 131  total 499  t=282s
+  kick 14 at it 2139: total 499 (best 499)
+  kick 15 at it 2289: total 499 (best 499)
+  kick 16 at it 2439: total 499 (best 499)
+  kick 17 at it 2589: total 499 (best 499)
+  kick 18 at it 2739: total 499 (best 499)
+  kick 19 at it 2889: total 504 (best 499)
+  lns it 2895 group [1, 2, 5]: 238 -> 233  total 499  t=410s
+  kick 20 at it 3039: total 499 (best 499)
+  kick 21 at it 3189: total 499 (best 499)
+  kick 22 at it 3339: total 499 (best 499)
+  kick 23 at it 3489: total 499 (best 499)
+  kick 24 at it 3639: total 499 (best 499)
+  kick 25 at it 3789: total 499 (best 499)
+  kick 26 at it 3939: total 499 (best 499)
+  kick 27 at it 4089: total 501 (best 499)
+  lns it 4096 group [2, 4]: 142 -> 140  total 499  t=576s
+  kick 28 at it 4239: total 501 (best 499)
+  lns it 4255 group [1, 9]: 129 -> 127  total 499  t=599s
+  lns done: 4267 iterations, 28 kicks, best 499
+after lns (4267 iterations) 499

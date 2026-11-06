@@ -1,0 +1,14 @@
+iter   0 overused    13 cost 879 pres 0.50 t=0.3s
+iter   1 overused     5 cost 883 pres 0.75 t=0.6s
+iter   2 overused     1 cost 889 pres 1.12 t=0.9s
+iter   3 overused     1 cost 885 pres 1.69 t=1.2s
+iter   4 overused     0 cost 887 pres 2.53 t=1.4s
+polish 0 cost 887
+start 887
+after exact polish 887
+  kick 1 at it 300: total 887 (best 887)
+  kick 2 at it 450: total 887 (best 887)
+  kick 3 at it 600: total 887 (best 887)
+  kick 4 at it 750: total 887 (best 887)
+  lns done: 778 iterations, 4 kicks, best 887
+after lns (778 iterations) 887

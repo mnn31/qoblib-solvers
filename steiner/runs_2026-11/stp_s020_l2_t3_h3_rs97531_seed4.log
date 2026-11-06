@@ -1,0 +1,41 @@
+iter   0 overused    29 cost 353 pres 0.50 t=0.0s
+iter   1 overused    13 cost 370 pres 0.75 t=0.0s
+iter   2 overused     5 cost 383 pres 1.12 t=0.0s
+iter   3 overused     4 cost 373 pres 1.69 t=0.0s
+iter   4 overused     0 cost 382 pres 2.53 t=0.0s
+polish 0 cost 371
+polish 1 cost 371
+start 371
+  net 1: 39 -> 38
+after exact polish 370
+  lns it 21 group [4, 7, 11]: 86 -> 84  total 368  t=1s
+  lns it 26 group [1, 2, 8]: 100 -> 99  total 367  t=1s
+  kick 1 at it 176: total 367 (best 367)
+  lns it 277 group [4, 6, 8, 12]: 131 -> 129  total 365  t=9s
+  kick 2 at it 427: total 365 (best 365)
+  kick 3 at it 577: total 365 (best 365)
+  kick 4 at it 727: total 367 (best 365)
+  lns it 729 group [6, 12]: 72 -> 70  total 365  t=23s
+  kick 5 at it 877: total 365 (best 365)
+  kick 6 at it 1027: total 365 (best 365)
+  lns it 1171 group [6, 8, 9]: 113 -> 111  total 363  t=37s
+  kick 7 at it 1321: total 364 (best 363)
+  lns it 1341 group [2, 3, 4, 11]: 111 -> 110  total 363  t=42s
+  kick 8 at it 1471: total 364 (best 363)
+  lns it 1502 group [1, 7, 9, 12]: 144 -> 143  total 363  t=46s
+  kick 9 at it 1621: total 363 (best 363)
+  kick 10 at it 1921: total 363 (best 363)
+  kick 11 at it 2071: total 363 (best 363)
+  kick 12 at it 2371: total 363 (best 363)
+  kick 13 at it 2521: total 363 (best 363)
+  kick 14 at it 2671: total 363 (best 363)
+  kick 15 at it 2821: total 363 (best 363)
+  kick 16 at it 2971: total 363 (best 363)
+  kick 17 at it 3121: total 363 (best 363)
+  kick 18 at it 3271: total 363 (best 363)
+  kick 19 at it 3421: total 363 (best 363)
+  kick 20 at it 3571: total 363 (best 363)
+  kick 21 at it 3721: total 363 (best 363)
+  kick 22 at it 3871: total 363 (best 363)
+  lns done: 3946 iterations, 22 kicks, best 363
+after lns (3946 iterations) 363

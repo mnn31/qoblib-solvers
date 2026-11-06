@@ -1,0 +1,40 @@
+iter   0 overused    26 cost 487 pres 0.50 t=0.0s
+iter   1 overused     5 cost 492 pres 0.75 t=0.1s
+iter   2 overused     1 cost 490 pres 1.12 t=0.1s
+iter   3 overused     0 cost 486 pres 1.69 t=0.1s
+polish 0 cost 486
+start 486
+  net 2: 71 -> 69
+  net 3: 57 -> 55
+after exact polish 482
+  lns it 1 group [1, 2, 5, 6]: 225 -> 220  total 477  t=1s
+  lns it 10 group [3, 5]: 96 -> 95  total 476  t=1s
+  kick 1 at it 160: total 478 (best 476)
+  lns it 184 group [2, 6, 7, 8]: 189 -> 187  total 476  t=34s
+  kick 2 at it 310: total 476 (best 476)
+  kick 3 at it 460: total 476 (best 476)
+  kick 4 at it 610: total 476 (best 476)
+  kick 5 at it 760: total 476 (best 476)
+  kick 6 at it 910: total 476 (best 476)
+  kick 7 at it 1060: total 476 (best 476)
+  kick 8 at it 1210: total 478 (best 476)
+  lns it 1214 group [1, 2, 4]: 163 -> 161  total 476  t=232s
+  kick 9 at it 1360: total 480 (best 476)
+  lns it 1366 group [1, 3, 9, 11]: 175 -> 173  total 478  t=261s
+  lns it 1374 group [9, 10, 11]: 101 -> 99  total 476  t=262s
+  kick 10 at it 1510: total 476 (best 476)
+  kick 11 at it 1660: total 476 (best 476)
+  kick 12 at it 1810: total 476 (best 476)
+  kick 13 at it 1960: total 476 (best 476)
+  kick 14 at it 2110: total 476 (best 476)
+  kick 15 at it 2260: total 476 (best 476)
+  kick 16 at it 2410: total 480 (best 476)
+  lns it 2415 group [2, 4, 8]: 142 -> 138  total 476  t=454s
+  kick 17 at it 2560: total 479 (best 476)
+  lns it 2562 group [1, 4, 6, 10]: 194 -> 191  total 476  t=484s
+  kick 18 at it 2710: total 476 (best 476)
+  kick 19 at it 2860: total 476 (best 476)
+  kick 20 at it 3010: total 476 (best 476)
+  kick 21 at it 3160: total 476 (best 476)
+  lns done: 3201 iterations, 21 kicks, best 476
+after lns (3201 iterations) 476

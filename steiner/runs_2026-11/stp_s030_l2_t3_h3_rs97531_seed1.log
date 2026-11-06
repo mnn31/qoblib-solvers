@@ -1,0 +1,45 @@
+iter   0 overused    17 cost 382 pres 0.50 t=0.0s
+iter   1 overused     5 cost 392 pres 0.75 t=0.0s
+iter   2 overused     2 cost 398 pres 1.12 t=0.0s
+iter   3 overused     2 cost 394 pres 1.69 t=0.1s
+iter   4 overused     1 cost 396 pres 2.53 t=0.1s
+iter   5 overused     1 cost 398 pres 3.80 t=0.1s
+iter   6 overused     0 cost 402 pres 5.70 t=0.1s
+polish 0 cost 399
+polish 1 cost 398
+polish 2 cost 398
+start 398
+  net 6: 60 -> 58
+after exact polish 396
+  lns it 1 group [1, 2, 6]: 141 -> 140  total 395  t=0s
+  lns it 8 group [1, 2, 8]: 145 -> 144  total 394  t=0s
+  lns it 34 group [1, 4]: 107 -> 106  total 393  t=2s
+  lns it 36 group [2, 4, 8, 9]: 156 -> 154  total 391  t=2s
+  lns it 47 group [2, 5, 8]: 134 -> 133  total 390  t=3s
+  kick 1 at it 197: total 390 (best 390)
+  lns it 205 group [1, 4, 11]: 121 -> 120  total 389  t=11s
+  lns it 219 group [4, 5, 8, 9]: 173 -> 172  total 388  t=12s
+  kick 2 at it 369: total 388 (best 388)
+  kick 3 at it 519: total 388 (best 388)
+  kick 4 at it 669: total 388 (best 388)
+  kick 5 at it 819: total 388 (best 388)
+  kick 6 at it 969: total 388 (best 388)
+  kick 7 at it 1119: total 388 (best 388)
+  kick 8 at it 1269: total 390 (best 388)
+  lns it 1274 group [3, 4, 6]: 149 -> 148  total 389  t=66s
+  lns it 1283 group [1, 3, 4, 10]: 150 -> 149  total 388  t=66s
+  kick 9 at it 1419: total 389 (best 388)
+  lns it 1557 group [2, 5, 8, 11]: 150 -> 149  total 388  t=80s
+  kick 10 at it 1569: total 392 (best 388)
+  lns it 1579 group [1, 6, 8, 9]: 185 -> 183  total 390  t=81s
+  lns it 1580 group [5, 8, 9]: 123 -> 121  total 388  t=81s
+  kick 11 at it 1719: total 398 (best 388)
+  lns it 1723 group [2, 5, 7, 8]: 161 -> 159  total 396  t=89s
+  lns it 1727 group [1, 6, 8]: 176 -> 175  total 395  t=89s
+  lns it 1728 group [3, 8, 9]: 122 -> 117  total 390  t=89s
+  lns it 1746 group [4, 8, 9]: 128 -> 126  total 388  t=90s
+  kick 12 at it 1869: total 388 (best 388)
+  kick 13 at it 2019: total 388 (best 388)
+  kick 14 at it 2169: total 388 (best 388)
+  lns done: 2292 iterations, 14 kicks, best 388
+after lns (2292 iterations) 388

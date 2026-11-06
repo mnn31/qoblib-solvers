@@ -1,0 +1,57 @@
+iter   0 overused    20 cost 349 pres 0.50 t=0.0s
+iter   1 overused    13 cost 358 pres 0.75 t=0.0s
+iter   2 overused     5 cost 376 pres 1.12 t=0.0s
+iter   3 overused     2 cost 369 pres 1.69 t=0.1s
+iter   4 overused     1 cost 373 pres 2.53 t=0.1s
+iter   5 overused     0 cost 375 pres 3.80 t=0.1s
+polish 0 cost 372
+polish 1 cost 372
+start 372
+  net 1: 35 -> 34
+after exact polish 371
+  lns it 3 group [2, 6, 13]: 116 -> 115  total 370  t=0s
+  net 1: 34 -> 32
+  lns it 29 group [5, 8, 10, 14]: 115 -> 111  total 364  t=1s
+  lns it 56 group [2, 9, 11, 14]: 103 -> 102  total 363  t=2s
+  lns it 67 group [4, 6, 11]: 106 -> 105  total 362  t=2s
+  lns it 102 group [3, 5, 6, 9]: 115 -> 114  total 361  t=3s
+  lns it 208 group [2, 11, 13]: 95 -> 94  total 360  t=5s
+  lns it 217 group [2, 4, 13]: 114 -> 113  total 359  t=5s
+  lns it 239 group [4, 8, 10, 13]: 130 -> 129  total 358  t=6s
+  kick 1 at it 389: total 359 (best 358)
+  lns it 394 group [5, 10, 14]: 81 -> 80  total 358  t=10s
+  kick 2 at it 539: total 358 (best 358)
+  kick 3 at it 689: total 358 (best 358)
+  kick 4 at it 839: total 358 (best 358)
+  kick 5 at it 989: total 360 (best 358)
+  lns it 997 group [3, 4, 8]: 87 -> 86  total 359  t=28s
+  lns it 1012 group [1, 4, 11, 13]: 128 -> 127  total 358  t=28s
+  kick 6 at it 1139: total 358 (best 358)
+  kick 7 at it 1289: total 360 (best 358)
+  lns it 1297 group [1, 10]: 58 -> 56  total 358  t=37s
+  kick 8 at it 1439: total 358 (best 358)
+  kick 9 at it 1589: total 358 (best 358)
+  kick 10 at it 1739: total 358 (best 358)
+  kick 11 at it 1889: total 358 (best 358)
+  kick 12 at it 2039: total 358 (best 358)
+  kick 13 at it 2189: total 358 (best 358)
+  kick 14 at it 2339: total 358 (best 358)
+  kick 15 at it 2489: total 358 (best 358)
+  kick 16 at it 2639: total 358 (best 358)
+  kick 17 at it 2789: total 358 (best 358)
+  kick 18 at it 2939: total 358 (best 358)
+  kick 19 at it 3089: total 358 (best 358)
+  kick 20 at it 3239: total 358 (best 358)
+  lns it 3312 group [1, 2, 10, 13]: 128 -> 127  total 357  t=87s
+  kick 21 at it 3462: total 359 (best 357)
+  lns it 3513 group [6, 9, 13]: 97 -> 95  total 357  t=92s
+  kick 22 at it 3612: total 357 (best 357)
+  kick 23 at it 3762: total 357 (best 357)
+  kick 24 at it 3912: total 357 (best 357)
+  kick 25 at it 4062: total 357 (best 357)
+  kick 26 at it 4212: total 357 (best 357)
+  kick 27 at it 4362: total 357 (best 357)
+  kick 28 at it 4512: total 357 (best 357)
+  kick 29 at it 4662: total 357 (best 357)
+  lns done: 4710 iterations, 29 kicks, best 357
+after lns (4710 iterations) 357

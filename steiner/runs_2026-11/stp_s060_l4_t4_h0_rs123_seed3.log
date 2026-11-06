@@ -1,0 +1,32 @@
+iter   0 overused    14 cost 701 pres 0.50 t=0.1s
+iter   1 overused     4 cost 705 pres 0.75 t=0.2s
+iter   2 overused     1 cost 709 pres 1.12 t=0.3s
+iter   3 overused     2 cost 707 pres 1.69 t=0.5s
+iter   4 overused     0 cost 711 pres 2.53 t=0.6s
+polish 0 cost 711
+start 711
+after exact polish 711
+  kick 1 at it 150: total 711 (best 711)
+  lns it 152 group [3, 5, 7, 8]: 258 -> 256  total 709  t=29s
+  kick 2 at it 302: total 709 (best 709)
+  kick 3 at it 452: total 709 (best 709)
+  kick 4 at it 602: total 709 (best 709)
+  kick 5 at it 752: total 709 (best 709)
+  kick 6 at it 902: total 709 (best 709)
+  kick 7 at it 1052: total 709 (best 709)
+  kick 8 at it 1202: total 709 (best 709)
+  kick 9 at it 1352: total 709 (best 709)
+  kick 10 at it 1502: total 709 (best 709)
+  kick 11 at it 1652: total 709 (best 709)
+  kick 12 at it 1802: total 709 (best 709)
+  kick 13 at it 1952: total 709 (best 709)
+  kick 14 at it 2102: total 709 (best 709)
+  kick 15 at it 2252: total 709 (best 709)
+  kick 16 at it 2402: total 709 (best 709)
+  kick 17 at it 2552: total 709 (best 709)
+  kick 18 at it 2702: total 709 (best 709)
+  kick 19 at it 2852: total 709 (best 709)
+  kick 20 at it 3002: total 709 (best 709)
+  kick 21 at it 3152: total 709 (best 709)
+  lns done: 3207 iterations, 21 kicks, best 709
+after lns (3207 iterations) 709

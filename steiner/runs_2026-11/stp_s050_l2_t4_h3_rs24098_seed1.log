@@ -1,0 +1,58 @@
+iter   0 overused    24 cost 815 pres 0.50 t=0.1s
+iter   1 overused    17 cost 815 pres 0.75 t=0.1s
+iter   2 overused     2 cost 831 pres 1.12 t=0.2s
+iter   3 overused     4 cost 827 pres 1.69 t=0.2s
+iter   4 overused     2 cost 836 pres 2.53 t=0.3s
+iter   5 overused     1 cost 837 pres 3.80 t=0.3s
+iter   6 overused     1 cost 836 pres 5.70 t=0.4s
+iter   7 overused     1 cost 837 pres 8.54 t=0.4s
+iter   8 overused     1 cost 841 pres 12.81 t=0.5s
+iter   9 overused     1 cost 836 pres 19.22 t=0.5s
+iter  10 overused     1 cost 840 pres 28.83 t=0.6s
+iter  11 overused     1 cost 839 pres 43.25 t=0.6s
+iter  12 overused     1 cost 835 pres 64.87 t=0.7s
+iter  13 overused     1 cost 843 pres 97.31 t=0.7s
+iter  14 overused     1 cost 841 pres 145.96 t=0.8s
+iter  15 overused     1 cost 834 pres 218.95 t=0.8s
+iter  16 overused     1 cost 843 pres 328.42 t=0.8s
+iter  17 overused     1 cost 841 pres 492.63 t=0.9s
+iter  18 overused     1 cost 839 pres 738.95 t=0.9s
+iter  19 overused     1 cost 852 pres 1108.42 t=1.0s
+iter  20 overused     0 cost 862 pres 1662.63 t=1.0s
+polish 0 cost 846
+polish 1 cost 846
+start 846
+after exact polish 846
+  net 5: 69 -> 67
+  net 10: 57 -> 51
+  lns it 3 group [7, 9]: 129 -> 127  total 836  t=1s
+  net 10: 51 -> 49
+  lns it 4 group [4, 7, 9]: 190 -> 187  total 831  t=1s
+  net 5: 67 -> 65
+  lns it 7 group [1, 6, 8]: 269 -> 265  total 825  t=2s
+  lns it 11 group [8, 11]: 167 -> 165  total 823  t=3s
+  net 8: 99 -> 98
+  lns it 30 group [1, 5, 6, 9]: 267 -> 265  total 820  t=7s
+  lns it 55 group [4, 7, 8]: 247 -> 246  total 819  t=12s
+  kick 1 at it 205: total 819 (best 819)
+  kick 2 at it 355: total 819 (best 819)
+  kick 3 at it 505: total 819 (best 819)
+  kick 4 at it 655: total 819 (best 819)
+  kick 5 at it 955: total 819 (best 819)
+  lns it 1009 group [1, 5, 6, 10]: 276 -> 274  total 817  t=199s
+  kick 6 at it 1159: total 817 (best 817)
+  kick 7 at it 1309: total 817 (best 817)
+  kick 8 at it 1459: total 817 (best 817)
+  kick 9 at it 1609: total 817 (best 817)
+  kick 10 at it 1759: total 817 (best 817)
+  kick 11 at it 1909: total 817 (best 817)
+  kick 12 at it 2059: total 817 (best 817)
+  kick 13 at it 2209: total 817 (best 817)
+  kick 14 at it 2359: total 818 (best 817)
+  lns it 2378 group [2, 3, 9]: 182 -> 181  total 817  t=473s
+  kick 15 at it 2509: total 817 (best 817)
+  kick 16 at it 2659: total 817 (best 817)
+  kick 17 at it 2809: total 817 (best 817)
+  kick 18 at it 2959: total 817 (best 817)
+  lns done: 3002 iterations, 18 kicks, best 817
+after lns (3002 iterations) 817

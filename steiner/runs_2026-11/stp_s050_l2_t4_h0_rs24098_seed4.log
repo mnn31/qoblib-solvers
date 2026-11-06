@@ -1,0 +1,35 @@
+iter   0 overused    30 cost 796 pres 0.50 t=0.1s
+iter   1 overused    16 cost 823 pres 0.75 t=0.1s
+iter   2 overused     2 cost 823 pres 1.12 t=0.2s
+iter   3 overused     2 cost 824 pres 1.69 t=0.2s
+iter   4 overused     1 cost 816 pres 2.53 t=0.3s
+iter   5 overused     1 cost 819 pres 3.80 t=0.3s
+iter   6 overused     0 cost 822 pres 5.70 t=0.4s
+polish 0 cost 820
+polish 1 cost 820
+start 820
+after exact polish 820
+  lns it 17 group [2, 4, 10]: 249 -> 246  total 817  t=4s
+  lns it 22 group [2, 5, 8, 11]: 327 -> 325  total 815  t=6s
+  lns it 36 group [1, 2, 3, 12]: 308 -> 304  total 811  t=8s
+  lns it 89 group [1, 3, 6, 7]: 287 -> 285  total 809  t=21s
+  lns it 93 group [4, 6, 11]: 208 -> 207  total 808  t=22s
+  lns it 210 group [2, 3, 6, 7]: 248 -> 246  total 806  t=51s
+  kick 1 at it 360: total 806 (best 806)
+  kick 2 at it 510: total 806 (best 806)
+  kick 3 at it 660: total 808 (best 806)
+  lns it 664 group [3, 8]: 178 -> 176  total 806  t=167s
+  kick 4 at it 810: total 808 (best 806)
+  lns it 920 group [3, 4, 6, 10]: 314 -> 312  total 806  t=241s
+  kick 5 at it 960: total 806 (best 806)
+  kick 6 at it 1110: total 806 (best 806)
+  kick 7 at it 1260: total 806 (best 806)
+  kick 8 at it 1410: total 806 (best 806)
+  kick 9 at it 1560: total 806 (best 806)
+  kick 10 at it 1710: total 806 (best 806)
+  kick 11 at it 1860: total 806 (best 806)
+  kick 12 at it 2010: total 806 (best 806)
+  kick 13 at it 2160: total 807 (best 806)
+  lns it 2189 group [2, 3, 6]: 217 -> 216  total 806  t=581s
+  lns done: 2267 iterations, 13 kicks, best 806
+after lns (2267 iterations) 806

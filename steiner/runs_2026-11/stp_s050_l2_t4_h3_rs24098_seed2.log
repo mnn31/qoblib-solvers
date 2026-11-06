@@ -1,0 +1,47 @@
+iter   0 overused    28 cost 822 pres 0.50 t=0.1s
+iter   1 overused    19 cost 823 pres 0.75 t=0.1s
+iter   2 overused     6 cost 826 pres 1.12 t=0.2s
+iter   3 overused     4 cost 828 pres 1.69 t=0.2s
+iter   4 overused     1 cost 840 pres 2.53 t=0.3s
+iter   5 overused     1 cost 840 pres 3.80 t=0.3s
+iter   6 overused     1 cost 833 pres 5.70 t=0.4s
+iter   7 overused     1 cost 841 pres 8.54 t=0.4s
+iter   8 overused     1 cost 839 pres 12.81 t=0.5s
+iter   9 overused     0 cost 848 pres 19.22 t=0.5s
+polish 0 cost 841
+polish 1 cost 841
+start 841
+  net 2: 63 -> 62
+after exact polish 840
+  lns it 1 group [2, 6, 8, 10]: 288 -> 287  total 839  t=0s
+  lns it 2 group [2, 7, 8]: 251 -> 249  total 837  t=1s
+  lns it 7 group [2, 3, 9]: 180 -> 179  total 836  t=2s
+  lns it 27 group [5, 6, 7, 9]: 262 -> 259  total 833  t=5s
+  lns it 37 group [1, 3, 4, 10]: 297 -> 289  total 825  t=7s
+  lns it 43 group [1, 4, 5, 10]: 273 -> 272  total 824  t=8s
+  lns it 84 group [4, 5, 11]: 193 -> 192  total 823  t=15s
+  lns it 109 group [1, 3, 5, 6]: 311 -> 310  total 822  t=20s
+  lns it 120 group [1, 9, 10]: 185 -> 183  total 820  t=21s
+  kick 1 at it 270: total 820 (best 820)
+  lns it 381 group [1, 5, 10]: 208 -> 207  total 819  t=69s
+  lns it 404 group [6, 10, 11]: 181 -> 180  total 818  t=74s
+  lns it 473 group [4, 5, 8]: 225 -> 224  total 817  t=88s
+  kick 2 at it 623: total 817 (best 817)
+  kick 3 at it 773: total 817 (best 817)
+  kick 4 at it 923: total 817 (best 817)
+  kick 5 at it 1073: total 821 (best 817)
+  lns it 1077 group [1, 5, 6, 9]: 273 -> 269  total 817  t=216s
+  kick 6 at it 1223: total 817 (best 817)
+  kick 7 at it 1373: total 817 (best 817)
+  kick 8 at it 1523: total 817 (best 817)
+  kick 9 at it 1673: total 817 (best 817)
+  kick 10 at it 1823: total 817 (best 817)
+  kick 11 at it 1973: total 817 (best 817)
+  kick 12 at it 2123: total 817 (best 817)
+  kick 13 at it 2273: total 817 (best 817)
+  kick 14 at it 2423: total 817 (best 817)
+  kick 15 at it 2573: total 817 (best 817)
+  kick 16 at it 2723: total 817 (best 817)
+  kick 17 at it 2873: total 817 (best 817)
+  lns done: 3004 iterations, 17 kicks, best 817
+after lns (3004 iterations) 817

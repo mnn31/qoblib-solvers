@@ -1,0 +1,36 @@
+iter   0 overused    37 cost 1405 pres 0.50 t=0.3s
+iter   1 overused    13 cost 1416 pres 0.75 t=0.6s
+iter   2 overused     1 cost 1418 pres 1.12 t=1.0s
+iter   3 overused     4 cost 1423 pres 1.69 t=1.4s
+iter   4 overused     2 cost 1401 pres 2.53 t=1.7s
+iter   5 overused     0 cost 1401 pres 3.80 t=2.1s
+polish 0 cost 1398
+polish 1 cost 1397
+polish 2 cost 1396
+start 1396
+  net 1: 133 -> 132
+  net 2: 142 -> 131
+  net 3: 134 -> 132
+  net 9: 123 -> 122
+  net 10: 131 -> 125
+  net 3: 132 -> 129
+after exact polish 1372
+  lns it 7 group [1, 2, 9]: 385 -> 384  total 1371  t=6s
+  lns it 11 group [1, 3, 7, 11]: 497 -> 496  total 1370  t=10s
+  lns it 13 group [7, 10]: 257 -> 256  total 1369  t=12s
+  lns it 22 group [4, 7, 12]: 388 -> 387  total 1368  t=21s
+  lns it 35 group [4, 5, 11]: 284 -> 283  total 1367  t=36s
+  lns it 38 group [2, 4, 12]: 385 -> 384  total 1366  t=39s
+  lns it 42 group [3, 8, 9, 12]: 470 -> 469  total 1365  t=41s
+  lns it 44 group [3, 6, 8]: 308 -> 307  total 1364  t=43s
+  lns it 46 group [7, 8, 9]: 336 -> 335  total 1363  t=45s
+  lns it 106 group [1, 8]: 213 -> 212  total 1362  t=96s
+  lns it 107 group [3, 6, 8, 9]: 428 -> 427  total 1361  t=98s
+  kick 1 at it 257: total 1361 (best 1361)
+  net 7: 133 -> 132
+  lns it 310 group [7, 8, 10, 12]: 476 -> 475  total 1359  t=271s
+  kick 2 at it 460: total 1359 (best 1359)
+  kick 3 at it 610: total 1361 (best 1359)
+  lns it 622 group [6, 7, 10, 12]: 490 -> 489  total 1360  t=557s
+  lns done: 679 iterations, 3 kicks, best 1359
+after lns (679 iterations) 1359

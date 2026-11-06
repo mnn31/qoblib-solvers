@@ -1,0 +1,42 @@
+iter   0 overused    21 cost 742 pres 0.50 t=0.1s
+iter   1 overused     7 cost 763 pres 0.75 t=0.2s
+iter   2 overused     2 cost 748 pres 1.12 t=0.2s
+iter   3 overused     1 cost 768 pres 1.69 t=0.3s
+iter   4 overused     0 cost 755 pres 2.53 t=0.4s
+polish 0 cost 754
+polish 1 cost 754
+start 754
+  net 2: 94 -> 88
+after exact polish 748
+  lns it 14 group [3, 4, 7, 14]: 280 -> 279  total 747  t=2s
+  lns it 93 group [2, 4, 11, 13]: 194 -> 193  total 746  t=15s
+  lns it 134 group [1, 4, 12, 14]: 261 -> 260  total 745  t=23s
+  kick 1 at it 284: total 747 (best 745)
+  kick 2 at it 434: total 749 (best 745)
+  lns it 456 group [2, 3, 4]: 223 -> 221  total 747  t=70s
+  lns it 509 group [5, 12, 15]: 141 -> 139  total 745  t=79s
+  kick 3 at it 584: total 745 (best 745)
+  kick 4 at it 734: total 745 (best 745)
+  kick 5 at it 884: total 745 (best 745)
+  kick 6 at it 1034: total 745 (best 745)
+  kick 7 at it 1184: total 745 (best 745)
+  kick 8 at it 1334: total 745 (best 745)
+  kick 9 at it 1484: total 745 (best 745)
+  kick 10 at it 1634: total 746 (best 745)
+  lns it 1636 group [3, 4, 12]: 191 -> 190  total 745  t=262s
+  kick 11 at it 1784: total 745 (best 745)
+  kick 12 at it 1934: total 745 (best 745)
+  kick 13 at it 2084: total 745 (best 745)
+  kick 14 at it 2234: total 745 (best 745)
+  kick 15 at it 2384: total 745 (best 745)
+  kick 16 at it 2534: total 745 (best 745)
+  kick 17 at it 2684: total 745 (best 745)
+  kick 18 at it 2834: total 745 (best 745)
+  kick 19 at it 2984: total 745 (best 745)
+  kick 20 at it 3134: total 745 (best 745)
+  kick 21 at it 3284: total 747 (best 745)
+  lns it 3289 group [1, 2, 4, 12]: 288 -> 286  total 745  t=534s
+  kick 22 at it 3434: total 745 (best 745)
+  kick 23 at it 3584: total 745 (best 745)
+  lns done: 3689 iterations, 23 kicks, best 745
+after lns (3689 iterations) 745

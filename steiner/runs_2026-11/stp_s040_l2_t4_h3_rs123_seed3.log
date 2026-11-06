@@ -1,0 +1,61 @@
+iter   0 overused    12 cost 402 pres 0.50 t=0.0s
+iter   1 overused     6 cost 412 pres 0.75 t=0.0s
+iter   2 overused     3 cost 425 pres 1.12 t=0.1s
+iter   3 overused     3 cost 425 pres 1.69 t=0.1s
+iter   4 overused     0 cost 431 pres 2.53 t=0.1s
+polish 0 cost 416
+polish 1 cost 416
+start 416
+  net 5: 55 -> 54
+after exact polish 415
+  lns it 1 group [3, 4, 6, 8]: 225 -> 222  total 412  t=0s
+  lns it 4 group [5, 6, 7, 10]: 176 -> 174  total 410  t=0s
+  lns it 12 group [3, 4, 5, 6]: 211 -> 210  total 409  t=1s
+  kick 1 at it 162: total 409 (best 409)
+  kick 2 at it 312: total 409 (best 409)
+  kick 3 at it 462: total 409 (best 409)
+  kick 4 at it 612: total 409 (best 409)
+  kick 5 at it 762: total 409 (best 409)
+  kick 6 at it 912: total 409 (best 409)
+  kick 7 at it 1062: total 409 (best 409)
+  kick 8 at it 1212: total 409 (best 409)
+  kick 9 at it 1362: total 409 (best 409)
+  kick 10 at it 1512: total 409 (best 409)
+  kick 11 at it 1662: total 409 (best 409)
+  kick 12 at it 1812: total 409 (best 409)
+  kick 13 at it 1962: total 409 (best 409)
+  kick 14 at it 2112: total 409 (best 409)
+  kick 15 at it 2262: total 409 (best 409)
+  kick 16 at it 2412: total 409 (best 409)
+  kick 17 at it 2562: total 409 (best 409)
+  kick 18 at it 2712: total 413 (best 409)
+  lns it 2714 group [5, 8]: 121 -> 118  total 410  t=251s
+  lns it 2776 group [5, 7, 8]: 173 -> 172  total 409  t=258s
+  kick 19 at it 2862: total 409 (best 409)
+  kick 20 at it 3012: total 409 (best 409)
+  kick 21 at it 3162: total 409 (best 409)
+  kick 22 at it 3312: total 409 (best 409)
+  kick 23 at it 3462: total 409 (best 409)
+  kick 24 at it 3612: total 409 (best 409)
+  kick 25 at it 3762: total 412 (best 409)
+  lns it 3771 group [4, 5, 6, 9]: 166 -> 163  total 409  t=351s
+  kick 26 at it 3912: total 409 (best 409)
+  kick 27 at it 4062: total 409 (best 409)
+  kick 28 at it 4212: total 409 (best 409)
+  kick 29 at it 4362: total 409 (best 409)
+  kick 30 at it 4512: total 409 (best 409)
+  kick 31 at it 4662: total 411 (best 409)
+  lns it 4683 group [5, 6, 10]: 121 -> 119  total 409  t=439s
+  kick 32 at it 4812: total 409 (best 409)
+  kick 33 at it 4962: total 409 (best 409)
+  kick 34 at it 5112: total 409 (best 409)
+  kick 35 at it 5262: total 409 (best 409)
+  kick 36 at it 5412: total 409 (best 409)
+  kick 37 at it 5562: total 409 (best 409)
+  kick 38 at it 5712: total 409 (best 409)
+  kick 39 at it 5862: total 409 (best 409)
+  kick 40 at it 6012: total 412 (best 409)
+  lns it 6014 group [3, 5, 6, 10]: 185 -> 182  total 409  t=563s
+  kick 41 at it 6312: total 409 (best 409)
+  lns done: 6423 iterations, 41 kicks, best 409
+after lns (6423 iterations) 409

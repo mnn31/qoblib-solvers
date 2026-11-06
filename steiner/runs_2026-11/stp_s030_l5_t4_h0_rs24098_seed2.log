@@ -1,0 +1,46 @@
+iter   0 overused    20 cost 451 pres 0.50 t=0.1s
+iter   1 overused    11 cost 456 pres 0.75 t=0.1s
+iter   2 overused     2 cost 467 pres 1.12 t=0.2s
+iter   3 overused     2 cost 465 pres 1.69 t=0.2s
+iter   4 overused     0 cost 473 pres 2.53 t=0.3s
+polish 0 cost 461
+polish 1 cost 459
+polish 2 cost 459
+start 459
+  net 4: 46 -> 45
+after exact polish 458
+  net 4: 45 -> 44
+  net 9: 41 -> 40
+  lns it 1 group [2, 5, 7, 8]: 218 -> 216  total 454  t=1s
+  lns it 5 group [4, 5, 6, 8]: 198 -> 196  total 452  t=2s
+  lns it 6 group [3, 7, 10]: 106 -> 105  total 451  t=2s
+  lns it 8 group [2, 8]: 115 -> 114  total 450  t=2s
+  lns it 11 group [1, 6, 7]: 160 -> 159  total 449  t=4s
+  lns it 35 group [3, 5, 8, 9]: 160 -> 159  total 448  t=8s
+  kick 1 at it 185: total 450 (best 448)
+  lns it 188 group [3, 7, 8]: 132 -> 131  total 449  t=43s
+  lns it 196 group [1, 7]: 112 -> 111  total 448  t=44s
+  kick 2 at it 335: total 449 (best 448)
+  lns it 470 group [4, 5, 9, 10]: 160 -> 159  total 448  t=106s
+  lns it 478 group [1, 6, 7, 8]: 221 -> 220  total 447  t=108s
+  kick 3 at it 628: total 447 (best 447)
+  kick 4 at it 778: total 449 (best 447)
+  lns it 795 group [1, 4, 8, 9]: 196 -> 194  total 447  t=180s
+  kick 5 at it 928: total 448 (best 447)
+  lns it 929 group [5, 6, 8]: 156 -> 155  total 447  t=211s
+  kick 6 at it 1078: total 447 (best 447)
+  kick 7 at it 1228: total 447 (best 447)
+  kick 8 at it 1378: total 447 (best 447)
+  kick 9 at it 1528: total 447 (best 447)
+  kick 10 at it 1678: total 448 (best 447)
+  lns it 1686 group [1, 7]: 111 -> 110  total 447  t=375s
+  kick 11 at it 1828: total 447 (best 447)
+  kick 12 at it 1978: total 447 (best 447)
+  kick 13 at it 2128: total 447 (best 447)
+  kick 14 at it 2278: total 447 (best 447)
+  kick 15 at it 2428: total 449 (best 447)
+  lns it 2456 group [2, 6, 7, 10]: 196 -> 194  total 447  t=538s
+  kick 16 at it 2578: total 447 (best 447)
+  kick 17 at it 2728: total 447 (best 447)
+  lns done: 2753 iterations, 17 kicks, best 447
+after lns (2753 iterations) 447

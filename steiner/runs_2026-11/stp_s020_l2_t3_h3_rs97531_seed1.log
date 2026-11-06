@@ -1,0 +1,59 @@
+iter   0 overused    32 cost 364 pres 0.50 t=0.0s
+iter   1 overused    13 cost 372 pres 0.75 t=0.0s
+iter   2 overused     3 cost 381 pres 1.12 t=0.0s
+iter   3 overused     1 cost 374 pres 1.69 t=0.0s
+iter   4 overused     0 cost 386 pres 2.53 t=0.0s
+polish 0 cost 372
+polish 1 cost 372
+start 372
+  net 1: 39 -> 38
+after exact polish 371
+  lns it 11 group [1, 4, 12]: 92 -> 91  total 370  t=0s
+  lns it 25 group [3, 9]: 79 -> 77  total 368  t=1s
+  lns it 30 group [5, 7, 10, 12]: 104 -> 103  total 367  t=1s
+  lns it 94 group [4, 6, 7, 9]: 143 -> 142  total 366  t=3s
+  lns it 209 group [3, 7, 9, 12]: 142 -> 140  total 364  t=6s
+  kick 1 at it 359: total 367 (best 364)
+  lns it 367 group [1, 2, 3, 11]: 125 -> 122  total 364  t=11s
+  lns it 423 group [6, 12]: 68 -> 67  total 363  t=13s
+  kick 2 at it 573: total 363 (best 363)
+  kick 3 at it 723: total 363 (best 363)
+  kick 4 at it 873: total 363 (best 363)
+  kick 5 at it 1023: total 363 (best 363)
+  kick 6 at it 1173: total 363 (best 363)
+  kick 7 at it 1323: total 365 (best 363)
+  lns it 1326 group [1, 5, 10]: 76 -> 74  total 363  t=40s
+  kick 8 at it 1473: total 363 (best 363)
+  kick 9 at it 1623: total 367 (best 363)
+  lns it 1631 group [1, 5, 10]: 78 -> 76  total 365  t=48s
+  lns it 1638 group [5, 8, 9, 12]: 118 -> 116  total 363  t=49s
+  kick 10 at it 1773: total 386 (best 363)
+  lns it 1775 group [1, 7, 10, 12]: 150 -> 149  total 385  t=53s
+  net 7: 46 -> 40
+  net 4: 27 -> 25
+  net 7: 40 -> 38
+  lns it 1777 group [3, 6, 10, 12]: 138 -> 132  total 369  t=53s
+  lns it 1781 group [6, 12]: 69 -> 67  total 367  t=53s
+  lns it 1795 group [3, 12]: 68 -> 64  total 363  t=54s
+  kick 11 at it 1923: total 364 (best 363)
+  lns it 1928 group [1, 4, 6]: 102 -> 101  total 363  t=58s
+  kick 12 at it 2073: total 363 (best 363)
+  kick 13 at it 2223: total 363 (best 363)
+  kick 14 at it 2373: total 363 (best 363)
+  kick 15 at it 2523: total 363 (best 363)
+  kick 16 at it 2673: total 363 (best 363)
+  kick 17 at it 2823: total 363 (best 363)
+  kick 18 at it 2973: total 363 (best 363)
+  kick 19 at it 3123: total 363 (best 363)
+  kick 20 at it 3273: total 363 (best 363)
+  kick 21 at it 3423: total 363 (best 363)
+  kick 22 at it 3573: total 373 (best 363)
+  net 3: 39 -> 36
+  lns it 3577 group [4, 7, 9, 12]: 136 -> 132  total 366  t=107s
+  lns it 3579 group [1, 3]: 74 -> 73  total 365  t=108s
+  lns it 3609 group [1, 3, 4]: 100 -> 99  total 364  t=109s
+  lns it 3793 group [3, 4, 7, 12]: 128 -> 127  total 363  t=114s
+  kick 23 at it 3873: total 397 (best 363)
+  lns it 3875 group [5, 8]: 83 -> 49  total 363  t=116s
+  lns done: 4018 iterations, 23 kicks, best 363
+after lns (4018 iterations) 363

@@ -1,0 +1,47 @@
+iter   0 overused    34 cost 989 pres 0.50 t=0.1s
+iter   1 overused    15 cost 1008 pres 0.75 t=0.1s
+iter   2 overused     4 cost 1017 pres 1.12 t=0.2s
+iter   3 overused     4 cost 1016 pres 1.69 t=0.3s
+iter   4 overused     2 cost 1033 pres 2.53 t=0.4s
+iter   5 overused     1 cost 1034 pres 3.80 t=0.5s
+iter   6 overused     1 cost 1033 pres 5.70 t=0.5s
+iter   7 overused     0 cost 1032 pres 8.54 t=0.6s
+polish 0 cost 1013
+polish 1 cost 1010
+polish 2 cost 1010
+start 1010
+  net 4: 103 -> 102
+  net 5: 60 -> 59
+  net 8: 99 -> 98
+  net 9: 72 -> 71
+  net 10: 108 -> 98
+after exact polish 996
+  lns it 8 group [2, 3, 9]: 278 -> 274  total 992  t=4s
+  lns it 22 group [6, 10, 11, 12]: 326 -> 325  total 991  t=9s
+  lns it 83 group [1, 6, 11, 12]: 328 -> 327  total 990  t=28s
+  net 7: 33 -> 31
+  lns it 89 group [2, 10, 11]: 251 -> 249  total 986  t=30s
+  net 4: 102 -> 100
+  lns it 232 group [1, 2, 5]: 260 -> 259  total 983  t=81s
+  lns it 248 group [1, 4, 5]: 257 -> 255  total 981  t=87s
+  lns it 264 group [1, 2, 4, 12]: 375 -> 374  total 980  t=95s
+  kick 1 at it 414: total 980 (best 980)
+  kick 2 at it 564: total 983 (best 980)
+  lns it 571 group [1, 3, 8, 10]: 395 -> 393  total 981  t=206s
+  kick 3 at it 714: total 983 (best 980)
+  lns it 741 group [5, 9]: 131 -> 129  total 981  t=264s
+  lns it 812 group [3, 7, 8, 9]: 301 -> 300  total 980  t=291s
+  kick 4 at it 864: total 980 (best 980)
+  kick 5 at it 1014: total 980 (best 980)
+  kick 6 at it 1164: total 980 (best 980)
+  kick 7 at it 1314: total 980 (best 980)
+  kick 8 at it 1464: total 980 (best 980)
+  kick 9 at it 1614: total 995 (best 980)
+  lns it 1617 group [6, 8, 10]: 296 -> 295  total 994  t=563s
+  lns it 1630 group [4, 8, 10]: 293 -> 292  total 993  t=569s
+  lns it 1638 group [1, 2, 3, 8]: 412 -> 409  total 990  t=572s
+  net 8: 99 -> 98
+  lns it 1671 group [2, 5]: 168 -> 162  total 983  t=585s
+  lns it 1674 group [2, 3, 4, 10]: 400 -> 398  total 981  t=586s
+  lns done: 1710 iterations, 9 kicks, best 980
+after lns (1710 iterations) 980

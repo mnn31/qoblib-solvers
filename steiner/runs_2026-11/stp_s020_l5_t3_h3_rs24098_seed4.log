@@ -1,0 +1,40 @@
+iter   0 overused    18 cost 284 pres 0.50 t=0.0s
+iter   1 overused    11 cost 292 pres 0.75 t=0.0s
+iter   2 overused     3 cost 303 pres 1.12 t=0.1s
+iter   3 overused     3 cost 301 pres 1.69 t=0.1s
+iter   4 overused     0 cost 306 pres 2.53 t=0.1s
+polish 0 cost 304
+polish 1 cost 304
+start 304
+after exact polish 304
+  lns it 10 group [1, 6, 9, 10]: 93 -> 91  total 302  t=0s
+  lns it 11 group [2, 5, 10]: 100 -> 98  total 300  t=1s
+  lns it 32 group [6, 7]: 54 -> 52  total 298  t=1s
+  kick 1 at it 182: total 298 (best 298)
+  kick 2 at it 332: total 298 (best 298)
+  kick 3 at it 482: total 298 (best 298)
+  kick 4 at it 632: total 298 (best 298)
+  lns it 692 group [1, 4, 10, 11]: 124 -> 123  total 297  t=26s
+  kick 5 at it 842: total 299 (best 297)
+  lns it 848 group [10, 11]: 68 -> 66  total 297  t=32s
+  kick 6 at it 992: total 299 (best 297)
+  lns it 1002 group [3, 4]: 64 -> 62  total 297  t=38s
+  kick 7 at it 1142: total 297 (best 297)
+  kick 8 at it 1292: total 297 (best 297)
+  kick 9 at it 1442: total 297 (best 297)
+  kick 10 at it 1592: total 297 (best 297)
+  kick 11 at it 1742: total 297 (best 297)
+  kick 12 at it 1892: total 297 (best 297)
+  kick 13 at it 2042: total 297 (best 297)
+  kick 14 at it 2192: total 297 (best 297)
+  kick 15 at it 2342: total 299 (best 297)
+  lns it 2348 group [1, 5, 6, 10]: 117 -> 115  total 297  t=90s
+  kick 16 at it 2492: total 298 (best 297)
+  lns it 2512 group [1, 4, 7, 11]: 126 -> 125  total 297  t=97s
+  kick 17 at it 2642: total 299 (best 297)
+  lns it 2649 group [1, 7, 10]: 95 -> 94  total 298  t=103s
+  lns it 2732 group [1, 2, 8, 10]: 106 -> 105  total 297  t=106s
+  kick 18 at it 2792: total 297 (best 297)
+  kick 19 at it 2942: total 297 (best 297)
+  lns done: 3090 iterations, 19 kicks, best 297
+after lns (3090 iterations) 297

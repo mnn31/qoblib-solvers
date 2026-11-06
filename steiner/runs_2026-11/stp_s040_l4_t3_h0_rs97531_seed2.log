@@ -1,0 +1,49 @@
+iter   0 overused    19 cost 563 pres 0.50 t=0.1s
+iter   1 overused     4 cost 573 pres 0.75 t=0.2s
+iter   2 overused     0 cost 593 pres 1.12 t=0.3s
+polish 0 cost 584
+polish 1 cost 580
+polish 2 cost 580
+start 580
+after exact polish 580
+  lns it 20 group [1, 4, 6, 7]: 211 -> 209  total 578  t=3s
+  lns it 29 group [2, 3, 8]: 203 -> 202  total 577  t=5s
+  lns it 122 group [2, 9]: 116 -> 115  total 576  t=16s
+  lns it 234 group [1, 4, 9, 12]: 226 -> 225  total 575  t=31s
+  kick 1 at it 384: total 577 (best 575)
+  lns it 408 group [1, 6, 7]: 137 -> 135  total 575  t=57s
+  kick 2 at it 534: total 575 (best 575)
+  kick 3 at it 684: total 576 (best 575)
+  lns it 685 group [2, 7, 9]: 165 -> 164  total 575  t=98s
+  lns it 821 group [2, 3, 4, 12]: 273 -> 271  total 573  t=116s
+  kick 4 at it 971: total 573 (best 573)
+  kick 5 at it 1121: total 575 (best 573)
+  lns it 1127 group [6, 7, 8, 12]: 179 -> 177  total 573  t=156s
+  kick 6 at it 1271: total 573 (best 573)
+  kick 7 at it 1421: total 573 (best 573)
+  kick 8 at it 1571: total 573 (best 573)
+  kick 9 at it 1721: total 573 (best 573)
+  kick 10 at it 1871: total 573 (best 573)
+  kick 11 at it 2021: total 573 (best 573)
+  kick 12 at it 2171: total 573 (best 573)
+  kick 13 at it 2321: total 573 (best 573)
+  kick 14 at it 2471: total 573 (best 573)
+  kick 15 at it 2621: total 573 (best 573)
+  kick 16 at it 2771: total 573 (best 573)
+  kick 17 at it 2921: total 573 (best 573)
+  kick 18 at it 3221: total 573 (best 573)
+  kick 19 at it 3371: total 576 (best 573)
+  lns it 3384 group [2, 12]: 121 -> 120  total 575  t=450s
+  net 2: 73 -> 72
+  lns it 3430 group [2, 7, 8]: 178 -> 177  total 573  t=457s
+  kick 20 at it 3521: total 573 (best 573)
+  kick 21 at it 3671: total 575 (best 573)
+  lns it 3675 group [1, 2, 4, 8]: 261 -> 259  total 573  t=489s
+  kick 22 at it 3821: total 575 (best 573)
+  lns it 3842 group [2, 7, 8, 9]: 219 -> 217  total 573  t=512s
+  kick 23 at it 3971: total 573 (best 573)
+  kick 24 at it 4121: total 573 (best 573)
+  kick 25 at it 4271: total 573 (best 573)
+  kick 26 at it 4421: total 573 (best 573)
+  lns done: 4512 iterations, 26 kicks, best 573
+after lns (4512 iterations) 573

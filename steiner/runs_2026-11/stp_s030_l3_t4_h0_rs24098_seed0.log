@@ -1,0 +1,67 @@
+iter   0 overused     7 cost 299 pres 0.50 t=0.0s
+iter   1 overused     1 cost 318 pres 0.75 t=0.0s
+iter   2 overused     2 cost 314 pres 1.12 t=0.1s
+iter   3 overused     3 cost 306 pres 1.69 t=0.1s
+iter   4 overused     0 cost 317 pres 2.53 t=0.1s
+polish 0 cost 309
+polish 1 cost 309
+start 309
+after exact polish 309
+  lns it 1 group [3, 4, 5, 6]: 201 -> 200  total 308  t=0s
+  lns it 15 group [2, 4, 6]: 169 -> 167  total 306  t=2s
+  lns it 17 group [5, 6]: 86 -> 84  total 304  t=3s
+  kick 1 at it 167: total 304 (best 304)
+  kick 2 at it 317: total 307 (best 304)
+  lns it 320 group [3, 4, 5, 6]: 203 -> 201  total 305  t=41s
+  lns it 355 group [3, 4, 5, 6]: 201 -> 200  total 304  t=45s
+  kick 3 at it 467: total 305 (best 304)
+  lns it 479 group [2, 4, 6]: 168 -> 167  total 304  t=62s
+  kick 4 at it 617: total 308 (best 304)
+  lns it 618 group [1, 3, 6]: 163 -> 161  total 306  t=81s
+  lns it 641 group [2, 3, 5, 6]: 194 -> 192  total 304  t=84s
+  kick 5 at it 767: total 305 (best 304)
+  lns it 771 group [1, 3, 4]: 169 -> 168  total 304  t=102s
+  kick 6 at it 917: total 310 (best 304)
+  lns it 921 group [1, 2, 4]: 170 -> 164  total 304  t=122s
+  kick 7 at it 1067: total 304 (best 304)
+  kick 8 at it 1217: total 304 (best 304)
+  kick 9 at it 1367: total 305 (best 304)
+  lns it 1372 group [1, 4, 6]: 168 -> 167  total 304  t=183s
+  kick 10 at it 1517: total 306 (best 304)
+  lns it 1518 group [1, 4, 6]: 169 -> 167  total 304  t=201s
+  kick 11 at it 1667: total 304 (best 304)
+  kick 12 at it 1817: total 304 (best 304)
+  kick 13 at it 1967: total 308 (best 304)
+  net 1: 54 -> 52
+  lns it 1968 group [2, 3, 4, 6]: 223 -> 222  total 305  t=264s
+  lns it 2046 group [3, 5]: 86 -> 85  total 304  t=274s
+  kick 14 at it 2117: total 306 (best 304)
+  lns it 2119 group [3, 4, 6]: 173 -> 171  total 304  t=284s
+  kick 15 at it 2267: total 306 (best 304)
+  lns it 2275 group [2, 4, 5, 6]: 198 -> 196  total 304  t=304s
+  kick 16 at it 2417: total 307 (best 304)
+  lns it 2418 group [1, 2, 4, 6]: 221 -> 219  total 305  t=323s
+  lns it 2440 group [3, 4, 6]: 172 -> 171  total 304  t=326s
+  kick 17 at it 2567: total 304 (best 304)
+  kick 18 at it 2717: total 304 (best 304)
+  kick 19 at it 2867: total 306 (best 304)
+  lns it 2873 group [2, 4]: 114 -> 112  total 304  t=383s
+  kick 20 at it 3017: total 306 (best 304)
+  lns it 3021 group [3, 6]: 113 -> 111  total 304  t=400s
+  kick 21 at it 3167: total 304 (best 304)
+  kick 22 at it 3317: total 304 (best 304)
+  kick 23 at it 3467: total 304 (best 304)
+  kick 24 at it 3617: total 305 (best 304)
+  lns it 3618 group [1, 4]: 113 -> 112  total 304  t=476s
+  kick 25 at it 3767: total 304 (best 304)
+  kick 26 at it 3917: total 304 (best 304)
+  kick 27 at it 4067: total 306 (best 304)
+  lns it 4068 group [1, 3, 4, 5]: 199 -> 197  total 304  t=537s
+  kick 28 at it 4217: total 304 (best 304)
+  kick 29 at it 4367: total 306 (best 304)
+  lns it 4368 group [1, 3, 4, 5]: 199 -> 198  total 305  t=578s
+  lns it 4372 group [1, 2, 4, 6]: 220 -> 219  total 304  t=579s
+  kick 30 at it 4517: total 305 (best 304)
+  lns it 4519 group [3, 4, 5]: 146 -> 145  total 304  t=598s
+  lns done: 4535 iterations, 30 kicks, best 304
+after lns (4535 iterations) 304

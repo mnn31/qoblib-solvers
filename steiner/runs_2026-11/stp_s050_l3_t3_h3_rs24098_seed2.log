@@ -1,0 +1,49 @@
+iter   0 overused    21 cost 761 pres 0.50 t=0.1s
+iter   1 overused     6 cost 762 pres 0.75 t=0.2s
+iter   2 overused     3 cost 769 pres 1.12 t=0.2s
+iter   3 overused     1 cost 772 pres 1.69 t=0.3s
+iter   4 overused     0 cost 772 pres 2.53 t=0.4s
+polish 0 cost 755
+polish 1 cost 755
+start 755
+  net 2: 94 -> 88
+  net 7: 83 -> 82
+after exact polish 748
+  lns it 17 group [1, 4]: 143 -> 142  total 747  t=2s
+  lns it 40 group [3, 4, 13, 14]: 218 -> 217  total 746  t=5s
+  kick 1 at it 190: total 746 (best 746)
+  kick 2 at it 340: total 746 (best 746)
+  kick 3 at it 490: total 748 (best 746)
+  kick 4 at it 640: total 748 (best 746)
+  lns it 711 group [2, 5, 14]: 211 -> 209  total 746  t=117s
+  kick 5 at it 790: total 746 (best 746)
+  kick 6 at it 940: total 748 (best 746)
+  lns it 963 group [3, 4, 10, 14]: 229 -> 227  total 746  t=161s
+  kick 7 at it 1090: total 748 (best 746)
+  lns it 1092 group [2, 6, 10]: 158 -> 157  total 747  t=182s
+  kick 8 at it 1240: total 747 (best 746)
+  kick 9 at it 1390: total 747 (best 746)
+  kick 10 at it 1540: total 747 (best 746)
+  kick 11 at it 1690: total 747 (best 746)
+  kick 12 at it 1840: total 747 (best 746)
+  kick 13 at it 1990: total 749 (best 746)
+  lns it 1993 group [6, 7, 8, 14]: 257 -> 255  total 747  t=336s
+  lns it 2068 group [2, 6, 10]: 157 -> 156  total 746  t=348s
+  lns it 2076 group [1, 4, 12, 14]: 261 -> 260  total 745  t=350s
+  kick 14 at it 2226: total 745 (best 745)
+  kick 15 at it 2376: total 745 (best 745)
+  kick 16 at it 2526: total 745 (best 745)
+  kick 17 at it 2676: total 747 (best 745)
+  lns it 2686 group [3, 9]: 68 -> 66  total 745  t=450s
+  kick 18 at it 2826: total 745 (best 745)
+  kick 19 at it 2976: total 750 (best 745)
+  lns it 2991 group [2, 12, 14]: 210 -> 207  total 747  t=497s
+  lns it 3017 group [2, 8, 14]: 225 -> 223  total 745  t=501s
+  kick 20 at it 3126: total 745 (best 745)
+  kick 21 at it 3276: total 745 (best 745)
+  kick 22 at it 3426: total 749 (best 745)
+  lns it 3431 group [2, 7, 8, 15]: 272 -> 269  total 746  t=572s
+  lns it 3557 group [6, 7, 8, 10]: 225 -> 224  total 745  t=594s
+  kick 23 at it 3576: total 745 (best 745)
+  lns done: 3590 iterations, 23 kicks, best 745
+after lns (3590 iterations) 745

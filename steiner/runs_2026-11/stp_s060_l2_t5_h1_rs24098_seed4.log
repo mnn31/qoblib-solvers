@@ -1,0 +1,52 @@
+iter   0 overused    46 cost 1311 pres 0.50 t=0.1s
+iter   1 overused    17 cost 1350 pres 0.75 t=0.3s
+iter   2 overused    12 cost 1342 pres 1.12 t=0.4s
+iter   3 overused     5 cost 1339 pres 1.69 t=0.5s
+iter   4 overused     0 cost 1354 pres 2.53 t=0.6s
+polish 0 cost 1338
+polish 1 cost 1338
+start 1338
+  net 1: 163 -> 159
+  net 2: 120 -> 119
+  net 3: 83 -> 82
+  net 4: 137 -> 136
+  net 7: 95 -> 94
+  net 11: 125 -> 106
+  net 1: 159 -> 158
+  net 4: 136 -> 135
+  net 6: 117 -> 115
+after exact polish 1307
+  lns it 3 group [5, 11, 12]: 253 -> 247  total 1301  t=2s
+  lns it 6 group [3, 10, 11]: 267 -> 265  total 1299  t=4s
+  net 2: 119 -> 118
+  lns it 10 group [6, 11, 12]: 272 -> 270  total 1296  t=7s
+  net 1: 158 -> 154
+  net 2: 118 -> 117
+  lns it 13 group [7, 9, 12]: 253 -> 251  total 1289  t=9s
+  net 2: 117 -> 115
+  lns it 27 group [1, 6]: 269 -> 267  total 1285  t=16s
+  lns it 41 group [2, 6, 10]: 315 -> 314  total 1284  t=23s
+  lns it 127 group [3, 4]: 217 -> 216  total 1283  t=68s
+  lns it 134 group [2, 10, 13]: 276 -> 275  total 1282  t=73s
+  kick 1 at it 284: total 1286 (best 1282)
+  net 7: 93 -> 92
+  lns it 286 group [9, 13]: 180 -> 179  total 1284  t=157s
+  lns it 324 group [1, 2, 12, 13]: 403 -> 402  total 1283  t=185s
+  lns it 368 group [2, 9, 12, 13]: 350 -> 349  total 1282  t=212s
+  kick 2 at it 434: total 1282 (best 1282)
+  kick 3 at it 584: total 1293 (best 1282)
+  net 9: 100 -> 99
+  lns it 585 group [7, 11]: 197 -> 196  total 1291  t=336s
+  lns it 588 group [7, 11]: 196 -> 195  total 1290  t=337s
+  lns it 590 group [3, 11, 12, 13]: 315 -> 313  total 1288  t=338s
+  lns it 598 group [3, 7, 8, 9]: 368 -> 366  total 1286  t=344s
+  lns it 664 group [2, 3, 7, 8]: 380 -> 379  total 1285  t=382s
+  net 2: 114 -> 113
+  lns it 670 group [7, 12, 13]: 229 -> 228  total 1283  t=383s
+  lns it 694 group [3, 8, 9]: 271 -> 270  total 1282  t=396s
+  kick 4 at it 734: total 1282 (best 1282)
+  lns it 869 group [3, 4, 6, 8]: 421 -> 420  total 1281  t=492s
+  lns it 897 group [5, 11]: 184 -> 183  total 1280  t=510s
+  kick 5 at it 1047: total 1280 (best 1280)
+  lns done: 1059 iterations, 5 kicks, best 1280
+after lns (1059 iterations) 1280

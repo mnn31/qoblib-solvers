@@ -1,0 +1,31 @@
+iter   0 overused    16 cost 1023 pres 0.50 t=0.2s
+iter   1 overused     5 cost 1027 pres 0.75 t=0.3s
+iter   2 overused     1 cost 1031 pres 1.12 t=0.5s
+iter   3 overused     1 cost 1031 pres 1.69 t=0.7s
+iter   4 overused     0 cost 1033 pres 2.53 t=0.8s
+polish 0 cost 1033
+start 1033
+after exact polish 1033
+  kick 1 at it 150: total 1033 (best 1033)
+  kick 2 at it 300: total 1033 (best 1033)
+  kick 3 at it 450: total 1033 (best 1033)
+  kick 4 at it 600: total 1033 (best 1033)
+  kick 5 at it 750: total 1033 (best 1033)
+  kick 6 at it 900: total 1033 (best 1033)
+  kick 7 at it 1050: total 1033 (best 1033)
+  kick 8 at it 1200: total 1033 (best 1033)
+  kick 9 at it 1350: total 1033 (best 1033)
+  kick 10 at it 1500: total 1033 (best 1033)
+  kick 11 at it 1650: total 1033 (best 1033)
+  kick 12 at it 1800: total 1033 (best 1033)
+  kick 13 at it 1950: total 1033 (best 1033)
+  kick 14 at it 2100: total 1033 (best 1033)
+  kick 15 at it 2250: total 1033 (best 1033)
+  kick 16 at it 2400: total 1035 (best 1033)
+  lns it 2403 group [12, 13, 15, 17]: 368 -> 366  total 1033  t=473s
+  kick 17 at it 2550: total 1033 (best 1033)
+  kick 18 at it 2700: total 1033 (best 1033)
+  kick 19 at it 2850: total 1033 (best 1033)
+  kick 20 at it 3000: total 1033 (best 1033)
+  lns done: 3024 iterations, 20 kicks, best 1033
+after lns (3024 iterations) 1033

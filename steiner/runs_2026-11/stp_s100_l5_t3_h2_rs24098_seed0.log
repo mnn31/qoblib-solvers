@@ -1,0 +1,19 @@
+iter   0 overused    30 cost 1947 pres 0.50 t=0.9s
+iter   1 overused     9 cost 1936 pres 0.75 t=1.7s
+iter   2 overused     3 cost 1946 pres 1.12 t=2.6s
+iter   3 overused     3 cost 1951 pres 1.69 t=3.4s
+iter   4 overused     0 cost 1957 pres 2.53 t=4.2s
+polish 0 cost 1938
+polish 1 cost 1938
+start 1938
+  net 8: 164 -> 163
+after exact polish 1937
+  lns it 7 group [2, 4, 16]: 465 -> 463  total 1935  t=11s
+  net 5: 111 -> 109
+  lns it 10 group [2, 7, 9, 14]: 568 -> 567  total 1932  t=17s
+  lns it 105 group [2, 6, 13]: 538 -> 536  total 1930  t=131s
+  kick 1 at it 255: total 1932 (best 1930)
+  lns it 360 group [2, 3, 10, 13]: 538 -> 536  total 1930  t=463s
+  kick 2 at it 405: total 1930 (best 1930)
+  lns done: 452 iterations, 2 kicks, best 1930
+after lns (452 iterations) 1930

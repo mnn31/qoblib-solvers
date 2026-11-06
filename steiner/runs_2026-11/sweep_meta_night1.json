@@ -1,0 +1,8 @@
+{
+ "commit": "95485bfe2108f3666e3472bfeb5f3e4c55edc4d7",
+ "workers": 5,
+ "seeds": "0,1,2,3,4",
+ "lns_seconds": 600.0,
+ "small_seconds": 120.0,
+ "started": "2026-11-03 16:55:59 PST"
+}

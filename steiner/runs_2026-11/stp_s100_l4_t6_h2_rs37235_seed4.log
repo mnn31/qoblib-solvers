@@ -1,0 +1,23 @@
+iter   0 overused    34 cost 2037 pres 0.50 t=0.8s
+iter   1 overused    11 cost 2040 pres 0.75 t=1.7s
+iter   2 overused     2 cost 2047 pres 1.12 t=2.6s
+iter   3 overused     1 cost 2036 pres 1.69 t=3.5s
+iter   4 overused     1 cost 2050 pres 2.53 t=4.4s
+iter   5 overused     1 cost 2038 pres 3.80 t=5.3s
+iter   6 overused     0 cost 2087 pres 5.70 t=6.2s
+polish 0 cost 2035
+polish 1 cost 2021
+polish 2 cost 2021
+start 2021
+  net 2: 228 -> 224
+  net 3: 259 -> 241
+  net 8: 177 -> 176
+after exact polish 1998
+  lns it 7 group [4, 5, 7, 8]: 760 -> 758  total 1996  t=54s
+  lns it 14 group [2, 3]: 465 -> 464  total 1995  t=99s
+  net 1: 233 -> 232
+  lns it 27 group [5, 9, 10, 11]: 565 -> 563  total 1992  t=198s
+  net 5: 217 -> 216
+  lns it 32 group [1, 4, 6]: 614 -> 613  total 1990  t=279s
+  lns done: 59 iterations, 0 kicks, best 1990
+after lns (59 iterations) 1990

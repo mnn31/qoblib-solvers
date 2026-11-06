@@ -1,0 +1,47 @@
+iter   0 overused    67 cost 1772 pres 0.50 t=0.3s
+iter   1 overused    20 cost 1793 pres 0.75 t=0.5s
+iter   2 overused     2 cost 1811 pres 1.12 t=0.8s
+iter   3 overused     5 cost 1815 pres 1.69 t=1.0s
+iter   4 overused     0 cost 1816 pres 2.53 t=1.3s
+polish 0 cost 1801
+polish 1 cost 1794
+polish 2 cost 1794
+start 1794
+  net 1: 90 -> 89
+  net 9: 112 -> 107
+  net 18: 112 -> 110
+after exact polish 1786
+  net 7: 108 -> 107
+  net 12: 96 -> 95
+  lns it 1 group [8, 10, 18, 21]: 442 -> 441  total 1783  t=1s
+  lns it 9 group [4, 5, 18]: 292 -> 290  total 1781  t=3s
+  lns it 18 group [4, 9, 12, 13]: 344 -> 342  total 1779  t=6s
+  lns it 27 group [6, 16]: 198 -> 197  total 1778  t=9s
+  lns it 28 group [7, 10, 21]: 331 -> 330  total 1777  t=9s
+  net 18: 108 -> 107
+  lns it 37 group [2, 3, 8, 12]: 325 -> 324  total 1775  t=13s
+  lns it 45 group [6, 7, 16, 20]: 364 -> 363  total 1774  t=16s
+  lns it 104 group [2, 5, 7, 18]: 388 -> 386  total 1772  t=35s
+  lns it 159 group [8, 9, 10]: 320 -> 319  total 1771  t=53s
+  lns it 171 group [1, 5, 9]: 293 -> 292  total 1770  t=56s
+  lns it 227 group [6, 8]: 197 -> 196  total 1769  t=76s
+  kick 1 at it 377: total 1769 (best 1769)
+  lns it 385 group [3, 5, 12]: 240 -> 238  total 1767  t=127s
+  lns it 465 group [2, 6, 9, 20]: 332 -> 331  total 1766  t=152s
+  kick 2 at it 615: total 1767 (best 1766)
+  kick 3 at it 765: total 1770 (best 1766)
+  net 1: 91 -> 90
+  lns it 828 group [7, 20]: 167 -> 166  total 1768  t=264s
+  net 1: 90 -> 89
+  lns it 889 group [7, 9, 17]: 291 -> 290  total 1766  t=284s
+  kick 4 at it 915: total 1767 (best 1766)
+  lns it 1065 group [1, 2, 7, 17]: 352 -> 351  total 1766  t=345s
+  kick 5 at it 1065: total 1766 (best 1766)
+  kick 6 at it 1215: total 1766 (best 1766)
+  kick 7 at it 1365: total 1766 (best 1766)
+  kick 8 at it 1515: total 1766 (best 1766)
+  kick 9 at it 1665: total 1768 (best 1766)
+  lns it 1666 group [2, 9, 16]: 288 -> 286  total 1766  t=535s
+  lns it 1728 group [1, 4, 9, 17]: 356 -> 355  total 1765  t=553s
+  lns done: 1875 iterations, 9 kicks, best 1765
+after lns (1875 iterations) 1765

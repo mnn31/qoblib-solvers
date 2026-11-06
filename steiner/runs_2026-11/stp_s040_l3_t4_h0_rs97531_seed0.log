@@ -1,0 +1,34 @@
+iter   0 overused    31 cost 672 pres 0.50 t=0.1s
+iter   1 overused     9 cost 684 pres 0.75 t=0.1s
+iter   2 overused     0 cost 705 pres 1.12 t=0.2s
+polish 0 cost 692
+polish 1 cost 689
+polish 2 cost 689
+start 689
+  net 2: 89 -> 88
+  net 3: 87 -> 86
+  net 5: 73 -> 72
+  net 6: 68 -> 67
+after exact polish 685
+  net 3: 86 -> 84
+  net 8: 78 -> 77
+  lns it 1 group [4, 6, 9, 10]: 234 -> 233  total 681  t=1s
+  net 8: 77 -> 76
+  lns it 13 group [1, 3, 9, 10]: 279 -> 278  total 679  t=6s
+  lns it 30 group [5, 6, 8]: 215 -> 213  total 677  t=11s
+  lns it 32 group [6, 7, 9, 10]: 271 -> 270  total 676  t=11s
+  lns it 40 group [3, 8, 9]: 229 -> 228  total 675  t=14s
+  lns it 106 group [2, 4, 9, 10]: 254 -> 253  total 674  t=41s
+  lns it 167 group [3, 5, 6]: 221 -> 220  total 673  t=62s
+  kick 1 at it 317: total 673 (best 673)
+  kick 2 at it 467: total 675 (best 673)
+  lns it 489 group [1, 3, 5]: 213 -> 211  total 673  t=184s
+  kick 3 at it 617: total 673 (best 673)
+  kick 4 at it 917: total 673 (best 673)
+  kick 5 at it 1067: total 673 (best 673)
+  kick 6 at it 1217: total 673 (best 673)
+  kick 7 at it 1367: total 673 (best 673)
+  kick 8 at it 1517: total 674 (best 673)
+  lns it 1570 group [3, 6, 7, 10]: 283 -> 282  total 673  t=596s
+  lns done: 1582 iterations, 8 kicks, best 673
+after lns (1582 iterations) 673

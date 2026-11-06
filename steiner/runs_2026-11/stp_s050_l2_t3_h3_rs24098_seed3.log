@@ -1,0 +1,47 @@
+iter   0 overused    11 cost 509 pres 0.50 t=0.0s
+iter   1 overused     8 cost 511 pres 0.75 t=0.1s
+iter   2 overused     2 cost 516 pres 1.12 t=0.1s
+iter   3 overused     0 cost 515 pres 1.69 t=0.1s
+polish 0 cost 514
+polish 1 cost 514
+start 514
+  net 2: 89 -> 85
+after exact polish 510
+  lns it 1 group [1, 2, 4, 5]: 310 -> 303  total 503  t=0s
+  net 1: 87 -> 86
+  lns it 15 group [2, 4, 8]: 206 -> 205  total 501  t=2s
+  kick 1 at it 165: total 501 (best 501)
+  lns it 167 group [2, 3, 5]: 206 -> 205  total 500  t=26s
+  lns it 274 group [1, 2, 8]: 224 -> 223  total 499  t=41s
+  kick 2 at it 424: total 499 (best 499)
+  kick 3 at it 574: total 499 (best 499)
+  kick 4 at it 724: total 499 (best 499)
+  kick 5 at it 874: total 499 (best 499)
+  kick 6 at it 1024: total 499 (best 499)
+  kick 7 at it 1174: total 499 (best 499)
+  kick 8 at it 1324: total 499 (best 499)
+  kick 9 at it 1474: total 499 (best 499)
+  kick 10 at it 1774: total 499 (best 499)
+  kick 11 at it 1924: total 499 (best 499)
+  kick 12 at it 2074: total 500 (best 499)
+  lns it 2087 group [2, 4, 8]: 206 -> 205  total 499  t=302s
+  kick 13 at it 2224: total 499 (best 499)
+  kick 14 at it 2374: total 499 (best 499)
+  kick 15 at it 2524: total 499 (best 499)
+  kick 16 at it 2674: total 499 (best 499)
+  kick 17 at it 2824: total 499 (best 499)
+  kick 18 at it 2974: total 502 (best 499)
+  lns it 2976 group [1, 2, 5]: 236 -> 233  total 499  t=430s
+  kick 19 at it 3124: total 500 (best 499)
+  lns it 3126 group [2, 4, 8]: 206 -> 205  total 499  t=451s
+  kick 20 at it 3274: total 499 (best 499)
+  kick 21 at it 3424: total 500 (best 499)
+  lns it 3443 group [2, 4, 9]: 184 -> 183  total 499  t=495s
+  kick 22 at it 3574: total 499 (best 499)
+  kick 23 at it 3724: total 499 (best 499)
+  kick 24 at it 3874: total 499 (best 499)
+  kick 25 at it 4024: total 500 (best 499)
+  lns it 4025 group [4, 8]: 132 -> 131  total 499  t=574s
+  kick 26 at it 4174: total 499 (best 499)
+  lns done: 4202 iterations, 26 kicks, best 499
+after lns (4202 iterations) 499

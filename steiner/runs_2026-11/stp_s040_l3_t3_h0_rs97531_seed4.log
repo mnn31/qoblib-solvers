@@ -1,0 +1,65 @@
+iter   0 overused    16 cost 606 pres 0.50 t=0.1s
+iter   1 overused     3 cost 619 pres 0.75 t=0.2s
+iter   2 overused     2 cost 618 pres 1.12 t=0.2s
+iter   3 overused     1 cost 626 pres 1.69 t=0.3s
+iter   4 overused     0 cost 619 pres 2.53 t=0.4s
+polish 0 cost 619
+start 619
+after exact polish 619
+  kick 1 at it 150: total 619 (best 619)
+  kick 2 at it 300: total 619 (best 619)
+  kick 3 at it 450: total 622 (best 619)
+  lns it 457 group [3, 7, 11, 12]: 247 -> 245  total 620  t=47s
+  kick 4 at it 600: total 620 (best 619)
+  lns it 619 group [2, 7, 11]: 174 -> 173  total 619  t=63s
+  kick 5 at it 750: total 619 (best 619)
+  kick 6 at it 900: total 619 (best 619)
+  kick 7 at it 1050: total 619 (best 619)
+  kick 8 at it 1200: total 619 (best 619)
+  kick 9 at it 1350: total 619 (best 619)
+  kick 10 at it 1500: total 619 (best 619)
+  kick 11 at it 1650: total 619 (best 619)
+  kick 12 at it 1800: total 619 (best 619)
+  kick 13 at it 2100: total 621 (best 619)
+  lns it 2108 group [3, 7, 12]: 197 -> 196  total 620  t=210s
+  kick 14 at it 2250: total 622 (best 619)
+  lns it 2252 group [1, 5, 6, 12]: 182 -> 180  total 620  t=222s
+  lns it 2260 group [2, 3, 5, 12]: 247 -> 246  total 619  t=223s
+  kick 15 at it 2400: total 619 (best 619)
+  kick 16 at it 2550: total 621 (best 619)
+  lns it 2581 group [2, 3, 12]: 218 -> 217  total 620  t=257s
+  lns it 2596 group [2, 3, 5]: 179 -> 178  total 619  t=258s
+  lns it 2622 group [1, 4, 7, 11]: 234 -> 233  total 618  t=261s
+  lns it 2758 group [2, 4, 9, 12]: 258 -> 257  total 617  t=275s
+  kick 17 at it 2908: total 619 (best 617)
+  lns it 2912 group [2, 3, 7, 11]: 250 -> 248  total 617  t=290s
+  kick 18 at it 3058: total 617 (best 617)
+  kick 19 at it 3208: total 617 (best 617)
+  kick 20 at it 3358: total 617 (best 617)
+  kick 21 at it 3508: total 617 (best 617)
+  kick 22 at it 3658: total 617 (best 617)
+  kick 23 at it 3808: total 617 (best 617)
+  kick 24 at it 3958: total 617 (best 617)
+  kick 25 at it 4108: total 617 (best 617)
+  kick 26 at it 4258: total 617 (best 617)
+  kick 27 at it 4408: total 617 (best 617)
+  kick 28 at it 4558: total 617 (best 617)
+  kick 29 at it 4708: total 619 (best 617)
+  lns it 4715 group [3, 7, 10]: 147 -> 145  total 617  t=471s
+  kick 30 at it 4858: total 619 (best 617)
+  lns it 4866 group [7, 8, 10]: 126 -> 124  total 617  t=486s
+  kick 31 at it 5008: total 617 (best 617)
+  kick 32 at it 5158: total 621 (best 617)
+  net 10: 22 -> 20
+  lns it 5179 group [1, 12]: 129 -> 127  total 617  t=517s
+  lns it 5298 group [2, 3, 4]: 224 -> 223  total 616  t=527s
+  kick 33 at it 5448: total 616 (best 616)
+  kick 34 at it 5598: total 618 (best 616)
+  lns it 5599 group [4, 11, 12]: 193 -> 192  total 617  t=558s
+  lns it 5711 group [4, 6, 7, 11]: 198 -> 197  total 616  t=569s
+  kick 35 at it 5748: total 617 (best 616)
+  lns it 5782 group [1, 3, 9, 11]: 225 -> 224  total 616  t=576s
+  kick 36 at it 5898: total 618 (best 616)
+  lns it 5935 group [3, 5, 6, 12]: 199 -> 197  total 616  t=592s
+  lns done: 6022 iterations, 36 kicks, best 616
+after lns (6022 iterations) 616

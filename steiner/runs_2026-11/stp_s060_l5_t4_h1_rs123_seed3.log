@@ -1,0 +1,23 @@
+iter   0 overused    14 cost 587 pres 0.50 t=0.1s
+iter   1 overused     3 cost 591 pres 0.75 t=0.3s
+iter   2 overused     1 cost 593 pres 1.12 t=0.4s
+iter   3 overused     1 cost 593 pres 1.69 t=0.5s
+iter   4 overused     0 cost 595 pres 2.53 t=0.7s
+polish 0 cost 595
+start 595
+after exact polish 595
+  kick 1 at it 150: total 595 (best 595)
+  kick 2 at it 300: total 595 (best 595)
+  kick 3 at it 450: total 595 (best 595)
+  kick 4 at it 600: total 595 (best 595)
+  kick 5 at it 750: total 595 (best 595)
+  kick 6 at it 900: total 595 (best 595)
+  kick 7 at it 1050: total 595 (best 595)
+  kick 8 at it 1200: total 595 (best 595)
+  kick 9 at it 1350: total 595 (best 595)
+  kick 10 at it 1500: total 595 (best 595)
+  kick 11 at it 1650: total 595 (best 595)
+  kick 12 at it 1800: total 595 (best 595)
+  kick 13 at it 1950: total 595 (best 595)
+  lns done: 2078 iterations, 13 kicks, best 595
+after lns (2078 iterations) 595

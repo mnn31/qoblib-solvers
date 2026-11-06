@@ -1,0 +1,46 @@
+iter   0 overused    35 cost 998 pres 0.50 t=0.1s
+iter   1 overused    12 cost 995 pres 0.75 t=0.2s
+iter   2 overused     6 cost 1035 pres 1.12 t=0.2s
+iter   3 overused     5 cost 1036 pres 1.69 t=0.3s
+iter   4 overused     1 cost 1006 pres 2.53 t=0.4s
+iter   5 overused     1 cost 1015 pres 3.80 t=0.5s
+iter   6 overused     0 cost 1020 pres 5.70 t=0.5s
+polish 0 cost 1010
+polish 1 cost 1010
+start 1010
+  net 4: 103 -> 102
+  net 5: 60 -> 59
+  net 8: 99 -> 98
+  net 10: 107 -> 99
+  net 6: 104 -> 103
+after exact polish 998
+  lns it 8 group [3, 6, 7, 9]: 308 -> 305  total 995  t=4s
+  net 10: 99 -> 97
+  net 11: 53 -> 51
+  lns it 9 group [1, 2, 11]: 255 -> 254  total 990  t=4s
+  net 10: 97 -> 96
+  lns it 10 group [4, 6, 9, 12]: 350 -> 348  total 987  t=5s
+  lns it 17 group [10, 12]: 173 -> 172  total 986  t=8s
+  lns it 24 group [4, 6, 8, 10]: 396 -> 395  total 985  t=11s
+  lns it 77 group [1, 2, 5, 8]: 359 -> 358  total 984  t=29s
+  lns it 82 group [1, 2, 4, 7]: 331 -> 329  total 982  t=32s
+  lns it 100 group [3, 8]: 202 -> 201  total 981  t=37s
+  kick 1 at it 250: total 981 (best 981)
+  kick 2 at it 400: total 987 (best 981)
+  net 2: 102 -> 101
+  lns it 432 group [6, 9]: 174 -> 170  total 982  t=156s
+  lns it 433 group [2, 6, 9]: 271 -> 270  total 981  t=157s
+  kick 3 at it 550: total 981 (best 981)
+  kick 4 at it 700: total 981 (best 981)
+  kick 5 at it 850: total 981 (best 981)
+  kick 6 at it 1000: total 984 (best 981)
+  net 9: 70 -> 68
+  lns it 1008 group [1, 3, 8]: 300 -> 299  total 981  t=384s
+  kick 7 at it 1150: total 981 (best 981)
+  kick 8 at it 1300: total 981 (best 981)
+  kick 9 at it 1450: total 981 (best 981)
+  kick 10 at it 1600: total 993 (best 981)
+  lns it 1605 group [3, 6]: 213 -> 206  total 986  t=598s
+  lns it 1611 group [2, 6, 11]: 258 -> 253  total 981  t=600s
+  lns done: 1612 iterations, 10 kicks, best 981
+after lns (1612 iterations) 981

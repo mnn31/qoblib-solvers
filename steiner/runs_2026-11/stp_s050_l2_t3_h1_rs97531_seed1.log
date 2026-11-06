@@ -1,0 +1,62 @@
+iter   0 overused    17 cost 827 pres 0.50 t=0.1s
+iter   1 overused     7 cost 842 pres 0.75 t=0.1s
+iter   2 overused     5 cost 849 pres 1.12 t=0.2s
+iter   3 overused     5 cost 842 pres 1.69 t=0.2s
+iter   4 overused     1 cost 846 pres 2.53 t=0.3s
+iter   5 overused     0 cost 858 pres 3.80 t=0.4s
+polish 0 cost 855
+polish 1 cost 848
+polish 2 cost 848
+start 848
+  net 1: 99 -> 95
+after exact polish 844
+  net 9: 78 -> 76
+  lns it 14 group [1, 4, 6]: 278 -> 276  total 840  t=2s
+  lns it 19 group [1, 4, 7, 8]: 313 -> 311  total 838  t=3s
+  lns it 59 group [4, 7, 8, 11]: 304 -> 302  total 836  t=11s
+  kick 1 at it 209: total 836 (best 836)
+  lns it 214 group [1, 3, 4]: 237 -> 235  total 834  t=28s
+  kick 2 at it 364: total 834 (best 834)
+  kick 3 at it 514: total 834 (best 834)
+  kick 4 at it 664: total 834 (best 834)
+  kick 5 at it 814: total 836 (best 834)
+  lns it 830 group [1, 7, 8]: 227 -> 225  total 834  t=102s
+  kick 6 at it 964: total 834 (best 834)
+  kick 7 at it 1114: total 836 (best 834)
+  net 1: 92 -> 91
+  lns it 1118 group [1, 7, 8, 9]: 303 -> 302  total 834  t=139s
+  kick 8 at it 1264: total 834 (best 834)
+  kick 9 at it 1414: total 836 (best 834)
+  lns it 1417 group [1, 9]: 169 -> 167  total 834  t=177s
+  kick 10 at it 1564: total 834 (best 834)
+  kick 11 at it 1714: total 834 (best 834)
+  kick 12 at it 1864: total 837 (best 834)
+  net 1: 92 -> 91
+  lns it 1866 group [1, 9, 10]: 254 -> 252  total 834  t=229s
+  kick 13 at it 2014: total 834 (best 834)
+  kick 14 at it 2164: total 834 (best 834)
+  kick 15 at it 2314: total 836 (best 834)
+  lns it 2344 group [2, 3, 6, 10]: 339 -> 337  total 834  t=287s
+  kick 16 at it 2464: total 834 (best 834)
+  kick 17 at it 2614: total 836 (best 834)
+  lns it 2625 group [3, 5, 10]: 172 -> 170  total 834  t=322s
+  kick 18 at it 2764: total 834 (best 834)
+  kick 19 at it 2914: total 834 (best 834)
+  kick 20 at it 3064: total 834 (best 834)
+  kick 21 at it 3214: total 834 (best 834)
+  kick 22 at it 3364: total 834 (best 834)
+  kick 23 at it 3514: total 836 (best 834)
+  lns it 3516 group [1, 5, 6]: 220 -> 218  total 834  t=432s
+  kick 24 at it 3664: total 834 (best 834)
+  kick 25 at it 3814: total 836 (best 834)
+  lns it 3827 group [6, 8, 9, 11]: 326 -> 324  total 834  t=471s
+  kick 26 at it 3964: total 834 (best 834)
+  kick 27 at it 4114: total 834 (best 834)
+  kick 28 at it 4264: total 834 (best 834)
+  kick 29 at it 4414: total 834 (best 834)
+  kick 30 at it 4564: total 834 (best 834)
+  kick 31 at it 4714: total 834 (best 834)
+  kick 32 at it 4864: total 838 (best 834)
+  lns it 4883 group [2, 8]: 167 -> 163  total 834  t=593s
+  lns done: 4938 iterations, 32 kicks, best 834
+after lns (4938 iterations) 834

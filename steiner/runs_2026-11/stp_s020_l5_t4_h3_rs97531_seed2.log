@@ -1,0 +1,15 @@
+iter   0 overused     1 cost 94 pres 0.50 t=0.0s
+iter   1 overused     2 cost 93 pres 0.75 t=0.0s
+iter   2 overused     0 cost 95 pres 1.12 t=0.0s
+polish 0 cost 95
+start 95
+after exact polish 95
+  kick 1 at it 150: total 95 (best 95)
+  kick 2 at it 300: total 96 (best 95)
+  lns it 301 group [1, 2, 3]: 96 -> 95  total 95  t=46s
+  kick 3 at it 450: total 96 (best 95)
+  lns it 451 group [1, 2, 3]: 96 -> 95  total 95  t=67s
+  kick 4 at it 600: total 95 (best 95)
+  kick 5 at it 750: total 95 (best 95)
+  lns done: 821 iterations, 5 kicks, best 95
+after lns (821 iterations) 95

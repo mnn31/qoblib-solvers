@@ -1,0 +1,44 @@
+iter   0 overused    20 cost 1234 pres 0.50 t=0.1s
+iter   1 overused     6 cost 1241 pres 0.75 t=0.2s
+iter   2 overused     1 cost 1277 pres 1.12 t=0.4s
+iter   3 overused     1 cost 1242 pres 1.69 t=0.5s
+iter   4 overused     1 cost 1240 pres 2.53 t=0.6s
+iter   5 overused     0 cost 1247 pres 3.80 t=0.8s
+polish 0 cost 1243
+polish 1 cost 1237
+polish 2 cost 1237
+start 1237
+  net 6: 129 -> 127
+after exact polish 1235
+  lns it 1 group [1, 4, 5, 11]: 440 -> 437  total 1232  t=1s
+  lns it 11 group [2, 4, 5, 8]: 506 -> 504  total 1230  t=4s
+  kick 1 at it 161: total 1230 (best 1230)
+  lns it 266 group [6, 7, 11]: 300 -> 299  total 1229  t=63s
+  kick 2 at it 416: total 1236 (best 1229)
+  lns it 425 group [1, 4, 9]: 342 -> 339  total 1233  t=101s
+  net 4: 136 -> 135
+  lns it 447 group [1, 5, 11]: 305 -> 303  total 1230  t=107s
+  lns it 463 group [1, 4, 5, 11]: 438 -> 437  total 1229  t=111s
+  kick 3 at it 566: total 1233 (best 1229)
+  lns it 569 group [4, 5, 8]: 379 -> 375  total 1229  t=133s
+  kick 4 at it 716: total 1229 (best 1229)
+  kick 5 at it 866: total 1229 (best 1229)
+  kick 6 at it 1016: total 1230 (best 1229)
+  lns it 1044 group [1, 2, 4]: 381 -> 380  total 1229  t=244s
+  kick 7 at it 1166: total 1229 (best 1229)
+  kick 8 at it 1316: total 1229 (best 1229)
+  kick 9 at it 1466: total 1229 (best 1229)
+  kick 10 at it 1616: total 1229 (best 1229)
+  kick 11 at it 1766: total 1229 (best 1229)
+  kick 12 at it 1916: total 1233 (best 1229)
+  lns it 1933 group [1, 3]: 250 -> 248  total 1231  t=452s
+  lns it 1981 group [2, 3, 5, 8]: 503 -> 502  total 1230  t=463s
+  lns it 1999 group [1, 3, 10]: 341 -> 340  total 1229  t=467s
+  kick 13 at it 2066: total 1232 (best 1229)
+  lns it 2080 group [3, 7]: 233 -> 230  total 1229  t=484s
+  kick 14 at it 2216: total 1229 (best 1229)
+  kick 15 at it 2366: total 1230 (best 1229)
+  lns it 2407 group [3, 7, 9, 11]: 390 -> 389  total 1229  t=561s
+  kick 16 at it 2516: total 1229 (best 1229)
+  lns done: 2570 iterations, 16 kicks, best 1229
+after lns (2570 iterations) 1229

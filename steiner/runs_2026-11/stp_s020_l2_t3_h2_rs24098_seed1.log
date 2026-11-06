@@ -1,0 +1,54 @@
+iter   0 overused    13 cost 225 pres 0.50 t=0.0s
+iter   1 overused     6 cost 230 pres 0.75 t=0.0s
+iter   2 overused     4 cost 230 pres 1.12 t=0.0s
+iter   3 overused     4 cost 236 pres 1.69 t=0.0s
+iter   4 overused     1 cost 250 pres 2.53 t=0.0s
+iter   5 overused     1 cost 243 pres 3.80 t=0.0s
+iter   6 overused     1 cost 246 pres 5.70 t=0.0s
+iter   7 overused     0 cost 241 pres 8.54 t=0.0s
+polish 0 cost 239
+polish 1 cost 239
+start 239
+after exact polish 239
+  lns it 1 group [1, 2, 4]: 118 -> 110  total 231  t=0s
+  kick 1 at it 151: total 233 (best 231)
+  lns it 154 group [1, 2, 5]: 109 -> 105  total 229  t=5s
+  kick 2 at it 304: total 232 (best 229)
+  lns it 309 group [1, 2, 5, 6]: 145 -> 144  total 231  t=10s
+  net 5: 39 -> 38
+  lns it 312 group [1, 5, 6]: 108 -> 107  total 229  t=10s
+  kick 3 at it 454: total 229 (best 229)
+  kick 4 at it 604: total 233 (best 229)
+  lns it 614 group [1, 4, 7, 8]: 111 -> 107  total 229  t=18s
+  kick 5 at it 754: total 229 (best 229)
+  kick 6 at it 904: total 229 (best 229)
+  kick 7 at it 1054: total 229 (best 229)
+  kick 8 at it 1204: total 235 (best 229)
+  lns it 1208 group [3, 4, 8]: 90 -> 88  total 233  t=33s
+  lns it 1213 group [1, 2, 4, 6]: 149 -> 147  total 231  t=34s
+  lns it 1218 group [1, 4, 5, 8]: 146 -> 144  total 229  t=34s
+  kick 9 at it 1354: total 229 (best 229)
+  kick 10 at it 1504: total 229 (best 229)
+  kick 11 at it 1654: total 229 (best 229)
+  kick 12 at it 1804: total 229 (best 229)
+  kick 13 at it 1954: total 229 (best 229)
+  kick 14 at it 2104: total 229 (best 229)
+  kick 15 at it 2254: total 229 (best 229)
+  kick 16 at it 2554: total 229 (best 229)
+  kick 17 at it 2704: total 229 (best 229)
+  kick 18 at it 2854: total 229 (best 229)
+  kick 19 at it 3004: total 229 (best 229)
+  kick 20 at it 3304: total 229 (best 229)
+  kick 21 at it 3454: total 229 (best 229)
+  kick 22 at it 3604: total 231 (best 229)
+  lns it 3627 group [2, 6, 8]: 109 -> 108  total 230  t=98s
+  lns it 3630 group [1, 2, 8]: 102 -> 101  total 229  t=98s
+  kick 23 at it 3754: total 229 (best 229)
+  kick 24 at it 3904: total 229 (best 229)
+  kick 25 at it 4054: total 229 (best 229)
+  kick 26 at it 4204: total 229 (best 229)
+  kick 27 at it 4354: total 231 (best 229)
+  lns it 4358 group [1, 2, 5]: 107 -> 105  total 229  t=116s
+  kick 28 at it 4504: total 229 (best 229)
+  lns done: 4534 iterations, 28 kicks, best 229
+after lns (4534 iterations) 229

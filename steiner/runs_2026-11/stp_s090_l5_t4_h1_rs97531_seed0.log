@@ -1,0 +1,22 @@
+iter   0 overused    20 cost 1151 pres 0.50 t=0.5s
+iter   1 overused     8 cost 1156 pres 0.75 t=0.9s
+iter   2 overused     4 cost 1158 pres 1.12 t=1.4s
+iter   3 overused     3 cost 1159 pres 1.69 t=1.8s
+iter   4 overused     1 cost 1162 pres 2.53 t=2.3s
+iter   5 overused     1 cost 1162 pres 3.80 t=2.7s
+iter   6 overused     0 cost 1167 pres 5.70 t=3.2s
+polish 0 cost 1166
+polish 1 cost 1156
+polish 2 cost 1156
+start 1156
+after exact polish 1156
+  net 1: 131 -> 121
+  net 2: 171 -> 170
+  lns it 1 group [3, 5, 8, 10]: 404 -> 402  total 1143  t=2s
+  lns it 30 group [2, 3, 6, 7]: 534 -> 532  total 1141  t=35s
+  kick 1 at it 180: total 1141 (best 1141)
+  kick 2 at it 330: total 1142 (best 1141)
+  lns it 365 group [2, 3, 5, 8]: 488 -> 487  total 1141  t=393s
+  kick 3 at it 480: total 1141 (best 1141)
+  lns done: 561 iterations, 3 kicks, best 1141
+after lns (561 iterations) 1141

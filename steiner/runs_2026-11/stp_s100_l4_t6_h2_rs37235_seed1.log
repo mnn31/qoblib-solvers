@@ -1,0 +1,22 @@
+iter   0 overused    32 cost 2002 pres 0.50 t=0.9s
+iter   1 overused     7 cost 2035 pres 0.75 t=1.7s
+iter   2 overused     3 cost 2038 pres 1.12 t=2.6s
+iter   3 overused     1 cost 2040 pres 1.69 t=3.4s
+iter   4 overused     1 cost 2065 pres 2.53 t=4.3s
+iter   5 overused     0 cost 2046 pres 3.80 t=5.1s
+polish 0 cost 2033
+polish 1 cost 2033
+start 2033
+  net 2: 226 -> 223
+  net 3: 261 -> 244
+  net 5: 231 -> 217
+  net 6: 196 -> 195
+  net 3: 244 -> 243
+after exact polish 1997
+  net 5: 217 -> 216
+  lns it 4 group [6, 7]: 371 -> 370  total 1995  t=35s
+  lns it 9 group [3, 4, 5]: 647 -> 646  total 1994  t=77s
+  lns it 14 group [2, 3, 7, 9]: 782 -> 781  total 1993  t=128s
+  lns it 17 group [1, 3, 7, 10]: 812 -> 811  total 1992  t=190s
+  lns done: 51 iterations, 0 kicks, best 1992
+after lns (51 iterations) 1992

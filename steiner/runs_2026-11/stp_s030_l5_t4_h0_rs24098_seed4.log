@@ -1,0 +1,45 @@
+iter   0 overused    20 cost 451 pres 0.50 t=0.0s
+iter   1 overused    10 cost 462 pres 0.75 t=0.1s
+iter   2 overused     2 cost 469 pres 1.12 t=0.1s
+iter   3 overused     2 cost 462 pres 1.69 t=0.2s
+iter   4 overused     0 cost 466 pres 2.53 t=0.2s
+polish 0 cost 466
+start 466
+  net 4: 52 -> 46
+  net 9: 43 -> 40
+  net 4: 46 -> 45
+after exact polish 456
+  lns it 7 group [5, 8, 9, 10]: 181 -> 178  total 453  t=2s
+  lns it 46 group [1, 2, 5, 7]: 215 -> 214  total 452  t=9s
+  lns it 53 group [5, 9, 10]: 118 -> 117  total 451  t=11s
+  lns it 195 group [4, 5, 9]: 130 -> 129  total 450  t=44s
+  lns it 201 group [1, 4, 7]: 157 -> 156  total 449  t=46s
+  net 4: 43 -> 42
+  lns it 225 group [4, 5, 6]: 137 -> 136  total 447  t=51s
+  kick 1 at it 375: total 448 (best 447)
+  lns it 431 group [2, 7, 10]: 145 -> 144  total 447  t=96s
+  kick 2 at it 525: total 450 (best 447)
+  lns it 541 group [1, 4, 6, 8]: 207 -> 206  total 449  t=119s
+  lns it 625 group [4, 7, 8, 9]: 202 -> 201  total 448  t=139s
+  lns it 672 group [4, 6, 7]: 151 -> 150  total 447  t=150s
+  kick 3 at it 675: total 447 (best 447)
+  kick 4 at it 825: total 447 (best 447)
+  kick 5 at it 975: total 447 (best 447)
+  kick 6 at it 1125: total 447 (best 447)
+  kick 7 at it 1275: total 450 (best 447)
+  lns it 1277 group [2, 4, 5, 10]: 176 -> 175  total 449  t=288s
+  lns it 1301 group [1, 2, 6]: 158 -> 156  total 447  t=293s
+  kick 8 at it 1425: total 447 (best 447)
+  kick 9 at it 1575: total 447 (best 447)
+  kick 10 at it 1725: total 447 (best 447)
+  kick 11 at it 1875: total 447 (best 447)
+  kick 12 at it 2025: total 448 (best 447)
+  lns it 2032 group [1, 4, 5, 7]: 198 -> 197  total 447  t=448s
+  kick 13 at it 2175: total 451 (best 447)
+  lns it 2195 group [4, 6, 8]: 156 -> 152  total 447  t=482s
+  kick 14 at it 2325: total 447 (best 447)
+  kick 15 at it 2475: total 447 (best 447)
+  kick 16 at it 2625: total 448 (best 447)
+  lns it 2636 group [1, 4, 7]: 153 -> 152  total 447  t=579s
+  lns done: 2739 iterations, 16 kicks, best 447
+after lns (2739 iterations) 447

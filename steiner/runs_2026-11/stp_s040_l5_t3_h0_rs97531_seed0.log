@@ -1,0 +1,42 @@
+iter   0 overused    16 cost 510 pres 0.50 t=0.1s
+iter   1 overused     3 cost 524 pres 0.75 t=0.1s
+iter   2 overused     2 cost 535 pres 1.12 t=0.2s
+iter   3 overused     2 cost 526 pres 1.69 t=0.3s
+iter   4 overused     0 cost 528 pres 2.53 t=0.4s
+polish 0 cost 524
+polish 1 cost 524
+start 524
+after exact polish 524
+  net 3: 78 -> 76
+  lns it 25 group [1, 2, 4, 7]: 259 -> 258  total 521  t=3s
+  kick 1 at it 175: total 521 (best 521)
+  lns it 204 group [2, 3, 4, 7]: 275 -> 274  total 520  t=37s
+  kick 2 at it 354: total 520 (best 520)
+  lns it 498 group [2, 4, 8, 11]: 238 -> 237  total 519  t=89s
+  lns it 513 group [4, 5, 7]: 157 -> 156  total 518  t=92s
+  kick 3 at it 663: total 518 (best 518)
+  kick 4 at it 813: total 518 (best 518)
+  kick 5 at it 963: total 518 (best 518)
+  kick 6 at it 1113: total 518 (best 518)
+  kick 7 at it 1263: total 520 (best 518)
+  lns it 1275 group [3, 4, 5, 8]: 224 -> 222  total 518  t=230s
+  kick 8 at it 1413: total 519 (best 518)
+  lns it 1422 group [1, 2, 8, 11]: 221 -> 220  total 518  t=254s
+  kick 9 at it 1563: total 518 (best 518)
+  kick 10 at it 1713: total 519 (best 518)
+  lns it 1758 group [2, 3, 11]: 197 -> 196  total 518  t=317s
+  kick 11 at it 1863: total 519 (best 518)
+  lns it 1867 group [2, 11]: 121 -> 120  total 518  t=336s
+  kick 12 at it 2013: total 518 (best 518)
+  kick 13 at it 2163: total 518 (best 518)
+  kick 14 at it 2313: total 518 (best 518)
+  kick 15 at it 2463: total 518 (best 518)
+  kick 16 at it 2613: total 518 (best 518)
+  kick 17 at it 2763: total 518 (best 518)
+  kick 18 at it 2913: total 518 (best 518)
+  kick 19 at it 3063: total 518 (best 518)
+  kick 20 at it 3213: total 522 (best 518)
+  lns it 3222 group [6, 9]: 45 -> 41  total 518  t=572s
+  kick 21 at it 3363: total 518 (best 518)
+  lns done: 3375 iterations, 21 kicks, best 518
+after lns (3375 iterations) 518

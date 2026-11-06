@@ -1,0 +1,47 @@
+iter   0 overused    11 cost 510 pres 0.50 t=0.0s
+iter   1 overused     7 cost 510 pres 0.75 t=0.1s
+iter   2 overused     2 cost 516 pres 1.12 t=0.1s
+iter   3 overused     1 cost 514 pres 1.69 t=0.2s
+iter   4 overused     0 cost 516 pres 2.53 t=0.2s
+polish 0 cost 514
+polish 1 cost 514
+start 514
+  net 2: 87 -> 83
+  net 4: 68 -> 67
+after exact polish 509
+  lns it 10 group [2, 4, 5, 8]: 290 -> 281  total 500  t=2s
+  kick 1 at it 160: total 500 (best 500)
+  kick 2 at it 310: total 501 (best 500)
+  lns it 316 group [2, 4, 5, 8]: 282 -> 281  total 500  t=49s
+  kick 3 at it 460: total 502 (best 500)
+  lns it 461 group [2, 4, 8]: 206 -> 204  total 500  t=72s
+  kick 4 at it 610: total 500 (best 500)
+  kick 5 at it 760: total 500 (best 500)
+  kick 6 at it 910: total 502 (best 500)
+  lns it 911 group [2, 8]: 139 -> 138  total 501  t=137s
+  lns it 931 group [2, 3, 8, 10]: 204 -> 202  total 499  t=139s
+  kick 7 at it 1081: total 499 (best 499)
+  kick 8 at it 1231: total 499 (best 499)
+  kick 9 at it 1381: total 499 (best 499)
+  kick 10 at it 1531: total 499 (best 499)
+  kick 11 at it 1681: total 499 (best 499)
+  kick 12 at it 1831: total 499 (best 499)
+  kick 13 at it 1981: total 499 (best 499)
+  kick 14 at it 2131: total 499 (best 499)
+  kick 15 at it 2281: total 499 (best 499)
+  kick 16 at it 2431: total 499 (best 499)
+  kick 17 at it 2581: total 499 (best 499)
+  kick 18 at it 2731: total 499 (best 499)
+  kick 19 at it 2881: total 502 (best 499)
+  lns it 2884 group [2, 4, 7, 8]: 207 -> 204  total 499  t=405s
+  kick 20 at it 3031: total 499 (best 499)
+  kick 21 at it 3181: total 499 (best 499)
+  kick 22 at it 3331: total 499 (best 499)
+  kick 23 at it 3481: total 499 (best 499)
+  kick 24 at it 3631: total 499 (best 499)
+  kick 25 at it 3781: total 499 (best 499)
+  kick 26 at it 3931: total 499 (best 499)
+  kick 27 at it 4081: total 499 (best 499)
+  kick 28 at it 4231: total 499 (best 499)
+  lns done: 4296 iterations, 28 kicks, best 499
+after lns (4296 iterations) 499

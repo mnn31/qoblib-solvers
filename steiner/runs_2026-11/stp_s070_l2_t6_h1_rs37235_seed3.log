@@ -1,0 +1,52 @@
+iter   0 overused    55 cost 1635 pres 0.50 t=0.2s
+iter   1 overused    30 cost 1655 pres 0.75 t=0.4s
+iter   2 overused    14 cost 1670 pres 1.12 t=0.6s
+iter   3 overused    10 cost 1679 pres 1.69 t=0.8s
+iter   4 overused     9 cost 1678 pres 2.53 t=1.0s
+iter   5 overused     4 cost 1682 pres 3.80 t=1.2s
+iter   6 overused     2 cost 1696 pres 5.70 t=1.4s
+iter   7 overused     1 cost 1698 pres 8.54 t=1.6s
+iter   8 overused     1 cost 1694 pres 12.81 t=1.8s
+iter   9 overused     1 cost 1696 pres 19.22 t=2.0s
+iter  10 overused     1 cost 1698 pres 28.83 t=2.2s
+iter  11 overused     1 cost 1696 pres 43.25 t=2.4s
+iter  12 overused     1 cost 1707 pres 64.87 t=2.6s
+iter  13 overused     0 cost 1708 pres 97.31 t=2.8s
+polish 0 cost 1700
+polish 1 cost 1699
+polish 2 cost 1699
+start 1699
+  net 1: 221 -> 217
+  net 2: 164 -> 163
+  net 5: 159 -> 156
+  net 6: 156 -> 152
+  net 7: 168 -> 166
+  net 8: 111 -> 109
+  net 1: 217 -> 216
+  net 2: 163 -> 162
+  net 5: 156 -> 155
+  net 12: 66 -> 62
+after exact polish 1676
+  lns it 16 group [8, 9, 12]: 281 -> 280  total 1675  t=32s
+  net 7: 166 -> 165
+  lns it 25 group [1, 6, 9, 10]: 605 -> 603  total 1672  t=58s
+  lns it 28 group [7, 11]: 260 -> 259  total 1671  t=61s
+  lns it 31 group [2, 6, 10, 11]: 528 -> 527  total 1670  t=68s
+  net 1: 218 -> 217
+  net 5: 154 -> 153
+  net 6: 145 -> 144
+  net 1: 217 -> 216
+  lns it 33 group [4, 5, 7, 9]: 611 -> 606  total 1661  t=74s
+  lns it 39 group [2, 3, 12]: 370 -> 369  total 1660  t=84s
+  lns it 53 group [4, 6]: 322 -> 321  total 1659  t=118s
+  lns it 62 group [1, 2, 4, 6]: 700 -> 692  total 1651  t=135s
+  lns it 66 group [2, 3, 5]: 467 -> 463  total 1647  t=145s
+  net 1: 209 -> 208
+  lns it 78 group [2, 4, 11]: 436 -> 435  total 1645  t=166s
+  lns it 101 group [4, 5, 11]: 431 -> 430  total 1644  t=221s
+  lns it 108 group [3, 10]: 269 -> 268  total 1643  t=232s
+  net 12: 57 -> 56
+  lns it 148 group [3, 9, 10]: 383 -> 380  total 1639  t=300s
+  lns it 187 group [1, 6, 7]: 507 -> 506  total 1638  t=401s
+  lns done: 283 iterations, 0 kicks, best 1638
+after lns (283 iterations) 1638
