@@ -79,6 +79,7 @@ class CongestionOracle:
         h = highspy.Highs()
         h.setOptionValue("output_flag", False)
         h.setOptionValue("presolve", "off")
+        h.setOptionValue("threads", 1)
         cost = np.zeros(ncols)
         cost[zcol] = 1.0
         h.addVars(ncols, np.zeros(ncols), np.full(ncols, INF))
