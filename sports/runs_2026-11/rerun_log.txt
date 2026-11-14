@@ -1,0 +1,56 @@
+Fri Nov 13 06:44:21 PST 2026 sports reruns
+37 runs moved for a clean rerun
+37 runs, one at a time, 8 workers, 600 s limit
+[1/37] Addition_064_Medium seed 0: UNKNOWN valid False wall 600.2 cpu 4693.1
+[2/37] ITC2021_Late_04 seed 0: OPTIMAL valid True wall 0.4 cpu 1.6
+[3/37] Addition_105_Small seed 0: OPTIMAL valid True wall 0.1 cpu 0.2
+[4/37] Addition_003_Medium seed 0: UNKNOWN valid False wall 600.3 cpu 4697.0
+[5/37] Late_005_Small seed 0: OPTIMAL valid True wall 0.1 cpu 0.3
+[6/37] Addition_110_Small seed 0: OPTIMAL valid True wall 0.1 cpu 0.3
+[7/37] Addition_046_Medium seed 0: UNKNOWN valid False wall 600.1 cpu 4588.0
+[8/37] Addition_107_Small seed 0: OPTIMAL valid True wall 0.1 cpu 0.1
+[9/37] Addition_130_Small seed 0: OPTIMAL valid True wall 0.1 cpu 0.2
+[10/37] Addition_029_Small seed 0: OPTIMAL valid True wall 0.1 cpu 0.6
+[11/37] Addition_028_Small seed 0: OPTIMAL valid True wall 0.1 cpu 0.5
+Fri Nov 13 21:58:49 PST 2026 resumed after the battery stop
+Fri Nov 13 21:58:49 PST 2026 sports reruns
+0 runs moved for a clean rerun
+26 runs, one at a time, 8 workers, 600 s limit
+[1/26] Addition_005_Medium seed 0: OPTIMAL valid True wall 51.2 cpu 386.7
+[2/26] Addition_152_Small seed 0: OPTIMAL valid True wall 0.1 cpu 0.2
+[3/26] Addition_016_Medium seed 0: OPTIMAL valid True wall 475.9 cpu 3721.5
+[4/26] Addition_090_Small seed 0: OPTIMAL valid True wall 0.1 cpu 0.2
+[5/26] Addition_109_Small seed 0: OPTIMAL valid True wall 0.1 cpu 0.2
+[6/26] Addition_043_Medium seed 0: UNKNOWN valid False wall 600.1 cpu 4758.7
+[7/26] Addition_067_Small seed 0: OPTIMAL valid True wall 0.1 cpu 0.1
+[8/26] Addition_015_Medium seed 0: OPTIMAL valid True wall 0.8 cpu 4.8
+[9/26] Addition_100_Medium seed 0: UNKNOWN valid False wall 600.1 cpu 4687.5
+[10/26] Early_005_Small seed 0: OPTIMAL valid True wall 0.0 cpu 0.0
+[11/26] Addition_104_Small seed 0: OPTIMAL valid True wall 0.2 cpu 0.1
+[12/26] Addition_083_Medium seed 0: UNKNOWN valid False wall 600.2 cpu 4675.5
+[13/26] Addition_003_Medium seed 1: UNKNOWN valid False wall 600.1 cpu 4686.6
+[14/26] Late_005_Small seed 1: OPTIMAL valid True wall 0.2 cpu 0.2
+[15/26] Addition_110_Small seed 1: OPTIMAL valid True wall 0.1 cpu 0.1
+[16/26] Addition_046_Medium seed 1: UNKNOWN valid False wall 600.2 cpu 4678.4
+[17/26] Addition_107_Small seed 1: OPTIMAL valid True wall 0.1 cpu 0.1
+[18/26] Addition_130_Small seed 1: OPTIMAL valid True wall 0.1 cpu 0.2
+[19/26] Addition_029_Small seed 1: OPTIMAL valid True wall 0.2 cpu 0.6
+[20/26] Addition_028_Small seed 1: OPTIMAL valid True wall 0.1 cpu 0.5
+[21/26] Addition_005_Medium seed 1: OPTIMAL valid True wall 49.8 cpu 375.7
+[22/26] Addition_152_Small seed 1: OPTIMAL valid True wall 0.1 cpu 0.2
+[23/26] Addition_016_Medium seed 1: UNKNOWN valid False wall 600.1 cpu 4672.6
+[24/26] Addition_090_Small seed 1: OPTIMAL valid True wall 0.1 cpu 0.2
+[25/26] Addition_109_Small seed 1: OPTIMAL valid True wall 0.1 cpu 0.2
+[26/26] Addition_043_Medium seed 1: UNKNOWN valid False wall 600.3 cpu 4684.5
+=== RUNS DONE ===
+=== SPORTS DONE ===
+
+Fri Nov 13 23:20:38 PST 2026 sports reruns
+three records of the 2026-11-13 reruns set aside by hand
+3 runs, one at a time, 8 workers, 600 s limit
+[1/3] Addition_005_Medium seed 0: OPTIMAL valid True wall 47.3 cpu 357.5
+[2/3] Addition_152_Small seed 0: OPTIMAL valid True wall 0.1 cpu 0.2
+[3/3] Addition_016_Medium seed 0: OPTIMAL valid True wall 409.0 cpu 3154.1
+=== RUNS DONE ===
+=== SPORTS DONE ===
+
