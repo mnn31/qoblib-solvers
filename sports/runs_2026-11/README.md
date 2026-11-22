@@ -1,4 +1,4 @@
-# Sports run records, 2026-11-12 to 2026-11-13
+# Sports run records, 2026-11-12 to 2026-11-13 and 2026-11-22
 
 Five independent runs of `run_independent.py` (commit 9c3bbd2) for every
 instance in `../rerun_2026-11.txt`: the 26 ITC2021 instances and every Tiny,
@@ -14,14 +14,19 @@ and `.xml` (the same timetable in RobinX format).
 `run_log.txt` is the log of the main sweep, `rerun_log.txt` the log of the
 reruns, `sweep_meta.jsonl` holds the settings of every sweep part.
 
-`set_aside/` holds 40 runs that overlapped other work on the laptop. 37 of
+`set_aside/` holds 43 runs that overlapped other work on the laptop. 37 of
 them overlapped work on 2026-11-12 between 17:15 and 18:15 and between 20:15
 and 20:50 (building and checking submission files, an audit script and short
-test runs); `move_interfered.py` moved them aside. The other 3 overlapped a
+test runs); `move_interfered.py` moved them aside. Another 3 overlapped a
 file system search and git commands on 2026-11-13 between 21:58:50 and
-22:03:10 and were moved by hand. Each `moved.txt` lists the runs with their
-own time windows. All 40 were run again with the same seed and are not used
-for any reported number.
+22:03:10 and were moved by hand. The reruns of those 3, started at 23:20:38
+the same day, overlapped a leftover worker process of a network design run:
+that run had been stopped at 23:20:03, but only its parent process, and the
+worker kept computing until about 01:18. This was noticed on 2026-11-22, so
+these 3 were set aside as well (`overlap_worker_2026-11-13`) and run a third
+time on 2026-11-22. Each `moved.txt` lists the runs with their own time
+windows. All 43 were run again with the same seed and are not used for any
+reported number.
 
 The reruns stopped at 07:14 on 2026-11-13 when the laptop was unplugged (a
 guard stops the sweep off AC power, and a run cut off that way writes no

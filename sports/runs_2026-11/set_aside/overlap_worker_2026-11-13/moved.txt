@@ -1,0 +1,4 @@
+Addition_005_Medium seed 0 23:20:38-23:21:26
+Addition_152_Small seed 0 23:21:26-23:21:26
+Addition_016_Medium seed 0 23:21:26-23:28:15
+overlap with a leftover worker process of a network design run: the run was stopped at 23:20:03 on 2026-11-13, but only its parent process, and the worker kept computing until about 01:18 on 2026-11-14
