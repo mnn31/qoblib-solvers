@@ -31,8 +31,23 @@ and run again with the same seed, and reached the same value (277527). The
 guard also stops the worker processes, so the battery stops left nothing
 running.
 
-The load average at the start of a run is a trailing average, so it is high
-right after a sports run with 8 workers (network12 seed 0) or after a resume.
+One run at a time means one benchmark run at a time. The laptop was not kept
+otherwise idle: other programs were open, and on 2026-11-22 document builds
+and a browser ran for part of network24 seed 4 and of the second network12
+seed 0 run. The search evaluation rate of a run (`evals` over `search_wall`)
+is between 86% and 100% of the fastest run of the same instance, and the load
+average at the end of most runs is about 3. The load average at the start of a
+run is a trailing average, so it is higher right after a sports run with 8
+workers (network12 seed 0) or after a resume.
+
+The seeds are those of the 2026-08-18 runs (`../results/sweep_excl1800`), and
+on this machine the search repeats itself for a given seed: all 25 runs have
+the incumbent sequence of the 1800 s run of their seed as a prefix. So each
+run here retraces that run and then continues, and its value is at least as
+good. This is also why the second network12 seed 0 run reached the same value
+as the one that was set aside. The cloud runs behind the first version of
+the upstream submission (2026-10-25, not in this repo) used the same seeds for
+the 8 replica setting but took other paths on the other machine.
 
 `../scripts/build_from_runs.py` builds the QOBLIB submission rows from these
 records.

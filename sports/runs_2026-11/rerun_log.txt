@@ -54,7 +54,7 @@ three records of the 2026-11-13 reruns set aside by hand
 === RUNS DONE ===
 === SPORTS DONE ===
 
-Sun Nov 22 12:02:27 PST 2026 three runs again: the reruns above of 23:20 on 2026-11-13 overlapped a leftover worker of a stopped network run
+Sun Nov 22 12:02:27 PST 2026 resumed for four reruns: three sports runs and network12 seed 0 overlapped the leftover worker of the network run stopped at 23:20 on 2026-11-13, which ran until about 01:18 on 2026-11-14
 Sun Nov 22 12:02:28 PST 2026 sports reruns (overlap with the leftover network worker)
 3 runs, one at a time, 8 workers, 600 s limit
 [1/3] Addition_005_Medium seed 0: OPTIMAL valid True wall 24.7 cpu 192.9

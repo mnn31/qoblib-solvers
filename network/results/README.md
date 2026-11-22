@@ -8,8 +8,10 @@ verified by the official Rust checker (`08-network/check`, exit code 0) and
 independently by `qoblib_net.solio.verify`.
 
 Protocol: five independent runs per instance, seeds 0 to 4, 1800 s each,
-random starts only, executed strictly one at a time on an otherwise idle Apple
-M3 Pro, budget enforced per proposal (longest run 1888 s).
+random starts only, executed strictly one at a time on an Apple M3 Pro laptop,
+budget enforced per proposal (longest run 1888 s). The laptop was not kept
+otherwise idle: 17 of the 100 runs, all from 2026-09-21 to 2026-09-23, show 33%
+to 78% of the highest evaluation rate seen for their instance.
 
 | instance | published best-known | this work | improvement | relative |
 | :--- | ---: | ---: | ---: | ---: |

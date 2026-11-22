@@ -8,7 +8,8 @@ Every field comes from a run record. Time to Solution is the mean over successfu
 runs of the time from the start of the run until the best topology was found, Total
 Runtime the mean wall clock of all runs and CPU Runtime the mean process CPU time of
 all runs, both including the integral routing at the end. A successful run is one
-that reaches the reported value. The script stops if a record is missing, invalid,
+that reaches the reported value. Time series points from before the run start (a
+clock offset of a few hundredths of a second) are written at time 0. The script stops if a record is missing, invalid,
 from another commit or from another search setting, if runs were not one at a
 time, or if a run's final incumbent differs from its checked integral objective.
 
@@ -68,7 +69,10 @@ for inst, rs in sorted(recs.items()):
     n = rs[0]["n"]
     d = f"{a.sub}/{inst}"; os.makedirs(d, exist_ok=True)
     shutil.copyfile(f"{a.runs}/{inst}_seed{top[0]['seed']}.sol", f"{d}/{inst}_solution.sol")
-    json.dump([r["series"] for r in ok], open(f"{d}/{inst}_objective_time_series.json", "w"))
+    # the search and the runner read different clocks, so a starting topology can land a few
+    # hundredths of a second before the run start; such points are written at time 0
+    json.dump([[{"Time": max(0.0, p["Time"]), "Incumbent": p["Incumbent"]} for p in r["series"]] for r in ok],
+              open(f"{d}/{inst}_objective_time_series.json", "w"))
     t = table.get(inst)
     note = "This instance has no entry in the best known table." if t is None else (
         f"Improves the table value {t[0]} ({t[1]})." if best < t[0] else
@@ -78,7 +82,9 @@ for inst, rs in sorted(recs.items()):
     runs_word = "run" if len(top) == 1 else "runs"
     rem = (f"{note} Heuristic, so the optimality bound is N/A. {len(rs)} independent runs from scratch, seeds "
            f"{', '.join(map(str, seeds))}, each with {reps} replicas and {secs:.0f} s of search followed by the integral routing, "
-           f"strictly one run at a time. Run values: {', '.join(str(r['objective']) for r in rs)}. Time to Solution is the mean time from "
+           f"strictly one run at a time. The seeds are those of the 2026-08-18 runs, and on this machine the search repeats itself "
+           f"for a given seed, so each run retraces the 1800 s run of its seed and then continues. Run values: "
+           f"{', '.join(str(r['objective']) for r in rs)}. Time to Solution is the mean time from "
            f"the start of the run until the best topology was found, over the {len(top)} successful {runs_word} (runs "
            "reaching the reported value); its integral routing is computed at the end of the run and takes under a second. Total Runtime "
            "is the mean wall clock time and CPU Runtime the mean process CPU time over all runs, both including the integral routing. Each "

@@ -11,8 +11,10 @@ Per run: `<instance>_seed<k>.json` (status, wall and process CPU time, build
 time, time series, commit, versions), `.sol` (timetable, when one was found)
 and `.xml` (the same timetable in RobinX format).
 
-`run_log.txt` is the log of the main sweep, `rerun_log.txt` the log of the
-reruns, `sweep_meta.jsonl` holds the settings of every sweep part.
+`run_log.txt` is the log of the main sweep and `sweep_meta.jsonl` holds the
+settings of every sweep part. `rerun_log.txt` holds the sports lines of the
+log of the reruns; the same queue went on with network design runs, and the
+full log is `../../network/runs_2026-11/run_log.txt`.
 
 `set_aside/` holds 43 runs that overlapped other work on the laptop. 37 of
 them overlapped work on 2026-11-12 between 17:15 and 18:15 and between 20:15
@@ -28,12 +30,16 @@ time on 2026-11-22. Each `moved.txt` lists the runs with their own time
 windows. All 43 were run again with the same seed and are not used for any
 reported number.
 
-The reruns stopped at 07:14 on 2026-11-13 when the laptop was unplugged (a
-guard stops the sweep off AC power, and a run cut off that way writes no
-record) and resumed at 21:58 the same day ("resumed after the battery stop" in
-`rerun_log.txt`). One kept run ended about 2 s after the power was
-disconnected: Addition_046_Medium seed 0, which found no timetable in 600 s.
-No run of that instance found a timetable, so it has no submission row.
+The reruns stopped on 2026-11-13 when the laptop was unplugged (a guard stops
+the sweep off AC power, and a run cut off that way writes no record) and
+resumed at 21:58 the same day ("resumed after the battery stop" in
+`rerun_log.txt`). The power went off at 07:14:20, came back at 07:14:22 and
+went off for good at 07:14:28. Five kept runs ended in those seconds.
+Addition_046_Medium seed 0 ended at 07:14:23 after 600 s without a timetable,
+so about 2 of its 600 s were on battery. No run of that instance found a
+timetable, so it has no submission row. The seed 0 runs of Addition_107_Small,
+Addition_130_Small, Addition_029_Small and Addition_028_Small, about 0.1 s
+each, ran right after it while the power was back.
 
 An earlier pilot on OR-Tools 9.15 hung after its first solution and wrote no
 records.
