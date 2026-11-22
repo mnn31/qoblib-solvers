@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build the submission rows only from the records of run_independent.py.
 
-    python scripts/build_from_runs.py <runs dir> <submission dir> --date <date of the last run> \
+    python scripts/build_from_runs.py <runs dir> <submission dir> --date <submission date> \
         --hardware "..." --reference <url at a fixed commit> --table <solutions/README.md>
 
 Every field comes from a run record. Time to Solution is the mean over successful

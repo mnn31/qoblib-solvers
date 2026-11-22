@@ -1,0 +1,2 @@
+network12 seed 0 2026-11-13 23:28:15 to 2026-11-14 01:28:15
+overlap with a leftover worker process of the first start of this sweep: it was stopped at 23:20:03 on 2026-11-13, but only its parent process, and the worker kept computing until about 01:18 on 2026-11-14

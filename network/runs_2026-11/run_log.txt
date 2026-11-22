@@ -1,0 +1,187 @@
+Fri Nov 13 06:44:21 PST 2026 sports reruns
+37 runs moved for a clean rerun
+37 runs, one at a time, 8 workers, 600 s limit
+[1/37] Addition_064_Medium seed 0: UNKNOWN valid False wall 600.2 cpu 4693.1
+[2/37] ITC2021_Late_04 seed 0: OPTIMAL valid True wall 0.4 cpu 1.6
+[3/37] Addition_105_Small seed 0: OPTIMAL valid True wall 0.1 cpu 0.2
+[4/37] Addition_003_Medium seed 0: UNKNOWN valid False wall 600.3 cpu 4697.0
+[5/37] Late_005_Small seed 0: OPTIMAL valid True wall 0.1 cpu 0.3
+[6/37] Addition_110_Small seed 0: OPTIMAL valid True wall 0.1 cpu 0.3
+[7/37] Addition_046_Medium seed 0: UNKNOWN valid False wall 600.1 cpu 4588.0
+[8/37] Addition_107_Small seed 0: OPTIMAL valid True wall 0.1 cpu 0.1
+[9/37] Addition_130_Small seed 0: OPTIMAL valid True wall 0.1 cpu 0.2
+[10/37] Addition_029_Small seed 0: OPTIMAL valid True wall 0.1 cpu 0.6
+[11/37] Addition_028_Small seed 0: OPTIMAL valid True wall 0.1 cpu 0.5
+Fri Nov 13 21:58:49 PST 2026 resumed after the battery stop
+Fri Nov 13 21:58:49 PST 2026 sports reruns
+0 runs moved for a clean rerun
+26 runs, one at a time, 8 workers, 600 s limit
+[1/26] Addition_005_Medium seed 0: OPTIMAL valid True wall 51.2 cpu 386.7
+[2/26] Addition_152_Small seed 0: OPTIMAL valid True wall 0.1 cpu 0.2
+[3/26] Addition_016_Medium seed 0: OPTIMAL valid True wall 475.9 cpu 3721.5
+[4/26] Addition_090_Small seed 0: OPTIMAL valid True wall 0.1 cpu 0.2
+[5/26] Addition_109_Small seed 0: OPTIMAL valid True wall 0.1 cpu 0.2
+[6/26] Addition_043_Medium seed 0: UNKNOWN valid False wall 600.1 cpu 4758.7
+[7/26] Addition_067_Small seed 0: OPTIMAL valid True wall 0.1 cpu 0.1
+[8/26] Addition_015_Medium seed 0: OPTIMAL valid True wall 0.8 cpu 4.8
+[9/26] Addition_100_Medium seed 0: UNKNOWN valid False wall 600.1 cpu 4687.5
+[10/26] Early_005_Small seed 0: OPTIMAL valid True wall 0.0 cpu 0.0
+[11/26] Addition_104_Small seed 0: OPTIMAL valid True wall 0.2 cpu 0.1
+[12/26] Addition_083_Medium seed 0: UNKNOWN valid False wall 600.2 cpu 4675.5
+[13/26] Addition_003_Medium seed 1: UNKNOWN valid False wall 600.1 cpu 4686.6
+[14/26] Late_005_Small seed 1: OPTIMAL valid True wall 0.2 cpu 0.2
+[15/26] Addition_110_Small seed 1: OPTIMAL valid True wall 0.1 cpu 0.1
+[16/26] Addition_046_Medium seed 1: UNKNOWN valid False wall 600.2 cpu 4678.4
+[17/26] Addition_107_Small seed 1: OPTIMAL valid True wall 0.1 cpu 0.1
+[18/26] Addition_130_Small seed 1: OPTIMAL valid True wall 0.1 cpu 0.2
+[19/26] Addition_029_Small seed 1: OPTIMAL valid True wall 0.2 cpu 0.6
+[20/26] Addition_028_Small seed 1: OPTIMAL valid True wall 0.1 cpu 0.5
+[21/26] Addition_005_Medium seed 1: OPTIMAL valid True wall 49.8 cpu 375.7
+[22/26] Addition_152_Small seed 1: OPTIMAL valid True wall 0.1 cpu 0.2
+[23/26] Addition_016_Medium seed 1: UNKNOWN valid False wall 600.1 cpu 4672.6
+[24/26] Addition_090_Small seed 1: OPTIMAL valid True wall 0.1 cpu 0.2
+[25/26] Addition_109_Small seed 1: OPTIMAL valid True wall 0.1 cpu 0.2
+[26/26] Addition_043_Medium seed 1: UNKNOWN valid False wall 600.3 cpu 4684.5
+=== RUNS DONE ===
+=== SPORTS DONE ===
+Fri Nov 13 23:18:31 PST 2026 network one at a time
+25 runs on 1 workers
+Fri Nov 13 23:20:03 PST 2026 stopped: network run 1 restarted after three sports reruns
+Fri Nov 13 23:20:38 PST 2026 sports reruns
+three records of the 2026-11-13 reruns set aside by hand
+3 runs, one at a time, 8 workers, 600 s limit
+[1/3] Addition_005_Medium seed 0: OPTIMAL valid True wall 47.3 cpu 357.5
+[2/3] Addition_152_Small seed 0: OPTIMAL valid True wall 0.1 cpu 0.2
+[3/3] Addition_016_Medium seed 0: OPTIMAL valid True wall 409.0 cpu 3154.1
+=== RUNS DONE ===
+=== SPORTS DONE ===
+Fri Nov 13 23:28:15 PST 2026 network one at a time
+25 runs on 1 workers
+Process SpawnPoolWorker-1:
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.11/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/opt/anaconda3/lib/python3.11/multiprocessing/queues.py", line 377, in put
+    self._writer.send_bytes(obj)
+  File "/opt/anaconda3/lib/python3.11/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/opt/anaconda3/lib/python3.11/multiprocessing/connection.py", line 427, in _send_bytes
+    self._send(header + buf)
+  File "/opt/anaconda3/lib/python3.11/multiprocessing/connection.py", line 384, in _send
+    n = write(self._handle, buf)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/anaconda3/lib/python3.11/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/opt/anaconda3/lib/python3.11/multiprocessing/queues.py", line 377, in put
+    self._writer.send_bytes(obj)
+  File "/opt/anaconda3/lib/python3.11/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/opt/anaconda3/lib/python3.11/multiprocessing/connection.py", line 427, in _send_bytes
+    self._send(header + buf)
+  File "/opt/anaconda3/lib/python3.11/multiprocessing/connection.py", line 384, in _send
+    n = write(self._handle, buf)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+BrokenPipeError: [Errno 32] Broken pipe
+/opt/anaconda3/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 6 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+[1/25] network12 seed 0: 277527 (LP 277526.3157894737) wall 7200 cpu 7186 tts 1239.923636
+[2/25] network20 seed 0: 523667 (LP 523666.6666666667) wall 7201 cpu 7191 tts 3796.310706
+[3/25] network22 seed 0: 628658 (LP 628657.1428571428) wall 7200 cpu 7190 tts 2888.959109
+/opt/anaconda3/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 6 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+Mon Nov 16 17:31:43 PST 2026 resumed after the battery stop of 2026-11-14 06:56 (network23 seed 0 was cut off, no record)
+Mon Nov 16 17:31:43 PST 2026 sports reruns
+three records of the 2026-11-13 reruns set aside by hand
+0 runs, one at a time, 8 workers, 600 s limit
+=== RUNS DONE ===
+=== SPORTS DONE ===
+Mon Nov 16 17:31:44 PST 2026 network one at a time
+22 runs on 1 workers
+[1/22] network23 seed 0: 659369 (LP 659368.4210526316) wall 7200 cpu 7165 tts 1686.434332
+[2/22] network24 seed 0: 694681 (LP 694680.5555555555) wall 7201 cpu 7156 tts 6179.734242
+[3/22] network12 seed 1: 277572 (LP 277571.4285714286) wall 7200 cpu 7169 tts 1613.134528
+[4/22] network20 seed 1: 524000 (LP 524000.0) wall 7200 cpu 7199 tts 7081.870259
+[5/22] network22 seed 1: 618115 (LP 618114.2857142857) wall 7200 cpu 7200 tts 2136.810707
+[6/22] network23 seed 1: 661172 (LP 661171.4285714285) wall 7200 cpu 7200 tts 4378.928095
+/opt/anaconda3/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 6 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+Tue Nov 17 21:50:08 PST 2026 resumed after the battery stop of 2026-11-17 07:08 (network24 seed 1 was cut off, no record)
+Tue Nov 17 21:50:08 PST 2026 sports reruns
+three records of the 2026-11-13 reruns set aside by hand
+0 runs, one at a time, 8 workers, 600 s limit
+=== RUNS DONE ===
+=== SPORTS DONE ===
+Tue Nov 17 21:50:09 PST 2026 network one at a time
+16 runs on 1 workers
+[1/16] network24 seed 1: 694584 (LP 694583.3333333334) wall 7201 cpu 7199 tts 4186.436102
+[2/16] network12 seed 2: 277000 (LP 277000.0) wall 7200 cpu 7199 tts 1561.90029
+[3/16] network20 seed 2: 521064 (LP 521063.829787234) wall 7200 cpu 7199 tts 4412.792761
+[4/16] network22 seed 2: 615810 (LP 615809.5238095239) wall 7200 cpu 7199 tts 7135.637597
+/opt/anaconda3/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 6 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+Wed Nov 18 22:03:35 PST 2026 resumed after the battery stop of 2026-11-18 07:11 (network23 seed 2 was cut off, no record)
+Wed Nov 18 22:03:35 PST 2026 sports reruns
+three records of the 2026-11-13 reruns set aside by hand
+0 runs, one at a time, 8 workers, 600 s limit
+=== RUNS DONE ===
+=== SPORTS DONE ===
+Wed Nov 18 22:03:35 PST 2026 network one at a time
+12 runs on 1 workers
+[1/12] network23 seed 2: 664388 (LP 664387.7551020408) wall 7201 cpu 7197 tts 1998.558567
+[2/12] network24 seed 2: 696688 (LP 696687.4999999998) wall 7200 cpu 7199 tts 3965.111475
+[3/12] network12 seed 3: 276474 (LP 276473.68421052635) wall 7200 cpu 7198 tts 3090.00234
+[4/12] network20 seed 3: 522594 (LP 522593.7500000001) wall 7200 cpu 7198 tts 3102.230304
+[5/12] network22 seed 3: 621844 (LP 621843.1372549019) wall 7200 cpu 7198 tts 1332.255139
+/opt/anaconda3/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 6 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+Thu Nov 19 17:42:13 PST 2026 resumed after the battery stop of 2026-11-19 08:35 (network23 seed 3 was cut off, no record)
+Thu Nov 19 17:42:13 PST 2026 sports reruns
+three records of the 2026-11-13 reruns set aside by hand
+0 runs, one at a time, 8 workers, 600 s limit
+=== RUNS DONE ===
+=== SPORTS DONE ===
+Thu Nov 19 17:42:13 PST 2026 network one at a time
+7 runs on 1 workers
+[1/7] network23 seed 3: 658257 (LP 658256.4102564103) wall 7200 cpu 7177 tts 6889.074294
+[2/7] network24 seed 3: 699929 (LP 699928.5714285715) wall 7200 cpu 7184 tts 6481.870063
+[3/7] network12 seed 4: 276474 (LP 276473.6842105263) wall 7200 cpu 7199 tts 4261.396196
+[4/7] network20 seed 4: 526273 (LP 526272.7272727273) wall 7200 cpu 7200 tts 6766.019898
+[5/7] network22 seed 4: 618135 (LP 618134.3283582089) wall 7200 cpu 7200 tts 1724.168992
+[6/7] network23 seed 4: 668632 (LP 668631.5789473684) wall 7201 cpu 7200 tts 2041.080372
+/opt/anaconda3/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 6 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+Sun Nov 22 09:59:47 PST 2026 resumed after the battery stop of 2026-11-20 07:15 (network24 seed 4 was cut off, no record)
+Sun Nov 22 09:59:47 PST 2026 sports reruns
+three records of the 2026-11-13 reruns set aside by hand
+0 runs, one at a time, 8 workers, 600 s limit
+=== RUNS DONE ===
+=== SPORTS DONE ===
+Sun Nov 22 09:59:47 PST 2026 network one at a time
+1 runs on 1 workers
+[1/1] network24 seed 4: 703447 (LP 703446.4285714286) wall 7201 cpu 7182 tts 6542.233227
+=== RUNS DONE ===
+=== NETWORK DONE ===
+=== CHAIN DONE ===
+Sun Nov 22 12:02:27 PST 2026 resumed for four reruns: three sports runs and network12 seed 0 overlapped the leftover worker of the network run stopped at 23:20 on 2026-11-13, which ran until about 01:18 on 2026-11-14
+Sun Nov 22 12:02:28 PST 2026 sports reruns (overlap with the leftover network worker)
+3 runs, one at a time, 8 workers, 600 s limit
+[1/3] Addition_005_Medium seed 0: OPTIMAL valid True wall 24.7 cpu 192.9
+[2/3] Addition_152_Small seed 0: OPTIMAL valid True wall 0.1 cpu 0.2
+[3/3] Addition_016_Medium seed 0: UNKNOWN valid False wall 600.2 cpu 4736.2
+=== RUNS DONE ===
+=== SPORTS FIX DONE ===
+Sun Nov 22 12:12:55 PST 2026 network rerun (overlap with the leftover network worker)
+1 runs on 1 workers
+[1/1] network12 seed 0: 277527 (LP 277526.3157894737) wall 7200 cpu 7184 tts 1122.444307
+=== RUNS DONE ===
+=== NETWORK FIX DONE ===
+=== FIX CHAIN DONE ===
