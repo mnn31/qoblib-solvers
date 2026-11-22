@@ -41,7 +41,7 @@ Every timetable is checked before it is reported:
 | `run_independent.py` | seeded independent runs, one at a time, with wall and CPU time per run |
 | `build_from_runs.py` | build the submission rows from the run records |
 | `rerun_2026-11.txt` | the 173 instances of the 2026-11 runs |
-| `runs_2026-11/` | records of the 865 runs of 2026-11-12 and 2026-11-13 |
+| `runs_2026-11/` | records of the 865 runs of 2026-11-12, 2026-11-13 and 2026-11-22 |
 | `open_instances.txt` | the 102 instances with no solution on record when this started |
 | `results/` | per instance JSON logs, timetables and validator reports |
 

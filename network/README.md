@@ -12,6 +12,11 @@ optimality; for the other fourteen only best-known upper bounds are known.
 Submitted upstream as [ZIB-AOPT/QOBLIB#45](https://github.com/ZIB-AOPT/QOBLIB/pull/45).
 See [`results/`](results/README.md).
 
+A follow up with five runs of 7200 s per instance on network12, network20,
+network22, network23 and network24, strictly one run at a time, is in
+[`runs_2026-11/`](runs_2026-11/README.md), submitted upstream as
+[ZIB-AOPT/QOBLIB#98](https://github.com/ZIB-AOPT/QOBLIB/pull/98).
+
 ## The idea
 
 The problem splits cleanly in two:
